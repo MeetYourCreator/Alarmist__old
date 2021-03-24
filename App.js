@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import Clock from './Clock.js'
 import { StyleSheet, Text, View } from 'react-native';
 
 // Build for ios View is mapped to UIView
@@ -7,7 +8,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
+      <Clock />
       <StatusBar style="auto" />
     </View>
   );
