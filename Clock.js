@@ -1,79 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import { setHour, setMinute, setSecond } from './time.js'
+import { StyleSheet, View, Text, SafeAreaView } from 'react-native'
+import styled from 'styled-components'
 
-
-const Clock = () => {
-  const [hourRatio, setHourRatio] = useState(0)
-  const [minuteRatio, setMinuteRatio] = useState(0)
-  const [secondRatio, setSecondRatio] = useState(0)
-
-  useEffect(() => {
-    setInterval(() => {
-      setHourRatio(setHour())
-      setMinuteRatio(setMinute())
-      setSecondRatio(setSecond())
-    }, 1000)
-  }, [])
-
-
-
-  return (
-    <>
-      <SafeAreaView>
-        <View style={styles.clockFace}>
-        <Text>
-          1
-        </Text>
-        <Text>
-          2
-        </Text>
-        <Text>
-          3
-        </Text>
-        <Text>
-          4
-        </Text>
-        <Text>
-          5
-        </Text>
-        <Text>
-          6
-        </Text>
-        <Text>
-          7
-        </Text>
-        <Text>
-          8
-        </Text>
-        <Text>
-          9
-        </Text>
-        <Text>
-          10
-        </Text>
-        <Text>
-          11
-        </Text>
-        <Text>
-            12
-        </Text>
-       </View>
-      </SafeAreaView>
-            
-    </>
-  )
-}
-
-const styles = StyleSheet.create({
-  clockFace: {
-    width: 375,
-    height: 375,
-    backgroundColor: '#66c1e67c',
-    borderRadius: 200,
-    borderColor: 'black',
-    borderWidth: 3,
-    position: 'relative'
-  }
-})
-export default Clock;
+export const ClockFace = styled.View`
+  width: 500px;
+  height: 500px;
+  background-color: rgba(102, 193, 230, 0.485);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow:  -8px 8px 15px rgba(225,225,225,0.05),
+       20px 20px 20px rgba(0,0,0,0.2),
+       inset -8px -8px 15px rgba(225,225,225,0.05),
+       inset 20px 20px 20px rgba(0,0,0,0.2);
+  position: relative;
+`
