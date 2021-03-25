@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "./time.js"
 import styled from 'styled-components/native'
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,8 @@ const Container = styled.View`
   background-color: rgb(238,235,235);
   overflow: hidden;
 `
-const ClockBody = styled.View`
+
+const ClockBody = styled.View.attrs(() => ({ color: "#fffabb" }))`
   border: 10px solid red;
 `
 
@@ -32,6 +33,43 @@ const ClockFace = styled.View`
   position: relative;
 `
 
+const SecondHand = styled.View`
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  width: 3px;
+  height: 50%;
+  background-color: red;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 11;
+`
+const MinuteHand = styled.View`
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  width: 8px;
+  height: 45%;
+  background-color: black;
+  border: 2px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+`
+
+const HourHand = styled.View`
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  width: 3px;
+  height: 40%;
+  background-color: red;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 9;
+`
 const Clock = () => {
   const [hourRatio, setHourRatio] = useState(0)
   const [minuteRatio, setMinuteRatio] = useState(0)
@@ -52,26 +90,94 @@ const Clock = () => {
         {/* <View style={styles.clock}> */}
         <ClockBody>
           <ClockFace>
-            <Text style={
-              {
-                transform: [{ rotate: '-30deg' }]
-              }
-            }>1</Text>
-            <Text style={
-              {
-                transform: [{ rotate: '-60deg' }]
-              }
-            }>2</Text>
-            <Text>3</Text>
-            <Text>4</Text>
-            <Text>5</Text>
-            <Text>6</Text>
-            <Text>7</Text>
-            <Text>8</Text>
-            <Text>9</Text>
-            <Text>10</Text>
-            <Text>11</Text>
-            <Text>12</Text>
+            <SecondHand />
+            <MinuteHand />
+              <Text
+                className="number"
+                style={{
+                  transform: [{ rotate: "-30deg" }],
+                }}
+              >
+                1
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-60deg" }],
+                }}
+              >
+                2
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-90deg" }],
+                }}
+              >
+                3
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-120deg" }],
+                }}
+              >
+                4
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-150deg" }],
+                }}
+              >
+                5
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-180deg" }],
+                }}
+              >
+                6
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-210deg" }],
+                }}
+              >
+                7
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-240deg" }],
+                }}
+              >
+                8
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-270deg" }],
+                }}
+              >
+                9
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-300deg" }],
+                }}
+              >
+                10
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-330deg" }],
+                }}
+              >
+                11
+              </Text>
+              <Text
+                style={{
+                  transform: [{ rotate: "-360deg" }],
+                }}
+              >
+                12
+              </Text>
+          
           </ClockFace>
           {/* </View> */}
         </ClockBody>
