@@ -18,6 +18,10 @@ const ClockEdge = styled.View`
   border-bottom-left-radius: 50px;
   height: 700px;
 `
+const Clock = styled.View`
+border: 10px solid black;
+`
+
 const ClockFace = styled.View`
   width: 500px;
   height: 500px;

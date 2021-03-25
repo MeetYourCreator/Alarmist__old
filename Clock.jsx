@@ -11,6 +11,9 @@ const Container = styled.View`
   background-color: rgb(238,235,235);
   overflow: hidden;
 `
+const ClockBody = styled.View`
+  border: 10px solid red;
+`
 
 const ClockEdge = styled.View`
   background-color:rgba(255, 0, 85, 0.485);
@@ -25,7 +28,7 @@ const ClockFace = styled.View`
   height: 375px;
   background-color: rgba(102, 193, 230, 0.485);
   border-radius: 175px;
-  border: 3px solid white;
+  border: 3px solid purple;
   position: relative;
 `
 
@@ -47,9 +50,18 @@ const Clock = () => {
     <>
       <Container>
         {/* <View style={styles.clock}> */}
+        <ClockBody>
           <ClockFace>
-            <Text>1</Text>
-            <Text>2</Text>
+            <Text style={
+              {
+                transform: [{ rotate: '-30deg' }]
+              }
+            }>1</Text>
+            <Text style={
+              {
+                transform: [{ rotate: '-60deg' }]
+              }
+            }>2</Text>
             <Text>3</Text>
             <Text>4</Text>
             <Text>5</Text>
@@ -61,7 +73,8 @@ const Clock = () => {
             <Text>11</Text>
             <Text>12</Text>
           </ClockFace>
-        {/* </View> */}
+          {/* </View> */}
+        </ClockBody>
       </Container>
     </>
   )
