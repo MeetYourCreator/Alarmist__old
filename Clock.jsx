@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "./time.js"
 import styled from 'styled-components/native'
+import PropsNumeral from './PropsNumeral.js'
+
+const rotate = degrees => {
+  return `transform:rotate(${degrees})`
+}
 
 const Container = styled.SafeAreaView`
   display: flex;
@@ -12,7 +17,8 @@ const Container = styled.SafeAreaView`
   overflow: hidden;
 `
 
-const ClockBody = styled.View.attrs(() => ({ color: "#fffabb" }))`
+const ClockBody = styled.View`
+  padding: 120px;
   border: 10px solid red;
 `
 
@@ -32,7 +38,9 @@ const ClockFace = styled.View`
   border: 3px solid purple;
   position: relative;
 `
-
+const Number1 = styled.Text`
+${rotate('30deg')};
+`
 const SecondHand = styled.View`
   position: absolute;
   bottom: 45%;
@@ -92,92 +100,86 @@ const Clock = () => {
           <ClockFace>
             <SecondHand />
             <MinuteHand />
+            <View style={{
+              transform: [{ translateY: `${Math.PI}` }]
+            }}>
+              <PropsNumeral background="yellow">1</PropsNumeral>
               <Text
-                className="number"
-                style={{
-                  transform: [{ rotate: "-30deg" }],
-                }}
-              >
-                1
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "-60deg" }],
-                }}
-              >
+              style={{
+              transform: [{ rotate: `${Math.PI}deg`}],
+           }}
+            >
                 2
+            </Text>
+              <Text style={{
+              transform: [{rotate: '60deg'}]
+              }}>
+              3
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-90deg" }],
-                }}
-              >
-                3
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "-120deg" }],
+                  transform: [{ rotate: `90deg` }],
                 }}
               >
                 4
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-150deg" }],
+                  transform: [{ rotate: "120deg" }],
                 }}
               >
                 5
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-180deg" }],
+                  transform: [{ rotate: "150deg" }],
                 }}
               >
                 6
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-210deg" }],
+                  transform: [{ rotate: "180deg" }],
                 }}
               >
                 7
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-240deg" }],
+                  transform: [{ rotate: "210deg" }],
                 }}
               >
                 8
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-270deg" }],
+                  transform: [{ rotate: "240deg" }],
                 }}
               >
                 9
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-300deg" }],
+                  transform: [{ rotate: "270deg" }],
                 }}
               >
                 10
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-330deg" }],
+                  transform: [{ rotate: "300deg" }],
                 }}
               >
                 11
               </Text>
               <Text
                 style={{
-                  transform: [{ rotate: "-360deg" }],
+                  transform: [{ rotate: "330deg" }],
                 }}
               >
                 12
               </Text>
-          
+            </View>
           </ClockFace>
           {/* </View> */}
         </ClockBody>
