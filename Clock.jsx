@@ -38,10 +38,9 @@ const ClockFace = styled.View`
   border: 3px solid purple;
   position: relative;
 `
-const initRotation = '0deg'
+const initRotation = `${ Math.PI / 12 }deg`
 
 const ClockNumber = styled.View`
-  rotation: 0;
   position: absolute;
   font-size: 40px;
   color: black;
