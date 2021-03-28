@@ -94,100 +94,48 @@ const Clock = () => {
   return (
     <>
       <Container>
-        {/* <View style={styles.clock}> */}
         <ClockBody>
           <ClockFace>
             <SecondHand />
             <MinuteHand />
-            <View
-              style={{
-                transformOrigin: "center",
-                transform: [{ translateY: `${Math.PI}` }],
-              }}
-            >
-              <PropsNumeral background="yellow">1</PropsNumeral>
-              <Text
-                style={{
-                  transform: [{ rotate: `${Math.PI}deg` }],
-                }}
-              >
-                2
-              </Text>
-              <View
-                style=
-                {{
-                  transformOrigin: '200%',
-                  transform: [{ rotate: "60deg" }],
-                }}
-                >
-                <Text>3</Text>
-              </View>
-              <Text
-                style={{
-                  transform: [{ rotate: `90deg` }],
-                }}
-              >
-                4
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "120deg" }],
-                }}
-              >
-                5
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "150deg" }],
-                }}
-              >
-                6
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "180deg" }],
-                }}
-              >
-                7
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "210deg" }],
-                }}
-              >
-                8
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "240deg" }],
-                }}
-              >
-                9
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "270deg" }],
-                }}
-              >
-                10
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "300deg" }],
-                }}
-              >
-                11
-              </Text>
-              <Text
-                style={{
-                  transform: [{ rotate: "330deg" }],
-                }}
-              >
-                12
-              </Text>
+            <HourHand />
+            <View>
+              <Text>1</Text>
+            </View>
+            <View>
+              <Text>2</Text>
+            </View>
+            <View>
+              <Text>3</Text>
+            </View>
+            <View>
+              <Text>4</Text>
+            </View>
+            <View>
+              <Text>5</Text>
+            </View>
+            <View>
+              <Text>6</Text>
+            </View>
+            <View>
+              <Text>7</Text>
+            </View>
+            <View>
+              <Text>8</Text>
+            </View>
+            <View>
+              <Text>9</Text>
+            </View>
+            <View>
+              <Text>10</Text>
+            </View>
+            <View>
+              <Text>11</Text>
+            </View>
+            <View>
+              <Text>12</Text>
             </View>
           </ClockFace>
-          {/* </View> */}
         </ClockBody>
       </Container>
     </>
