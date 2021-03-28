@@ -8,7 +8,7 @@ const rotate = degrees => {
   return `transform:rotate(${degrees})`
 }
 
-const Container = styled.SafeAreaView`
+const Container = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,33 +113,46 @@ const Clock = () => {
             <MinuteHand />
             <HourHand />
             <ClockNumber>
-              <Text style={{
-              transform:[{rotate: `${initRotation}`}]
-              }}>1</Text>
+              <Text
+                style={{
+                  transform: [{ rotate: `${initRotation}` }],
+                }}
+              >
+                1
+              </Text>
+            </ClockNumber>
+            <ClockNumber>
               <Text>2</Text>
-
-              
-                <Text>3</Text>
-             
-                <Text>4</Text>
-              
-                <Text>5</Text>
-              
-                <Text>6</Text>
-             
-                <Text>7</Text>
-              
-                <Text>8</Text>
-
-                <Text>9</Text>
-             
-                <Text>10</Text>
-              
-                <Text>11</Text>
-             
-           
-                <Text>12</Text>
-             
+            </ClockNumber>
+            <ClockNumber>
+              <Text>3</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>4</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>5</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>6</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>7</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>8</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>9</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>10</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>11</Text>
+            </ClockNumber>
+            <ClockNumber>
+              <Text>12</Text>
             </ClockNumber>
           </ClockFace>
         </ClockBody>
