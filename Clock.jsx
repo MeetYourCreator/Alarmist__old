@@ -90,7 +90,7 @@ const Clock = () => {
       setSecondRatio(setSecond())
     }, 1000)
   }, [])
-  
+
   return (
     <>
       <Container>
@@ -99,22 +99,29 @@ const Clock = () => {
           <ClockFace>
             <SecondHand />
             <MinuteHand />
-            <View style={{
-              transform: [{ translateY: `${Math.PI}` }]
-            }}>
+            <View
+              style={{
+                transformOrigin: "center",
+                transform: [{ translateY: `${Math.PI}` }],
+              }}
+            >
               <PropsNumeral background="yellow">1</PropsNumeral>
               <Text
-              style={{
-              transform: [{ rotate: `${Math.PI}deg`}],
-           }}
-            >
+                style={{
+                  transform: [{ rotate: `${Math.PI}deg` }],
+                }}
+              >
                 2
-            </Text>
-              <Text style={{
-              transform: [{rotate: '60deg'}]
-              }}>
-              3
               </Text>
+              <View
+                style=
+                {{
+                  transformOrigin: '200%',
+                  transform: [{ rotate: "60deg" }],
+                }}
+                >
+                <Text>3</Text>
+              </View>
               <Text
                 style={{
                   transform: [{ rotate: `90deg` }],
