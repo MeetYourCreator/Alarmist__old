@@ -38,6 +38,20 @@ const ClockFace = styled.View`
   border: 3px solid purple;
   position: relative;
 `
+const initRotation = '0deg'
+
+const ClockNumber = styled.View`
+  rotation: 0;
+  position: absolute;
+  font-size: 40px;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 18px;
+  text-align: center;
+  transform: rotate(${initRotation})
+`
+
 const Number1 = styled.Text`
 ${rotate('30deg')};
 `
@@ -99,42 +113,33 @@ const Clock = () => {
             <SecondHand />
             <MinuteHand />
             <HourHand />
-            <View>
+            <ClockNumber>
               <Text>1</Text>
-            </View>
-            <View>
               <Text>2</Text>
-            </View>
-            <View>
-              <Text>3</Text>
-            </View>
-            <View>
-              <Text>4</Text>
-            </View>
-            <View>
-              <Text>5</Text>
-            </View>
-            <View>
-              <Text>6</Text>
-            </View>
-            <View>
-              <Text>7</Text>
-            </View>
-            <View>
-              <Text>8</Text>
-            </View>
-            <View>
-              <Text>9</Text>
-            </View>
-            <View>
-              <Text>10</Text>
-            </View>
-            <View>
-              <Text>11</Text>
-            </View>
-            <View>
-              <Text>12</Text>
-            </View>
+
+              
+                <Text>3</Text>
+             
+                <Text>4</Text>
+              
+                <Text>5</Text>
+              
+                <Text>6</Text>
+             
+                <Text>7</Text>
+              
+                <Text>8</Text>
+
+                <Text>9</Text>
+             
+                <Text>10</Text>
+              
+                <Text>11</Text>
+             
+           
+                <Text>12</Text>
+             
+            </ClockNumber>
           </ClockFace>
         </ClockBody>
       </Container>
