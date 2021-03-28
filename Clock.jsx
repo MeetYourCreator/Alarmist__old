@@ -90,7 +90,6 @@ const Clock = () => {
       setSecondRatio(setSecond())
     }, 1000)
   }, [])
-
   
   return (
     <>
