@@ -48,7 +48,7 @@ const ClockNumber = styled.View`
   height: 100%;
   padding: 18px;
   text-align: center;
-  transform: rotate(${initRotation})
+  transform: rotate(${initRotation});
 `
 
 const Number1 = styled.Text`
@@ -113,7 +113,9 @@ const Clock = () => {
             <MinuteHand />
             <HourHand />
             <ClockNumber>
-              <Text>1</Text>
+              <Text style={{
+              transform:[{rotate: `${initRotation}`}]
+              }}>1</Text>
               <Text>2</Text>
 
               
