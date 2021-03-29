@@ -47,7 +47,7 @@ ${rotate('30deg')};
 `
 const SecondHand = styled.View`
   position: absolute;
-  bottom: 45%;
+  bottom: 50%;
   left: 50%;
   width: 3px;
   height: 50%;
@@ -59,7 +59,7 @@ const SecondHand = styled.View`
 `
 const MinuteHand = styled.View`
   position: absolute;
-  bottom: 45%;
+  bottom: 50%;
   left: 50%;
   width: 8px;
   height: 45%;
@@ -72,11 +72,11 @@ const MinuteHand = styled.View`
 
 const HourHand = styled.View`
   position: absolute;
-  bottom: 45%;
+  bottom: 50%;
   left: 50%;
-  width: 3px;
+  width: 10px;
   height: 40%;
-  background-color: red;
+  background-color: black;
   border: 1px solid white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -100,9 +100,21 @@ const AlarmClock = () => {
       <Container>
         <ClockBody>
           <Clock>
-            <SecondHand />
-            <MinuteHand />
-            <HourHand />
+            <SecondHand
+              style={{
+                transform: [{ translateX: "-3%" }],
+              }}
+            />
+            <MinuteHand
+              style={{
+                transform: [{ translateX: "-5%" }],
+              }}
+            />
+            <HourHand
+              style={{
+                transform: [{ translateX: "-5%" }],
+              }}
+            />
 
             <ClockNumber
               style={{
