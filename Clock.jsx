@@ -2,76 +2,8 @@ import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "./time.js"
 import styled from 'styled-components/native'
-import PropsNumeral from './PropsNumeral.js'
 
-const rotate = degrees => {
-  return `transform:rotate(${degrees})`
-}
 
-const Container = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100px;
-  background-color: rgb(238,235,235);
-  overflow: hidden;
-`
-
-const ClockBody = styled.View`
-  padding: 120px;
-  border: 10px solid red;
-`
-
-const Clock = styled.View`
-  width: 300px;
-  height: 300px;
-  background-color: rgba(102, 193, 230, 0.485);
-  border-radius: 150px;
-  border: 3px solid purple;
-  position: relative;
-`
-const ClockNumber = styled.View`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`
-const SecondHand = styled.View`
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  width: 3px;
-  height: 50%;
-  background-color: red;
-  border: 1px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  z-index: 11;
-`
-const MinuteHand = styled.View`
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  width: 8px;
-  height: 45%;
-  background-color: black;
-  border: 2px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  z-index: 10;
-`
-
-const HourHand = styled.View`
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  width: 10px;
-  height: 40%;
-  background-color: black;
-  border: 1px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  z-index: 9;
-`
 const AlarmClock = () => {
   const [hourRatio, setHourRatio] = useState(0)
   const [minuteRatio, setMinuteRatio] = useState(0)
@@ -214,8 +146,71 @@ const AlarmClock = () => {
   )
 }
 
-const styles = StyleSheet.create({
+const Container = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  background-color: rgb(238, 235, 235);
+  overflow: hidden;
+`
 
+const ClockBody = styled.View`
+  padding: 120px;
+  border: 10px solid red;
+`
+
+const Clock = styled.View`
+  width: 300px;
+  height: 300px;
+  background-color: rgba(102, 193, 230, 0.485);
+  border-radius: 150px;
+  border: 3px solid purple;
+  position: relative;
+`
+const ClockNumber = styled.View`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`
+const SecondHand = styled.View`
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 3px;
+  height: 50%;
+  background-color: red;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 11;
+`
+const MinuteHand = styled.View`
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 8px;
+  height: 45%;
+  background-color: black;
+  border: 2px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+`
+
+const HourHand = styled.View`
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 10px;
+  height: 40%;
+  background-color: black;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 9;
+`
+const styles = StyleSheet.create({
 
   number: {
     textAlign: 'center',
