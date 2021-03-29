@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { v4 as uuid4 } from 'uuid'
+import uuid from 'uuid-random'
 import {
   getAllTimeZones,
   showISO,
@@ -35,8 +35,8 @@ const WorldDigitalClockContainer = () => {
     <>
       {allTimeZones.map((worldclock) => (
         <WorldDigitalClock
-          key={uuid4()}
-          id={uuid4()}
+          key={uuid()}
+          id={uuid()}
           className="world-clock-container"
           unix={showISO(worldclock.timestamp)}
           zonename={formatZoneName(worldclock.zoneName)}
