@@ -18,8 +18,7 @@ const AlarmClock = () => {
 
   return (
     <>
-      <Container>
-        <ClockBody>
+      <ClockContainer> 
           <Clock>
             <SecondHand
               style={{
@@ -127,24 +126,19 @@ const AlarmClock = () => {
               <Text style={styles.number}>12</Text>
             </ClockNumber>
           </Clock>
-        </ClockBody>
-      </Container>
+      </ClockContainer>
     </>
   )
 }
 
-const Container = styled.View`
+const ClockContainer = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100px;
   background-color: rgb(238, 235, 235);
-  overflow: hidden;
-`
-
-const ClockBody = styled.View`
-  padding: 120px;
   border: 10px solid red;
+  overflow: hidden;
 `
 
 const Clock = styled.View`
