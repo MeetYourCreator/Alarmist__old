@@ -6,32 +6,35 @@ import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx'
 import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClockContainer.jsx'
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack'
+
+const Stack = createStackNavigator();
 
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
   return (
     <NavigationContainer>
-      <StackActions.Navigator>
-      
+      <Stack.Navigator>
           <Stack.Screen
-            name=''
+            name='Digital Local Clock'
             component={LocalDigitalClock}
-            options={{}}
+          options={{title: 'Digital Local Clock'}}
           />
         <Stack.Screen
-          name=''
+          name='Digital World Clock'
           component={WorldDigitalClockContainer}
-          options={{}}
+          options={{title: 'Digital World Clock'}}
         />
         <Stack.Screen
-          name=''
+          name='Analog Local Clock'
           component={AnalogClock}
-          options={{}}
+          options={{ title: 'Analog Local Clock'}}
           />
-      <StatusBar style="auto" />
-      </StackActions.Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
+    
+  
   );
 }
 
