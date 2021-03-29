@@ -22,19 +22,11 @@ const ClockBody = styled.View`
   border: 10px solid red;
 `
 
-const ClockEdge = styled.View`
-  background-color:rgba(255, 0, 85, 0.485);
-  border-top-right-radius: 250px;
-  border-bottom-right-radius: 250px;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 50px;
-  height: 700px;
-`
-const ClockFace = styled.View`
-  width: 375px;
-  height: 375px;
+const Clock = styled.View`
+  width: 300px;
+  height: 300px;
   background-color: rgba(102, 193, 230, 0.485);
-  border-radius: 175px;
+  border-radius: 150px;
   border: 3px solid purple;
   position: relative;
 `
@@ -42,13 +34,12 @@ const initRotation = `${ Math.PI / 12 }deg`
 
 const ClockNumber = styled.View`
   position: absolute;
-  font-size: 40px;
-  color: black;
+
   width: 100%;
   height: 100%;
-  padding: 18px;
+  font-size: 40px;
+  background-color: rgba(240,240,214,.1);
   text-align: center;
-  transform: rotate(${initRotation});
 `
 
 const Number1 = styled.Text`
@@ -91,7 +82,7 @@ const HourHand = styled.View`
   border-top-right-radius: 10px;
   z-index: 9;
 `
-const Clock = () => {
+const AlarmClock = () => {
   const [hourRatio, setHourRatio] = useState(0)
   const [minuteRatio, setMinuteRatio] = useState(0)
   const [secondRatio, setSecondRatio] = useState(0)
@@ -108,70 +99,71 @@ const Clock = () => {
     <>
       <Container>
         <ClockBody>
-          <ClockFace>
+          <Clock>
             <SecondHand />
             <MinuteHand />
             <HourHand />
+
             <ClockNumber>
-              <Text
-                style={{
-                  transform: [{ rotate: `${initRotation}` }],
-                }}
-              >
-                1
-              </Text>
+              <Text style={styles.number}>1</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>2</Text>
+              <Text style={styles.number}>2</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>3</Text>
+              <Text style={styles.number}>3</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>4</Text>
+              <Text style={styles.number}>4</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>5</Text>
+              <Text style={styles.number}>5</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>6</Text>
+              <Text style={styles.number}>6</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>7</Text>
+              <Text style={styles.number}>7</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>8</Text>
+              <Text style={styles.number}>8</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>9</Text>
+              <Text style={styles.number}>9</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>10</Text>
+              <Text style={styles.number}>10</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>11</Text>
+              <Text style={styles.number}>11</Text>
             </ClockNumber>
+
             <ClockNumber>
-              <Text>12</Text>
+              <Text style={styles.number}>12</Text>
             </ClockNumber>
-          </ClockFace>
+          </Clock>
         </ClockBody>
       </Container>
     </>
   )
 }
 
-// const styles = StyleSheet.create({
-//   clock: {},
+const styles = StyleSheet.create({
 
-//   clockFace: {
-//     width: 375,
-//     height: 375,
-//     backgroundColor: "#66c1e67c",
-//     borderRadius: 200,
-//     borderColor: "black",
-//     borderWidth: 3,
-//     position: "relative",
-//   },
-// })
-export default Clock
+
+  number: {
+    textAlign: 'center',
+    fontSize: 70,
+  },
+})
+export default AlarmClock
