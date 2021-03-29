@@ -104,51 +104,99 @@ const AlarmClock = () => {
             <MinuteHand />
             <HourHand />
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "30deg" }],
+              }}
+            >
               <Text style={styles.number}>1</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "60deg" }],
+              }}
+            >
               <Text style={styles.number}>2</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "90deg" }],
+              }}
+            >
               <Text style={styles.number}>3</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "120deg" }],
+              }}
+            >
               <Text style={styles.number}>4</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "150deg" }],
+              }}
+            >
               <Text style={styles.number}>5</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "180deg" }],
+              }}
+            >
               <Text style={styles.number}>6</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "210deg" }],
+              }}
+            >
               <Text style={styles.number}>7</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "240deg" }],
+              }}
+            >
               <Text style={styles.number}>8</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "270deg" }],
+              }}
+            >
               <Text style={styles.number}>9</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "300deg" }],
+              }}
+            >
               <Text style={styles.number}>10</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "330deg" }],
+              }}
+            >
               <Text style={styles.number}>11</Text>
             </ClockNumber>
 
-            <ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "360deg" }],
+              }}
+            >
               <Text style={styles.number}>12</Text>
             </ClockNumber>
           </Clock>
@@ -163,7 +211,7 @@ const styles = StyleSheet.create({
 
   number: {
     textAlign: 'center',
-    fontSize: 70,
+    fontSize: 40
   },
 })
 export default AlarmClock
