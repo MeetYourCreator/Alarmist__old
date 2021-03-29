@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "./time.js"
-import styled from 'styled-components/native'
-
+import styled from "styled-components/native"
 
 const AlarmClock = () => {
   const [hourRatio, setHourRatio] = useState(0)
@@ -27,10 +26,8 @@ const AlarmClock = () => {
                 transform: [{ translateY: "-25%" }],
 
                 transform: [{ rotate: `${secondRatio * 360}deg` }],
-                
               }}
             />
-
             <MinuteHand
               style={{
                 transform: [{ translateZ: "-50%" }],
@@ -43,7 +40,6 @@ const AlarmClock = () => {
                 transform: [{ rotate: `${hourRatio * 360}deg` }],
               }}
             />
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "30deg" }],
@@ -51,7 +47,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>1</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "60deg" }],
@@ -59,7 +54,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>2</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "90deg" }],
@@ -75,7 +69,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>4</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "150deg" }],
@@ -83,7 +76,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>5</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "180deg" }],
@@ -91,7 +83,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>6</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "210deg" }],
@@ -99,7 +90,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>7</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "240deg" }],
@@ -107,7 +97,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>8</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "270deg" }],
@@ -123,7 +112,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>10</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "330deg" }],
@@ -131,7 +119,6 @@ const AlarmClock = () => {
             >
               <Text style={styles.number}>11</Text>
             </ClockNumber>
-
             <ClockNumber
               style={{
                 transform: [{ rotate: "360deg" }],
@@ -211,10 +198,9 @@ const HourHand = styled.View`
   z-index: 9;
 `
 const styles = StyleSheet.create({
-
   number: {
-    textAlign: 'center',
-    fontSize: 40
+    textAlign: "center",
+    fontSize: 40,
   },
 })
 export default AlarmClock
