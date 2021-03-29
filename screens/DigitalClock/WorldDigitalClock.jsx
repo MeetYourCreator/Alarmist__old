@@ -19,31 +19,31 @@ const WorldDigitalClock = ({ id, unix, zonename, country }) => {
   )
 }
 
-const WorldClockContainer = styled.View`
+const WorldClockContainer = styled.SafeAreaView`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 `
 
 const Clock = styled.View`
   position: relative;
-  width: 150px;
+  width: 350px;
   height: auto;
-  border-width: 3px;
+  border-width: 8;
   border-color; #000000;
   border-radius: 15px;
   background-color: #151617;
 `
 const ClockText = styled.Text`
   display: flex;
-  margin: 40px 0px;
+  padding: 10px;
   text-shadow: 3px 3px 20px #f70300;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 70px;
   color: rgb(247, 1, 3);
 `
 const Location = styled.Text`

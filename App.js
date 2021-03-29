@@ -1,21 +1,37 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import AnalogClock from './screens/AnalogClock.jsx'
 import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx'
 import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClockContainer.jsx'
 import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
   return (
-    <View style={styles.container}>
-      <LocalDigitalClock />
-      <WorldDigitalClockContainer />
-      <AnalogClock />
+    <NavigationContainer>
+      <StackActions.Navigator>
       
+          <Stack.Screen
+            name=''
+            component={LocalDigitalClock}
+            options={{}}
+          />
+        <Stack.Screen
+          name=''
+          component={WorldDigitalClockContainer}
+          options={{}}
+        />
+        <Stack.Screen
+          name=''
+          component={AnalogClock}
+          options={{}}
+          />
       <StatusBar style="auto" />
-    </View>
+      </StackActions.Navigator>
+    </NavigationContainer>
   );
 }
 
