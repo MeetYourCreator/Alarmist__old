@@ -102,7 +102,8 @@ const AlarmClock = () => {
           <Clock>
             <SecondHand
               style={{
-                transform: [{ translateX: "-3%" }],
+                transform: [{ translate: "-50%" }],
+                transform: [{rotate: `${secondRatio * 360}deg`}]
               }}
             />
             <MinuteHand
