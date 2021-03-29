@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
-import { setHour, setMinute, setSecond } from "./time.js"
+import { setHour, setMinute, setSecond } from "../time.js"
 import styled from "styled-components/native"
 
-const AlarmClock = () => {
+const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(0)
   const [minuteRatio, setMinuteRatio] = useState(0)
   const [secondRatio, setSecondRatio] = useState(0)
@@ -197,4 +197,4 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
 })
-export default AlarmClock
+export default AnalogClock
