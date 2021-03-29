@@ -18,18 +18,18 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: '#fff',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
-  // number: {
-  //   position: 'absolute',
-  //   top: 0,
-  //   left: 50,
-  //   width: 5,
-  //   height: 15,
-  //   backgroundColor: 'black'
-  // }
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  number: {
+    position: 'absolute',
+    top: 0,
+    left: 50,
+    width: 5,
+    height: 15,
+    backgroundColor: 'black'
+  }
 });
