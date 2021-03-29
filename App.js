@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import AnalogClock from './screens/AnalogClock.jsx'
 import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx'
+import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClockContainer.jsx'
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 // Build for ios View is mapped to UIView
@@ -10,6 +11,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <LocalDigitalClock />
+      <WorldDigitalClockContainer />
       <AnalogClock />
       
       <StatusBar style="auto" />
