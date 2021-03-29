@@ -30,20 +30,10 @@ const Clock = styled.View`
   border: 3px solid purple;
   position: relative;
 `
-const initRotation = `${ Math.PI / 12 }deg`
-
 const ClockNumber = styled.View`
   position: absolute;
-
   width: 100%;
   height: 100%;
-  font-size: 40px;
-  background-color: rgba(240,240,214,.1);
-  text-align: center;
-`
-
-const Number1 = styled.Text`
-${rotate('30deg')};
 `
 const SecondHand = styled.View`
   position: absolute;
@@ -102,18 +92,23 @@ const AlarmClock = () => {
           <Clock>
             <SecondHand
               style={{
-                transform: [{ translate: "-50%" }],
-                transform: [{rotate: `${secondRatio * 360}deg`}]
+                transform: [{ translateY: "-25%" }],
+
+                transform: [{ rotate: `${secondRatio * 360}deg` }],
+                
               }}
             />
+
             <MinuteHand
               style={{
-                transform: [{ translateX: "-5%" }],
+                transform: [{ translateZ: "-50%" }],
+                transform: [{ rotate: `${minuteRatio * 360}deg` }],
               }}
             />
             <HourHand
               style={{
-                transform: [{ translateX: "-5%" }],
+                transform: [{ translateZ: "-50%" }],
+                transform: [{ rotate: `${hourRatio * 360}deg` }],
               }}
             />
 
