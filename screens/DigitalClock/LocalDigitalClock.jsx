@@ -43,13 +43,13 @@ const Clock = styled.View`
   position: relative;
   width: 350px;
   height: auto;
-  border: 3px solid #2d2d2d;
+  border: 8px solid #2d2d2d;
   border-radius: 15px;
   background-color: #151617;
 `
 const ClockText = styled.Text`
   display: flex;
-  margin: 20px
+  margin: 15px
   text-shadow: 3px 3px 20px #f70300;
   justify-content: center;
   align-items: center;
