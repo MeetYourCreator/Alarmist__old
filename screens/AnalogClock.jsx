@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "../services/time.js"
-import styled from "styled-components/native"
+import styled, {keyframes} from "styled-components"
+
 
 const AnalogClock = ({ navigate }) => {
   const [hourRatio, setHourRatio] = useState(0)
@@ -169,8 +170,7 @@ const ClockNumber = styled.View`
   height: 100%;
 `
 const SecondHand = styled.View`
-  position: absolute;
-  bottom: 50%;
+  top: 0%;
   left: 50%;
   width: 3px;
   height: 50%;
@@ -181,9 +181,8 @@ const SecondHand = styled.View`
   z-index: 11;
 `
 const MinuteHand = styled.View`
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
+  top: -45%;
+  left: 45%;
   width: 8px;
   height: 45%;
   background-color: black;
@@ -194,9 +193,8 @@ const MinuteHand = styled.View`
 `
 
 const HourHand = styled.View`
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
+  top: -95%;
+  left: 45%;
   width: 10px;
   height: 40%;
   background-color: black;
@@ -204,6 +202,10 @@ const HourHand = styled.View`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: 9;
+`
+
+const ClockCenter = styled.View`
+
 `
 const styles = StyleSheet.create({
   number: {
