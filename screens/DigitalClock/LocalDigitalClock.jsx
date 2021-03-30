@@ -22,11 +22,6 @@ const LocalDigitalClock = ({ navigation }) => {
         </Clock>
         <Location>LocalTime</Location>
       </LocalClockContainer>
-      <Button
-        title="Digital World Clock"
-        onPress={() => navigation.navigate('Digital World Clock',)}
-      ></Button>
-      <SearchBar />
     </>
   )
 }
@@ -36,14 +31,6 @@ const LocalClockContainer = styled.View`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top-width: 2px;
-  border-top-color: #fac931;
-  border-right-width: 2px;
-  border-right-color: #fac931;
-  border-bottom-width: 2px;
-  border-bottom-color: #fac931;
-  border-left-width: 2px;
-  border-left-color: #fac931;
   padding: 40px;
 `
 const Clock = styled.View`
@@ -56,11 +43,12 @@ const Clock = styled.View`
 `
 const ClockText = styled.Text`
   display: flex;
-  margin: 15px
+  margin: 15px;
   text-shadow: 3px 3px 20px #f70300;
   justify-content: center;
   align-items: center;
-  font-size: 75px;
+  text-align: center;
+  font-size: 65px;
   color: rgb(247, 1, 3);
   }
 `

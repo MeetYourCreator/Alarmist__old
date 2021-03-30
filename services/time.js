@@ -49,7 +49,7 @@ export const getAllTimeZones = async () => {
 
 export const showISO = (timestampMS, styleLight, styleDark) => {
   const zoneISO = new Date(timestampMS * 1000).toISOString();
-  const zoneISOhhmmss = zoneISO.slice(11, 19)
+  const zoneISOhhmmss = zoneISO.slice(11, 16)
   return zoneISOhhmmss
 }
 

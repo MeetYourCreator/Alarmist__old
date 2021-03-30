@@ -4,6 +4,12 @@ import { getAllTimeZones, showISO } from "../../../services/time.js"
 import { formatZoneName } from '../../../services/etc.js'
 import WorldDigitalClock from "./WorldDigitalClock.jsx"
 import SearchBar from '../../../components/SearchBar.jsx'
+import styled from 'styled-components'
+
+const TestStyleWrapper = styled.SafeAreaView`
+  background-color: #ffff02;
+  overflow: visible;
+`
 
 const WorldDigitalClockContainer = ({ navigation }) => {
   const [allTimeZones, setAllTimeZones] = useState([])
@@ -16,7 +22,7 @@ const WorldDigitalClockContainer = ({ navigation }) => {
   console.log("%c%s", "color: blue; font-weight: 700", "1-before useEffect")
   useEffect(() => {
     console.log("3-inside useEffect")
-    setTimeout(fetchWorldTimeZones, 1000)
+    setTimeout(fetchWorldTimeZones, 20000)
     console.log("4-after setTimeout")
   })
   console.log("2-after useEffect")
@@ -31,16 +37,18 @@ const WorldDigitalClockContainer = ({ navigation }) => {
 
   return (
     <>
-      {allTimeZones.map((worldclock) => (
-        <WorldDigitalClock
-          key={uuid()}
-          id={uuid()}
-          className="world-clock-container"
-          unix={showISO(worldclock.timestamp)}
-          zonename={formatZoneName(worldclock.zoneName)}
-          country={worldclock.countryName}
-        />
-      ))}
+      <TestStyleWrapper>
+        {allTimeZones.map((worldclock) => (
+          <WorldDigitalClock
+            key={uuid()}
+            id={uuid()}
+            className="world-clock-container"
+            unix={showISO(worldclock.timestamp)}
+            zonename={formatZoneName(worldclock.zoneName)}
+            country={worldclock.countryName}
+          />
+        ))}
+      </TestStyleWrapper>
     </>
   )
 }

@@ -43,7 +43,8 @@ const ClockText = styled.Text`
   text-shadow: 3px 3px 20px #f70300;
   justify-content: center;
   align-items: center;
-  font-size: 70px;
+  text-align: center;
+  font-size: 80px;
   color: rgb(247, 1, 3);
 `
 const Location = styled.Text`

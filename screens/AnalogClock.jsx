@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "../services/time.js"
 import styled from "styled-components/native"
 
-const AnalogClock = () => {
+const AnalogClock = ({ navigate }) => {
   const [hourRatio, setHourRatio] = useState(0)
   const [minuteRatio, setMinuteRatio] = useState(0)
   const [secondRatio, setSecondRatio] = useState(0)
@@ -136,12 +136,11 @@ const ClockContainer = styled.View`
   justify-content: center;
   align-items: center;
   min-height: 100px;
-  background-color: rgb(238, 235, 235);
-  border: 10px solid red;
-  overflow: hidden;
+  padding-top: 20px;
+  
 `
 
-const Clock = styled.View`
+const Clock = styled.SafeAreaView`
   width: 300px;
   height: 300px;
   background-color: rgba(102, 193, 230, 0.485);
