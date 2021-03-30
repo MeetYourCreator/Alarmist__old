@@ -28,6 +28,7 @@ const LocalDigitalClock = ({ navigation }) => {
 
 const LocalClockContainer = styled.View`
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;

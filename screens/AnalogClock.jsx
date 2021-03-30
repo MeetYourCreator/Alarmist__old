@@ -133,6 +133,7 @@ const AnalogClock = ({ navigate }) => {
 
 const ClockContainer = styled.View`
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   min-height: 100px;

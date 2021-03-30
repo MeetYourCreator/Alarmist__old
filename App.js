@@ -26,17 +26,17 @@ export default function App() {
         <Stack.Screen
           name='Digital Local Clock'
           component={LocalDigitalClock}
-          options={{ title: 'Digital Local Clock' }}
+          options={{ title: 'Digital Alarmist' }}
         />
         <Stack.Screen
           name='Digital World Clock'
           component={WorldDigitalClockContainer}
-          options={{ title: 'Digital World Clock' }}
+          options={{ title: 'World Alarmist' }}
         />
         <Stack.Screen
           name='Analog Clock'
           component={AnalogClock}
-          options={{ title: 'Analog Clock' }}
+          options={{ title: 'Analog Alarmist' }}
         />
       </Stack.Navigator>
       </NavigationContainer>

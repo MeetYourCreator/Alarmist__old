@@ -7,15 +7,15 @@ const HomeScreen = ({ navigation }) => {
   return (
     <>
       <Button
-        title="Local Digital Clock"
+        title="Digital Alarmist"
         onPress={() => navigation.navigate("Digital Local Clock")}
       ></Button>
       <Button
-        title="Local Analog Clock"
+        title="Analog Alarmist"
         onPress={() => navigation.navigate("Analog Clock")}
       ></Button>
       <Button
-        title="World Digital Clock"
+        title="World Alarmist"
         onPress={() => navigation.navigate("Digital World Clock")}
       ></Button>
     </>
