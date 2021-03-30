@@ -3,6 +3,8 @@ import { Button, Text, View, SafeAreaView, StyleSheet } from "react-native"
 import styled from "styled-components"
 import { showLocalTime } from "../../time.js"
 
+import SearchBar from '../../components/SearchBar.jsx'
+
 const LocalDigitalClock = ({ navigation }) => {
   const [localTime, setLocalTime] = useState(showLocalTime())
 
@@ -24,6 +26,7 @@ const LocalDigitalClock = ({ navigation }) => {
         title="Digital World Clock"
         onPress={() => navigation.navigate('Digital World Clock',)}
       ></Button>
+      <SearchBar />
     </>
   )
 }
