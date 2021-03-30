@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react'
-import { Text, View, SafeAreaView, StyleSheet } from 'react-native'
-import styled from 'styled-components'
-import {showLocalTime} from '../../time.js'
+import React, { useEffect, useState } from "react"
+import { Button, Text, View, SafeAreaView, StyleSheet } from "react-native"
+import styled from "styled-components"
+import { showLocalTime } from "../../time.js"
 
-const LocalDigitalClock = () => {
+const LocalDigitalClock = ({ navigation }) => {
   const [localTime, setLocalTime] = useState(showLocalTime())
 
   useEffect(() => {
@@ -20,6 +20,10 @@ const LocalDigitalClock = () => {
         </Clock>
         <Location>LocalTime</Location>
       </LocalClockContainer>
+      <Button
+        title="Digital World Clock"
+        onPress={() => navigation.navigate('Digital World Clock',)}
+      ></Button>
     </>
   )
 }
@@ -63,7 +67,7 @@ const Location = styled.Text`
   margin-bottom: 5px;
   margin-left: 7px;
   border-top-width: 2px;
-  
+
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -72,4 +76,4 @@ const Location = styled.Text`
   font-size: 13px;
   font-variant: small-caps;
 `
-export default LocalDigitalClock;
+export default LocalDigitalClock

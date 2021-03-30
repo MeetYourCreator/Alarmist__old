@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 import { Text, View, SafeAreaView, StyleSheet } from "react-native"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const WorldDigitalClock = ({ id, unix, zonename, country }) => {
   return (
@@ -61,4 +61,4 @@ const Location = styled.Text`
   font-size: 13px;
   font-variant: small-caps;
 `
-export default WorldDigitalClock;
+export default WorldDigitalClock
