@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
-import { setHour, setMinute, setSecond } from "../time.js"
+import { setHour, setMinute, setSecond } from "../services/time.js"
 import styled from "styled-components/native"
 
 const AnalogClock = () => {

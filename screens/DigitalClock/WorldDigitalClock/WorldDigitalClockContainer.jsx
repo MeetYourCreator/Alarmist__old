@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
 import uuid from "uuid-random"
-import { getAllTimeZones, showISO, formatZoneName } from "../../../time.js"
+import { getAllTimeZones, showISO } from "../../../services/time.js"
+import { formatZoneName } from '../../../services/etc.js'
 import WorldDigitalClock from "./WorldDigitalClock.jsx"
+import SearchBar from '../../../components/SearchBar.jsx'
 
 const WorldDigitalClockContainer = ({ navigation }) => {
   const [allTimeZones, setAllTimeZones] = useState([])

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Button, Text, View, SafeAreaView, StyleSheet } from "react-native"
 import styled from "styled-components"
-import { showLocalTime } from "../../time.js"
+import { showLocalTime } from "../../services/time.js"
 
 import SearchBar from '../../components/SearchBar.jsx'
 
