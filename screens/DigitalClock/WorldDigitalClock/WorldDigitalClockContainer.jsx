@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import uuid from "uuid-random"
-import { getAllTimeZones, showISO, formatZoneName } from "../../time.js"
+import { getAllTimeZones, showISO, formatZoneName } from "../../../time.js"
 import WorldDigitalClock from "./WorldDigitalClock.jsx"
 
 const WorldDigitalClockContainer = ({ navigation }) => {
