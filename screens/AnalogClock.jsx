@@ -181,8 +181,8 @@ const SecondHand = styled.View`
   z-index: 11;
 `
 const MinuteHand = styled.View`
-  top: -45%;
-  left: 45%;
+  top: -50%;
+  left: 47%;
   width: 8px;
   height: 45%;
   background-color: black;
