@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen
           name='Home'
           component={HomeScreen}
-          options={{ title: 'Choose Your Clock' }}
+          options={{ title: 'Choose Your Alarmist Clock' }}
         />
         <Stack.Screen
           name='Digital Local Clock'
@@ -43,20 +43,3 @@ export default function App() {
   
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  number: {
-    position: 'absolute',
-    top: 0,
-    left: 50,
-    width: 5,
-    height: 15,
-    backgroundColor: 'black'
-  }
-});

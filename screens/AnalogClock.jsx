@@ -20,6 +20,7 @@ const AnalogClock = ({ navigate }) => {
   return (
     <>
       <ClockContainer>
+        <ClockCenter />
         <Clock>
           <SecondHand
             style={{
@@ -205,6 +206,10 @@ const HourHand = styled.View`
 `
 
 const ClockCenter = styled.View`
+width: 40px;
+height: 40px;
+border-radius: 20;
+background-color: black;
 `
 const styles = StyleSheet.create({
   number: {
