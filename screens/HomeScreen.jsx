@@ -1,26 +1,35 @@
 import React from 'react'
-import { Button, Text, View, SafeAreaView, StyleSheet } from "react-native"
+import { Button, TouchableOpacity, Text, View, SafeAreaView, StyleSheet } from "react-native"
+import AppButton from '../components/AppButton.jsx'
 import styled from 'styled-components'
 
 const HomeScreen = ({ navigation }) => {
 
   return (
     <>
-      <Button
+      <AppButton
         title="Digital Alarmist"
         onPress={() => navigation.navigate("Digital Local Clock")}
-      ></Button>
-      <Button
+      ></AppButton>
+      <AppButton
         title="Analog Alarmist"
         onPress={() => navigation.navigate("Analog Clock")}
-      ></Button>
-      <Button
+      ></AppButton>
+      <AppButton
         title="World Alarmist"
         onPress={() => navigation.navigate("Digital World Clock")}
-      ></Button>
+      ></AppButton>
     </>
   )
 
 }
 
+const styles = StyleSheet.create({
+  button: {
+    width: '200px',
+    backgroundColor: 'red',
+    color: 'black',
+    fontSize: 35,
+  }
+})
 export default HomeScreen;
