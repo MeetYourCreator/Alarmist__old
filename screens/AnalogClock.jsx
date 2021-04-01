@@ -158,17 +158,19 @@ const ClockContainer = styled.View`
 `
 
 const Clock = styled.SafeAreaView`
-  width: 300px;
-  height: 300px;
+  width: 325px;
+  height: 325px;
   background-color: rgba(102, 193, 230, 0.485);
-  border-radius: 150px;
+  border-radius: 160px;
   border: 3px solid purple;
   position: relative;
+  padding: 30px;
 `
 const ClockNumber = styled.View`
   position: absolute;
   width: 100%;
   height: 100%;
+  paddingTop: 5;
 `
 const SecondHand = styled.View`
   top: 0%;
@@ -183,7 +185,7 @@ const SecondHand = styled.View`
 `
 const MinuteHand = styled.View`
   top: -50%;
-  left: 47%;
+  left: 50%;
   width: 8px;
   height: 45%;
   background-color: black;
@@ -195,21 +197,24 @@ const MinuteHand = styled.View`
 
 const HourHand = styled.View`
   top: -95%;
-  left: 45%;
+  left: 50%;
   width: 10px;
   height: 40%;
   background-color: black;
-  border: 1px solid white;
+  border: 2px solid white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: 9;
 `
 
 const ClockCenter = styled.View`
-width: 40px;
-height: 40px;
+top: 23%;
+left: 0%;
+width: 30px;
+height: 30px;
 border-radius: 20;
 background-color: black;
+z-index: 20;
 `
 const styles = StyleSheet.create({
   number: {
