@@ -205,7 +205,6 @@ const HourHand = styled.View`
 `
 
 const ClockCenter = styled.View`
-
 `
 const styles = StyleSheet.create({
   number: {
