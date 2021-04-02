@@ -24,7 +24,7 @@ const WorldDigitalClockContainer = ({ navigation }) => {
     console.log("3-inside useEffect")
     setTimeout(fetchWorldTimeZones, 20000)
     console.log("4-after setTimeout")
-  })
+  }, [])
   console.log("2-after useEffect")
 
   const fetchWorldTimeZones = async () => {

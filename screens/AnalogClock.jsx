@@ -214,6 +214,8 @@ width: 40px;
 height: 40px;
 border-radius: 20px;
 background-color: black;
+border-width: 2px;
+border-color: white;
 z-index: 20;
 `
 const styles = StyleSheet.create({

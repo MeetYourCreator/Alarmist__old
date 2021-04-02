@@ -32,7 +32,7 @@ const Clock = styled.View`
   position: relative;
   width: 350px;
   height: auto;
-  border-width: 8;
+  border-width: 8px;
   border-color; #000000;
   border-radius: 15px;
   background-color: #151617;
