@@ -27,10 +27,10 @@ const AnalogClock = ({ navigate }) => {
             <SecondHand
               style={{
                 transform: [
-                  { translateY: 75 },
+                  { translateY: 70 },
                   { translateX: 0 },
                   { rotate: `${secondRatio * 360}deg` },
-                  { translateY: -75 },
+                  { translateY: -70 },
                   { translateX: 0 },
                 ],
               }}
@@ -38,10 +38,10 @@ const AnalogClock = ({ navigate }) => {
             <MinuteHand
               style={{
                 transform: [
-                  { translateY: 75 },
+                  { translateY: 68 },
                   { translateX: 0 },
                   { rotate: `${minuteRatio * 360}deg` },
-                  { translateY: -75 },
+                  { translateY: -68 },
                   { translateX: 5},
                 ],
               }}
@@ -49,11 +49,11 @@ const AnalogClock = ({ navigate }) => {
             <HourHand
               style={{
                 transform: [
-                  { translateY: 75 },
-                  { translateX: -10 },
+                  { translateY: 70 },
+                  { translateX: -25 },
                   { rotate: `${hourRatio * 360}deg` },
-                  { translateY: -75 },
-                  { translateX: -10 },
+                  { translateY: -70 },
+                  { translateX: -20 },
                 ],
               }}
             />

@@ -9,17 +9,17 @@ const HomeScreen = ({ navigation }) => {
     <>
       <SafeAreaView style={styles.screenContainer}>
         <AppButton
-          title="Digital Alarmist"
-          onPress={() => navigation.navigate("Digital Local Clock")}
-        ></AppButton>
-        <AppButton
-          title="Analog Alarmist"
+          title="12 Hour Alarmist"
           onPress={() => navigation.navigate("Analog Clock")}
         ></AppButton>
         <AppButton
+          title="24 Hour Alarmist"
+          onPress={() => navigation.navigate("Digital Local Clock")}
+        ></AppButton>
+        {/* <AppButton
           title="World Alarmist"
           onPress={() => navigation.navigate("Digital World Clock")}
-        ></AppButton>
+        ></AppButton> */}
       </SafeAreaView>
     </>
   )
