@@ -176,7 +176,7 @@ const SecondHand = styled.View`
   bottom: 0%;
   left: 50%;
   width: 3px;
-  height: 50%;
+  height: 45%;
   background-color: red;
   border: 1px solid white;
   border-top-left-radius: 10px;
@@ -184,7 +184,7 @@ const SecondHand = styled.View`
   z-index: 11;
 `
 const MinuteHand = styled.View`
-  bottom: 50%;
+  bottom: 45%;
   left: 50%;
   width: 8px;
   height: 45%;
@@ -196,7 +196,7 @@ const MinuteHand = styled.View`
 `
 
 const HourHand = styled.View`
-  bottom: 90%;
+  bottom: 85%;
   left: 50%;
   width: 10px;
   height: 40%;
@@ -219,7 +219,8 @@ z-index: 20;
 const styles = StyleSheet.create({
   number: {
     textAlign: "center",
-    fontSize: 40,
+    fontSize: 30,
+    marginTop: 5
   },
 })
 export default AnalogClock
