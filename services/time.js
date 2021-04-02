@@ -5,7 +5,6 @@ export const setHour = () => {
   const secondRatio = date.getSeconds() / 60;
   const minuteRatio = (secondRatio + date.getMinutes()) / 60;
   const hourRatio = (minuteRatio + date.getHours()) / 12;
-
   return hourRatio
 }
 
@@ -13,14 +12,12 @@ export const setMinute = () => {
   const date = new Date();
   const secondRatio = date.getSeconds() / 60;
   const minuteRatio = (secondRatio + date.getMinutes()) / 60;
-
   return minuteRatio
 }
 
 export const setSecond = () => {
   const date = new Date();
   const secondRatio = date.getSeconds() / 60;
-
   return secondRatio
 
 }

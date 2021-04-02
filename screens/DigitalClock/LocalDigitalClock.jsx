@@ -3,8 +3,6 @@ import { Button, Text, View, SafeAreaView, StyleSheet } from "react-native"
 import styled from "styled-components"
 import { showLocalTime } from "../../services/time.js"
 
-import SearchBar from '../../components/SearchBar.jsx'
-
 const LocalDigitalClock = ({ navigation }) => {
   const [localTime, setLocalTime] = useState(showLocalTime())
 

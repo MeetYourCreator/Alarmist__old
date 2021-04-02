@@ -5,144 +5,147 @@ import styled, {keyframes} from "styled-components"
 
 
 const AnalogClock = ({ navigate }) => {
-  const [hourRatio, setHourRatio] = useState('')
-  const [minuteRatio, setMinuteRatio] = useState('')
-  const [secondRatio, setSecondRatio] = useState('')
-
+  const [hourRatio, setHourRatio] = useState(setHour())
+  const [minuteRatio, setMinuteRatio] = useState(setMinute())
+  const [secondRatio, setSecondRatio] = useState(setSecond())
+  
   useEffect(() => {
     setInterval(() => {
       setHourRatio(setHour())
       setMinuteRatio(setMinute())
       setSecondRatio(setSecond())
-    }, 1000)
+    }, 1000);
+
   }, [])
 
   return (
     <>
-      <ClockContainer>
-        <ClockCenter />
-        <Clock>
-          <SecondHand
-            style={{
-              transform: [
-                { translateY: 75 },
-                { translateX: -5 },
-                { rotate: `${secondRatio * 360}deg` },
-                { translateY: -75 },
-                { translateX: 5 },
-              ],
-            }}
-          />
-          <MinuteHand
-            style={{
-              transform: [
-                { translateY: 75 },
-                { translateX: -5 },
-                { rotate: `${minuteRatio * 360}deg` },
-                { translateY: -75 },
-                { translateX: 5 },
-              ],
-            }}
-          />
-          <HourHand
-            style={{
-              transform: [
-                { translateY: 75 },
-                { translateX: -5 },
-                { rotate: `${hourRatio * 360}deg` },
-                { translateY: -75 },
-                { translateX: 5 },
-              ],
-            }}
-          />
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "30deg" }],
-            }}
-          >
-            <Text style={styles.number}>1</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "60deg" }],
-            }}
-          >
-            <Text style={styles.number}>2</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "90deg" }],
-            }}
-          >
-            <Text style={styles.number}>3</Text>
-          </ClockNumber>
+     
+        <ClockContainer>
+          <ClockCenter />
+          <Clock>
+            <SecondHand
+              style={{
+                transform: [
+                  { translateY: 75 },
+                  { translateX: -5 },
+                  { rotate: `${secondRatio * 360}deg` },
+                  { translateY: -75 },
+                  { translateX: 5 },
+                ],
+              }}
+            />
+            <MinuteHand
+              style={{
+                transform: [
+                  { translateY: 75 },
+                  { translateX: -5 },
+                  { rotate: `${minuteRatio * 360}deg` },
+                  { translateY: -75 },
+                  { translateX: 5 },
+                ],
+              }}
+            />
+            <HourHand
+              style={{
+                transform: [
+                  { translateY: 75 },
+                  { translateX: -5 },
+                  { rotate: `${hourRatio * 360}deg` },
+                  { translateY: -75 },
+                  { translateX: 5 },
+                ],
+              }}
+            />
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "30deg" }],
+              }}
+            >
+              <Text style={styles.number}>1</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "60deg" }],
+              }}
+            >
+              <Text style={styles.number}>2</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "90deg" }],
+              }}
+            >
+              <Text style={styles.number}>3</Text>
+            </ClockNumber>
 
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "120deg" }],
-            }}
-          >
-            <Text style={styles.number}>4</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "150deg" }],
-            }}
-          >
-            <Text style={styles.number}>5</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "180deg" }],
-            }}
-          >
-            <Text style={styles.number}>6</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "210deg" }],
-            }}
-          >
-            <Text style={styles.number}>7</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "240deg" }],
-            }}
-          >
-            <Text style={styles.number}>8</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "270deg" }],
-            }}
-          >
-            <Text style={styles.number}>9</Text>
-          </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "120deg" }],
+              }}
+            >
+              <Text style={styles.number}>4</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "150deg" }],
+              }}
+            >
+              <Text style={styles.number}>5</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "180deg" }],
+              }}
+            >
+              <Text style={styles.number}>6</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "210deg" }],
+              }}
+            >
+              <Text style={styles.number}>7</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "240deg" }],
+              }}
+            >
+              <Text style={styles.number}>8</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "270deg" }],
+              }}
+            >
+              <Text style={styles.number}>9</Text>
+            </ClockNumber>
 
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "300deg" }],
-            }}
-          >
-            <Text style={styles.number}>10</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "330deg" }],
-            }}
-          >
-            <Text style={styles.number}>11</Text>
-          </ClockNumber>
-          <ClockNumber
-            style={{
-              transform: [{ rotate: "360deg" }],
-            }}
-          >
-            <Text style={styles.number}>12</Text>
-          </ClockNumber>
-        </Clock>
-      </ClockContainer>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "300deg" }],
+              }}
+            >
+              <Text style={styles.number}>10</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "330deg" }],
+              }}
+            >
+              <Text style={styles.number}>11</Text>
+            </ClockNumber>
+            <ClockNumber
+              style={{
+                transform: [{ rotate: "360deg" }],
+              }}
+            >
+              <Text style={styles.number}>12</Text>
+            </ClockNumber>
+          </Clock>
+        </ClockContainer>
+     
     </>
   )
 }
@@ -183,7 +186,7 @@ const SecondHand = styled.View`
 const MinuteHand = styled.View`
   bottom: 45%;
   left: 50%;
-  width: 8px;
+  width: 9px;
   height: 45%;
   background-color: black;
   border: 2px solid white;
@@ -193,10 +196,10 @@ const MinuteHand = styled.View`
 `
 
 const HourHand = styled.View`
-  bottom: 85%;
+  bottom: 75%;
   left: 50%;
   width: 10px;
-  height: 40%;
+  height: 30%;
   background-color: black;
   border: 2px solid white;
   border-top-left-radius: 10px;
@@ -209,7 +212,7 @@ bottom: -23%;
 left: 0%;
 width: 40px;
 height: 40px;
-border-radius: 20;
+border-radius: 20px;
 background-color: black;
 z-index: 20;
 `
