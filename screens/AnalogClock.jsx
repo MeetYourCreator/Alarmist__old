@@ -10,12 +10,12 @@ const AnalogClock = ({ navigate }) => {
   const [secondRatio, setSecondRatio] = useState(setSecond())
   
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setHourRatio(setHour())
       setMinuteRatio(setMinute())
       setSecondRatio(setSecond())
     }, 1000);
-
+    return () => clearInterval(interval)
   }, [])
 
   return (
