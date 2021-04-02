@@ -28,10 +28,10 @@ const AnalogClock = ({ navigate }) => {
               style={{
                 transform: [
                   { translateY: 75 },
-                  { translateX: -5 },
+                  { translateX: 0 },
                   { rotate: `${secondRatio * 360}deg` },
                   { translateY: -75 },
-                  { translateX: 5 },
+                  { translateX: 0 },
                 ],
               }}
             />
@@ -39,10 +39,10 @@ const AnalogClock = ({ navigate }) => {
               style={{
                 transform: [
                   { translateY: 75 },
-                  { translateX: -5 },
+                  { translateX: 0 },
                   { rotate: `${minuteRatio * 360}deg` },
                   { translateY: -75 },
-                  { translateX: 5 },
+                  { translateX: 5},
                 ],
               }}
             />
@@ -50,10 +50,10 @@ const AnalogClock = ({ navigate }) => {
               style={{
                 transform: [
                   { translateY: 75 },
-                  { translateX: -5 },
+                  { translateX: -10 },
                   { rotate: `${hourRatio * 360}deg` },
                   { translateY: -75 },
-                  { translateX: 5 },
+                  { translateX: 0 },
                 ],
               }}
             />
