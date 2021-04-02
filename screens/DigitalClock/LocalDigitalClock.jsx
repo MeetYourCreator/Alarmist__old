@@ -57,7 +57,6 @@ const Location = styled.Text`
   margin-bottom: 5px;
   margin-left: 7px;
   border-top-width: 2px;
-
   text-align: center;
   justify-content: center;
   align-items: center;

@@ -53,7 +53,7 @@ const AnalogClock = ({ navigate }) => {
                   { translateX: -10 },
                   { rotate: `${hourRatio * 360}deg` },
                   { translateY: -75 },
-                  { translateX: 0 },
+                  { translateX: -10 },
                 ],
               }}
             />

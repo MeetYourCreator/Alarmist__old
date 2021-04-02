@@ -36,11 +36,13 @@ export const showLocalTime = () => {
 
 }
 
+
 export const getAllTimeZones = async () => {
   const url = `https://api.timezonedb.com/v2.1/list-time-zone?key=7KJHTP7QS6J7&format=json`;
   const response = await axios.get(url);
-  console.log('5-inside getAllTimeZones()')
-  console.log('%c%s', 'color: green; background: yellow', 'response:', response)
+  // console.log('5-inside getAllTimeZones()')
+  // console.log('%c%s', 'color: green; background: yellow', 'response:', response)
+
   return response.data.zones;
 }
 
