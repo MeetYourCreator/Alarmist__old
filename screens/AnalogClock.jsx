@@ -5,9 +5,9 @@ import styled, {keyframes} from "styled-components"
 
 
 const AnalogClock = ({ navigate }) => {
-  const [hourRatio, setHourRatio] = useState(0)
-  const [minuteRatio, setMinuteRatio] = useState(0)
-  const [secondRatio, setSecondRatio] = useState(0)
+  const [hourRatio, setHourRatio] = useState('')
+  const [minuteRatio, setMinuteRatio] = useState('')
+  const [secondRatio, setSecondRatio] = useState('')
 
   useEffect(() => {
     setInterval(() => {
@@ -156,21 +156,18 @@ const ClockContainer = styled.View`
   padding-top: 20px;
   
 `
-
-const Clock = styled.SafeAreaView`
+const Clock = styled.View`
   width: 325px;
   height: 325px;
   background-color: rgba(102, 193, 230, 0.485);
-  border-radius: 160px;
-  border: 3px solid purple;
+  border-radius: 170px;
+  border: 5px solid purple;
   position: relative;
-  padding: 30px;
 `
 const ClockNumber = styled.View`
   position: absolute;
   width: 100%;
   height: 100%;
-  paddingTop: 5;
 `
 const SecondHand = styled.View`
   bottom: 0%;
@@ -220,7 +217,7 @@ const styles = StyleSheet.create({
   number: {
     textAlign: "center",
     fontSize: 30,
-    marginTop: 5
+    marginTop: 10
   },
 })
 export default AnalogClock
