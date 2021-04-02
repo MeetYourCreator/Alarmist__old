@@ -173,7 +173,7 @@ const ClockNumber = styled.View`
   paddingTop: 5;
 `
 const SecondHand = styled.View`
-  top: 0%;
+  bottom: 0%;
   left: 50%;
   width: 3px;
   height: 50%;
@@ -184,7 +184,7 @@ const SecondHand = styled.View`
   z-index: 11;
 `
 const MinuteHand = styled.View`
-  top: -50%;
+  bottom: 50%;
   left: 50%;
   width: 8px;
   height: 45%;
@@ -196,7 +196,7 @@ const MinuteHand = styled.View`
 `
 
 const HourHand = styled.View`
-  top: -95%;
+  bottom: 90%;
   left: 50%;
   width: 10px;
   height: 40%;
@@ -208,10 +208,10 @@ const HourHand = styled.View`
 `
 
 const ClockCenter = styled.View`
-top: 23%;
+bottom: -23%;
 left: 0%;
-width: 30px;
-height: 30px;
+width: 40px;
+height: 40px;
 border-radius: 20;
 background-color: black;
 z-index: 20;
