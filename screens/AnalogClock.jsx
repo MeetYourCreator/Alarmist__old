@@ -50,7 +50,7 @@ const AnalogClock = ({ navigate }) => {
               style={{
                 transform: [
                   { translateY: 70 },
-                  { translateX: -25 },
+                  { translateX: -15 },
                   { rotate: `${hourRatio * 360}deg` },
                   { translateY: -70 },
                   { translateX: -20 },
@@ -196,8 +196,8 @@ const MinuteHand = styled.View`
 `
 
 const HourHand = styled.View`
-  bottom: 75%;
-  left: 50%;
+  bottom: 90%;
+  left: 60%;
   width: 10px;
   height: 30%;
   background-color: black;
