@@ -2,11 +2,16 @@ import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "../services/time.js"
 import styled, {keyframes} from "styled-components"
+import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js"
 import { Clock } from '../components/styled/analog/Clock.js'
-import { ClockNumber } from '../components/styled/analog/ClockNumber.js'
-import {SecondHand} from '../components/styled/analog/SecondHand.js'
+import { SecondHand } from '../components/styled/analog/SecondHand.js'
+import { MinuteHand } from "../components/styled/analog/MinuteHand.js"
+import { HourHand } from "../components/styled/analog/HourHand.js"
+import { ClockNumber } from "../components/styled/analog/ClockNumber.js"
+import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
 
-const AnalogClock = ({ navigate }) => {
+
+const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
@@ -22,7 +27,7 @@ const AnalogClock = ({ navigate }) => {
 
   return (
     <>
-      <ClockContainer>
+      <AnalogClockContainer>
         <ClockCenter />
         <Clock
           color="blue"
@@ -148,20 +153,19 @@ const AnalogClock = ({ navigate }) => {
             <Text style={styles.number}>12</Text>
           </ClockNumber>
         </Clock>
-      </ClockContainer>
+      </AnalogClockContainer>
     </>
   )
 }
 
-const ClockContainer = styled.View`
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  min-height: 100px;
-  padding-top: 20px;
-  
-`
+// const AnalogClockContainer = styled.View`
+//   display: flex;
+//   flex: 1;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100px;
+//   padding-top: 20px; 
+// `
 // const Clock = styled.View`
 //   width: 325px;
 //   height: 325px;
@@ -189,41 +193,42 @@ const ClockContainer = styled.View`
 //   z-index: 11;
 // `
 
-const MinuteHand = styled.View`
-  bottom: 45%;
-  left: 50%;
-  width: 9px;
-  height: 45%;
-  background-color: black;
-  border: 2px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  z-index: 10;
-`
+// const MinuteHand = styled.View`
+//   bottom: 45%;
+//   left: 50%;
+//   width: 9px;
+//   height: 45%;
+//   background-color: black;
+//   border: 2px solid white;
+//   border-top-left-radius: 10px;
+//   border-top-right-radius: 10px;
+//   z-index: 10;
+// `
 
-const HourHand = styled.View`
-  bottom: 85%;
-  left: 60%;
-  width: 10px;
-  height: 30%;
-  background-color: black;
-  border: 2px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  z-index: 9;
-`
+// const HourHand = styled.View`
+//   bottom: 85%;
+//   left: 60%;
+//   width: 10px;
+//   height: 30%;
+//   background-color: black;
+//   border: 2px solid white;
+//   border-top-left-radius: 10px;
+//   border-top-right-radius: 10px;
+//   z-index: 9;
+// `
 
-const ClockCenter = styled.View`
-bottom: -23%;
-left: 0%;
-width: 40px;
-height: 40px;
-border-radius: 20px;
-background-color: black;
-border-width: 2px;
-border-color: white;
-z-index: 20;
-`
+// const ClockCenter = styled.View`
+// bottom: -23%;
+// left: 0%;
+// width: 40px;
+// height: 40px;
+// border-radius: 20px;
+// background-color: black;
+// border-width: 2px;
+// border-color: white;
+// z-index: 20;
+// `
+
 const styles = StyleSheet.create({
   number: {
     textAlign: "center",
