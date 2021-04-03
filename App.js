@@ -8,6 +8,7 @@ import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock
 import { StyleSheet, Text, TextInput, SafeAreaView, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
+import Menu from './components/shared/Menu.jsx'
 
 const Stack = createStackNavigator();
 
@@ -15,7 +16,6 @@ const Stack = createStackNavigator();
 // Build for android View is mapped to AndroidView
 export default function App() {
   return (
-
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
@@ -40,6 +40,5 @@ export default function App() {
         />
       </Stack.Navigator>
       </NavigationContainer>
-  
   );
 }
