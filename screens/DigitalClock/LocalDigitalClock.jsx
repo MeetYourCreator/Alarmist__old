@@ -19,7 +19,10 @@ const LocalDigitalClock = () => {
     <>
       <DigitalClockContainer>
         <Clock>
-          <ClockText>{localTime}</ClockText>
+          <ClockText
+            color='blue'
+            textShadowColor='blue'
+          >{localTime}</ClockText>
         </Clock>
         <Location>LocalTime</Location>
       </DigitalClockContainer>
