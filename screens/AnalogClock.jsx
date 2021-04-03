@@ -46,7 +46,7 @@ const AnalogClock = ({ navigate }) => {
                 { translateX: 0 },
                 { rotate: `${minuteRatio * 360}deg` },
                 { translateY: -68 },
-                { translateX: 5 },
+                { translateX: -5 },
               ],
             }}
           />
@@ -188,6 +188,7 @@ const ClockContainer = styled.View`
 //   border-top-right-radius: 10px;
 //   z-index: 11;
 // `
+
 const MinuteHand = styled.View`
   bottom: 45%;
   left: 50%;
