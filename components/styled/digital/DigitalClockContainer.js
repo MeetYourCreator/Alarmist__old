@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LocalClockContainer = styled.View`
+export const DigitalClockContainer = styled.View`
   display: flex;
   flex: 1;
   flex-direction: column;
