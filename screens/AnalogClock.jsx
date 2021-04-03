@@ -10,6 +10,8 @@ import { ClockNumberContainer } from "../components/styled/analog/ClockNumberCon
 import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
 
+import AppLoading from "expo-app-loading"
+import { useFonts, Inter_900Black } from "@expo-google-fonts/inter"
 
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
@@ -25,6 +27,10 @@ const AnalogClock = () => {
     return () => clearInterval(interval)
   }, [])
 
+   let [fontsLoaded] = useFonts({
+     Inter_900Black,
+   })
+  
   return (
     <>
       <AnalogClockContainer>
@@ -158,7 +164,8 @@ const styles = StyleSheet.create({
   number: {
     textAlign: "center",
     fontSize: 30,
-    marginTop: 10
+    marginTop: 10,
+    fontFamily: "Inter_900Black",
   },
 })
 export default AnalogClock
