@@ -18,7 +18,7 @@ const AppButton = ({onPress, title}) => {
       >
         <TouchableOpacity
           onPress={onPress}
-          activeOpacity={0.8}
+          activeOpacity={0.5}
           style={styles.appButtonContainer}
         >
           <Text style={styles.buttonText}>{title}</Text>
