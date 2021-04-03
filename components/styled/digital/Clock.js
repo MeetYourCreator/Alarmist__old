@@ -6,5 +6,5 @@ export const Clock = styled.View`
   height: auto;
   border: 8px solid #2d2d2d;
   border-radius: 15px;
-  background-color: #151617;
+  background-color: ${(props) => props.color ? props.color : '#151617'};
 `
