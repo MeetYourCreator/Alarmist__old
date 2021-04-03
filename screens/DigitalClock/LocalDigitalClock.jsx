@@ -7,9 +7,10 @@ const LocalDigitalClock = ({ navigation }) => {
   const [localTime, setLocalTime] = useState(showLocalTime())
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setLocalTime(showLocalTime())
-    }, 1000)
+    }, 1000);
+    return () => clearTimeout(timeout)
   })
 
   return (
