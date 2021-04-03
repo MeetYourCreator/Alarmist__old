@@ -11,7 +11,8 @@ import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
 
 import AppLoading from "expo-app-loading"
-import { useFonts, Inter_900Black } from "@expo-google-fonts/inter"
+import { useFonts, Inter_900Black} from "@expo-google-fonts/inter"
+import { Monoton_400Regular } from "@expo-google-fonts/monoton"
 
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
@@ -29,6 +30,7 @@ const AnalogClock = () => {
 
    let [fontsLoaded] = useFonts({
      Inter_900Black,
+     Monoton_400Regular
    })
   
   return (
@@ -62,10 +64,10 @@ const AnalogClock = () => {
           <HourHand
             style={{
               transform: [
-                { translateY: 70 },
+                { translateY: 60 },
                 { translateX: -15 },
                 { rotate: `${hourRatio * 360}deg` },
-                { translateY: -70 },
+                { translateY: -50 },
                 { translateX: -20 },
               ],
             }}
@@ -75,14 +77,14 @@ const AnalogClock = () => {
               transform: [{ rotate: "30deg" }],
             }}
           >
-            <ClockNumberFont>1</ClockNumberFont>
+            <ClockNumberFont fontFamily="Monoton_400Regular">1</ClockNumberFont>
           </ClockNumberContainer>
           <ClockNumberContainer
             style={{
               transform: [{ rotate: "60deg" }],
             }}
           >
-            <Text style={styles.number}>2</Text>
+            <ClockNumberFont>2</ClockNumberFont>
           </ClockNumberContainer>
           <ClockNumberContainer
             style={{

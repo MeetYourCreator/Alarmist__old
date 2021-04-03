@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HourHand = styled.View`
-  bottom: 85%;
+  bottom: 75%;
   left: 60%;
   width: 10px;
   height: 30%;
