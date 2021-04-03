@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react"
 import { StyleSheet, Text, View, SafeAreaView } from "react-native"
 import { setHour, setMinute, setSecond } from "../services/time.js"
 import styled, {keyframes} from "styled-components"
-import {Clock} from '../components/styled/Clock.js'
+import { Clock } from '../components/styled/analog/Clock.js'
+import { ClockNumber } from '../components/styled/analog/ClockNumber.js'
+import {SecondHand} from '../components/styled/analog/SecondHand.js'
 
 const AnalogClock = ({ navigate }) => {
   const [hourRatio, setHourRatio] = useState(setHour())
@@ -22,8 +24,11 @@ const AnalogClock = ({ navigate }) => {
     <>
       <ClockContainer>
         <ClockCenter />
-        <Clock color="blue">
+        <Clock
+          color="blue"
+          borderColor='red'>
           <SecondHand
+            color='white'
             style={{
               transform: [
                 { translateY: 70 },
@@ -165,22 +170,24 @@ const ClockContainer = styled.View`
 //   border: 5px solid purple;
 //   position: relative;
 // `
-const ClockNumber = styled.View`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`
-const SecondHand = styled.View`
-  bottom: 0%;
-  left: 50%;
-  width: 3px;
-  height: 45%;
-  background-color: red;
-  border: 1px solid white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  z-index: 11;
-`
+
+// const ClockNumber = styled.View`
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+// `
+
+// const SecondHand = styled.View`
+//   bottom: 0%;
+//   left: 50%;
+//   width: 3px;
+//   height: 45%;
+//   background-color: red;
+//   border: 1px solid white;
+//   border-top-left-radius: 10px;
+//   border-top-right-radius: 10px;
+//   z-index: 11;
+// `
 const MinuteHand = styled.View`
   bottom: 45%;
   left: 50%;
