@@ -30,8 +30,12 @@ const Menu = ({ onPress, icon }) => {
 }
 
 const styles = StyleSheet.create({
+  menuContainer: {
+    flex: 1,
+    backgroundColor: "rgba(92,92,92,.1)",
+  },
   menu: {
-    flexDirection: 'row',
+    flexDirection: "row",
     backgroundColor: "rgba(92,92,92,.1)",
     paddingVertical: 10,
     paddingHorizontal: 15,
@@ -40,14 +44,13 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginRight: 10,
     marginLeft: 10,
-    justifyContent: 'space-evenly'
+    justifyContent: "space-evenly",
   },
   icon: {
-    flexDirection: 'column',
+    flexDirection: "column",
     padding: 10,
-    borderColor: 'black',
+    borderColor: "black",
     borderLeftWidth: 2,
-    
-  }
+  },
 })
 export default Menu;
