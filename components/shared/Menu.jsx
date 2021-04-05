@@ -33,6 +33,7 @@ const Menu = ({ onPress, icon }) => {
               <MaterialIcons
                 name="close"
                 size={24}
+                style={styles.modalToggle}
                 onPress={() => setModalOpen(false)}
               ></MaterialIcons>
             </Modal>
@@ -65,6 +66,15 @@ const Menu = ({ onPress, icon }) => {
 }
 
 const styles = StyleSheet.create({
+  modalToggle: {
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#ff00ff',
+    padding: 10,
+    borderRadius: 10,
+    alignSelf: 'center'
+  },
+
   menuContainer: {
     flex: 1,
     backgroundColor: "rgba(92,92,92,.1)",
