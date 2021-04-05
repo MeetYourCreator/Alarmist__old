@@ -3,6 +3,7 @@ import {
   Button,
   TouchableOpacity,
   Text,
+  Modal,
   View,
   SafeAreaView,
   StyleSheet,
@@ -36,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
       (notification) => {
         alert(notification)
       }
-    )
+    );
 
     return () => {
       subscription.remove()
@@ -58,7 +59,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <>
-      <SafeAreaView style={styles.screenContainer}>
+       <SafeAreaView style={styles.screenContainer}>
         <View style={styles.buttonContainer}>
           <AppButton
             title="Trigger Notifications"

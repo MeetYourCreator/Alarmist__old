@@ -42,11 +42,11 @@ export default function App() {
           component={LocalDigitalClock}
           options={{ title: 'Digital Alarmist' }}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name='Digital World Clock'
           component={WorldDigitalClockContainer}
           options={{ title: 'World Alarmist' }}
-        />
+        /> */}
         <Stack.Screen
           name='Analog Clock'
           component={AnalogClock}
