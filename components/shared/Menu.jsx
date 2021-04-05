@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react"
 import {
   Button,
   TouchableOpacity,
@@ -9,16 +9,15 @@ import {
   SafeAreaView,
   StyleSheet,
 } from "react-native"
-import styled from 'styled-components'
-import {MaterialIcons} from '@expo/vector-icons'
-import { Inter_200ExtraLight } from '@expo-google-fonts/inter';
+import styled from "styled-components"
+import { MaterialIcons } from "@expo/vector-icons"
+import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
 const Menu = ({ titleOne, titleTwo }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
     <SafeAreaView style={styles.menu}>
-      
       <View style={styles.container}>
         <Modal
           animationType={"slide"}
@@ -114,10 +113,9 @@ const Menu = ({ titleOne, titleTwo }) => {
           }}
         ></MaterialIcons>
       </View>
-
     </SafeAreaView>
   )
-};
+}
 
 const styles = StyleSheet.create({
   menu: {
@@ -138,19 +136,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "rgb(211,211,211)",
     height: 80,
-    borderColor: 'black',
+    borderColor: "black",
     borderWidth: 2,
   },
   modal: {
     flex: 1,
     alignItems: "center",
     backgroundColor: "yellow",
-    marginTop: 700,
+    borderColor: 'black',
+    borderWidth: 2,
+    marginTop: 500,
+    marginBottom: 200,
   },
   text: {
     color: "#3f2949",
     marginTop: 10,
   },
 })
-      
-export default Menu;
+
+export default Menu
