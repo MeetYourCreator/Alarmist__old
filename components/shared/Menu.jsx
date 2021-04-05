@@ -11,12 +11,14 @@ import {
 } from "react-native"
 import styled from 'styled-components'
 import {MaterialIcons} from '@expo/vector-icons'
+import { Inter_200ExtraLight } from '@expo-google-fonts/inter';
 
 const Menu = ({ onPress, icon }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
     <SafeAreaView style={styles.menu}>
+      
       <View style={styles.container}>
         <Modal
           animationType={"slide"}
@@ -122,7 +124,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-evenly",
-    alignItems: 'center',
+    alignItems: "center",
+    // marginTop: 40,
+    marginLeft: 20,
+    marginRight: 20,
     backgroundColor: "purple",
     height: 100,
   },
@@ -132,14 +137,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "rgb(211,211,211)",
-    height: 100,
-    width: 200,
+    height: 80,
+    borderColor: 'black',
+    borderWidth: 2,
   },
   modal: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#00ff00",
-    padding: 100,
+    backgroundColor: "yellow",
+    marginTop: 700,
   },
   text: {
     color: "#3f2949",
