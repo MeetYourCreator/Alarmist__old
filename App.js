@@ -9,13 +9,26 @@ import { StyleSheet, Text, TextInput, SafeAreaView, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import Menu from './components/shared/Menu.jsx'
+import * as Notifications from "expo-notifications"
+import * as Permissions from "expo-permissions"
+
+//function exectued to let os know what tpo dpo with incoming Notification before the Notification is displayed to the user
+Notifications.setNotificationHandler({
+  handleNotification: async () => {
+    return {
+      shouldShowAlert: true,
+      shouldPlaySound: true
+    };
+  }
+})
+
 
 const Stack = createStackNavigator();
 
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
-  
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -40,6 +53,6 @@ export default function App() {
           options={{ title: 'Analog Alarmist' }}
         />
       </Stack.Navigator>
-      </NavigationContainer>
+    </NavigationContainer>
   );
 }

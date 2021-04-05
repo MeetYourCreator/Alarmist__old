@@ -14,20 +14,33 @@ import * as Notifications from "expo-notifications"
 import * as Permissions from "expo-permissions"
 
 const HomeScreen = ({ navigation }) => {
-  //need for ios
+  //Permissions needed for ios
   useEffect(() => {
     Permissions.getAsync(Permissions.NOTIFICATIONS)
       .then((statusObj) => {
         if (statusObj.status !== "granted") {
           return Permissions.askAsync(Permissions.NOTIFICATIONS)
         }
-        return statusObj;
+        return statusObj
       })
       .then((statusObj) => {
         if (statusObj.status !== "granted") {
-          return;
+          return
         }
       })
+  }, [])
+
+  //handle Notifications if App is running
+  useEffect(() => {
+    const subscription = Notifications.addNotificationReceivedListener(
+      (notification) => {
+        alert(notification)
+      }
+    )
+
+    return () => {
+      subscription.remove()
+    }
   }, [])
 
   const triggerNotificationsHandler = () => {
