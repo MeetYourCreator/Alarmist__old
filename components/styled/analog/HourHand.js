@@ -5,7 +5,7 @@ export const HourHand = styled.View`
   bottom: 65%;
   left: 50%;
   width: 10px;
-  height: 30%;
+  height: 38%;
   background-color: ${(props) => props.color ? props.color : 'black'};
   border: 2px solid white;
   border-top-left-radius: 10px;
