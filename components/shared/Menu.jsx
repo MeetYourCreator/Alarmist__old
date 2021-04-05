@@ -13,93 +13,134 @@ import styled from 'styled-components'
 import {MaterialIcons} from '@expo/vector-icons'
 
 const Menu = ({ onPress, icon }) => {
-  const [modalOpen, setModalOpen] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   return (
-    <>
-      <SafeAreaView style={styles.menuContainer}>
-        <TouchableOpacity
-          onPress={onPress}
-          activeOpacity={0.5}
-          style={styles.menu}
+    <SafeAreaView style={styles.menu}>
+      <View style={styles.container}>
+        <Modal
+          animationType={"slide"}
+          transparent={false}
+          visible={showModal}
+          onRequestClose={() => {
+            console.log("Modal has been closed.")
+          }}
         >
-          <View style={styles.icon}>
-            <Modal
-              visible={modalOpen}
-              animationType="slide"
-              style={styles.modalContainer}
-            >
-              <Text> Hello from the Modal</Text>
-              <MaterialIcons
-                name="close"
-                size={24}
-                style={styles.modalToggle}
-                onPress={() => setModalOpen(false)}
-              ></MaterialIcons>
-            </Modal>
+          {/*All views of Modal*/}
+          {/*Animation can be slide, slide, none*/}
+          <View style={styles.modal}>
+            <Text style={styles.text}>Modal is open!</Text>
             <MaterialIcons
               name="add"
               size={24}
-              onPress={() => setModalOpen(true)}
+              onPress={() => {
+                setShowModal(!showModal)
+              }}
             ></MaterialIcons>
           </View>
-          <View style={styles.icon}>
-            {icon}
+        </Modal>
+        {/*Updating the state to make Modal Visible*/}
+        <MaterialIcons
+          name="add"
+          size={24}
+          onPress={() => {
+            setShowModal(!showModal)
+          }}
+        ></MaterialIcons>
+      </View>
+
+      <View style={styles.container}>
+        <Modal
+          animationType={"slide"}
+          transparent={false}
+          visible={showModal}
+          onRequestClose={() => {
+            console.log("Modal has been closed.")
+          }}
+        >
+          {/*All views of Modal*/}
+          {/*Animation can be slide, slide, none*/}
+          <View style={styles.modal}>
+            <Text style={styles.text}>Modal is open!</Text>
             <MaterialIcons
               name="add"
               size={24}
-              onPress={() => setModalOpen(true)}
+              onPress={() => {
+                setShowModal(!showModal)
+              }}
             ></MaterialIcons>
           </View>
-          <View style={styles.icon}>
-            {icon}
+        </Modal>
+        {/*Updating the state to make Modal Visible*/}
+        <MaterialIcons
+          name="add"
+          size={24}
+          onPress={() => {
+            setShowModal(!showModal)
+          }}
+        ></MaterialIcons>
+      </View>
+
+      <View style={styles.container}>
+        <Modal
+          animationType={"slide"}
+          transparent={false}
+          visible={showModal}
+          onRequestClose={() => {
+            console.log("Modal has been closed.")
+          }}
+        >
+          {/*All views of Modal*/}
+          {/*Animation can be slide, slide, none*/}
+          <View style={styles.modal}>
+            <Text style={styles.text}>Modal is open!</Text>
             <MaterialIcons
               name="add"
               size={24}
-              onPress={() => setModalOpen(true)}
+              onPress={() => {
+                setShowModal(!showModal)
+              }}
             ></MaterialIcons>
           </View>
-        </TouchableOpacity>
-      </SafeAreaView>
-    </>
+        </Modal>
+        {/*Updating the state to make Modal Visible*/}
+        <MaterialIcons
+          name="add"
+          size={24}
+          onPress={() => {
+            setShowModal(!showModal)
+          }}
+        ></MaterialIcons>
+      </View>
+
+    </SafeAreaView>
   )
-}
+};
 
 const styles = StyleSheet.create({
-  modalToggle: {
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#ff00ff',
-    padding: 10,
-    borderRadius: 10,
-    alignSelf: 'center'
-  },
-
-  menuContainer: {
-    flex: 1,
-    backgroundColor: "rgba(92,92,92,.1)",
-    justifyContent: 'center',
-    alignItems: 'center',
-    
-  },
   menu: {
+    flex: 1,
     flexDirection: "row",
-    backgroundColor: "rgba(92,92,92,.1)",
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    elevation: 8,
-    borderRadius: 20,
-    marginTop: 20,
-    marginRight: 10,
-    marginLeft: 10,
     justifyContent: "space-evenly",
   },
-  icon: {
+  container: {
+    flex: 1,
     flexDirection: "column",
-    padding: 10,
-    borderColor: "black",
-    borderLeftWidth: 1,
-    borderRightWidth: 1
+    justifyContent: 'space-around',
+    alignItems: "center",
+    backgroundColor: "#ecf0f1",
+    marginTop: 0,
+  },
+  modal: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#00ff00",
+    padding: 100,
+  },
+  text: {
+    color: "#3f2949",
+    marginTop: 10,
   },
 })
+      
 export default Menu;
