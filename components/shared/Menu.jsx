@@ -18,10 +18,11 @@ const Menu = ({ titleOne, titleTwo }) => {
 
   return (
     <SafeAreaView style={styles.menu}>
+      
       <View style={styles.container}>
         <Modal
           animationType={"slide"}
-          transparent={false}
+          transparent={true}
           visible={showModal}
           onRequestClose={() => {
             console.log("Modal has been closed.")
@@ -53,7 +54,7 @@ const Menu = ({ titleOne, titleTwo }) => {
       <View style={styles.container}>
         <Modal
           animationType={"slide"}
-          transparent={false}
+          transparent={true}
           visible={showModal}
           onRequestClose={() => {
             console.log("Modal has been closed.")
@@ -85,7 +86,7 @@ const Menu = ({ titleOne, titleTwo }) => {
       <View style={styles.container}>
         <Modal
           animationType={"slide"}
-          transparent={false}
+          transparent={true}
           visible={showModal}
           onRequestClose={() => {
             console.log("Modal has been closed.")
@@ -113,6 +114,7 @@ const Menu = ({ titleOne, titleTwo }) => {
           }}
         ></MaterialIcons>
       </View>
+
     </SafeAreaView>
   )
 }
@@ -135,7 +137,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "rgb(211,211,211)",
-    height: 80,
+    height: 70,
     borderColor: "black",
     borderWidth: 2,
   },
@@ -145,8 +147,8 @@ const styles = StyleSheet.create({
     backgroundColor: "yellow",
     borderColor: 'black',
     borderWidth: 2,
-    marginTop: 600,
-    marginBottom: 115,
+    marginTop: 680,
+    marginBottom: 100,
   },
   text: {
     color: "#3f2949",
