@@ -10,7 +10,7 @@ import {
 } from "react-native"
 import AppButton from "../components/AppButton.jsx"
 import styled from "styled-components"
-import Menu from "../components/shared/Menu.jsx"
+import CustomModal from "../components/shared/CustomModal.jsx"
 import * as Notifications from "expo-notifications"
 import * as Permissions from "expo-permissions"
 
@@ -59,7 +59,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <>
-       <SafeAreaView style={styles.screenContainer}>
+      <SafeAreaView style={styles.screenContainer}>
         <View style={styles.buttonContainer}>
           <AppButton
             title="Trigger Notifications"
@@ -78,13 +78,27 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Digital World Clock")}
         ></AppButton> */}
         </View>
-        <Menu titleOne="Test" titleTwo='Color'></Menu>
+        <View style={styles.menu}>
+          <CustomModal title="Clock Text Color"></CustomModal>
+          <CustomModal title="Clock Skin"></CustomModal>
+          <CustomModal title="Test"></CustomModal>
+        </View>
       </SafeAreaView>
     </>
   )
 }
 
 const styles = StyleSheet.create({
+  menu: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "flex-end",
+    marginTop: 40,
+    marginLeft: 20,
+    marginRight: 20,
+    height: 10,
+  },
   screenContainer: {
     flex: 1,
     justifyContent: "space-between",

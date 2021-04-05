@@ -8,7 +8,6 @@ import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock
 import { StyleSheet, Text, TextInput, SafeAreaView, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
-import Menu from './components/shared/Menu.jsx'
 import * as Notifications from "expo-notifications"
 import * as Permissions from "expo-permissions"
 
