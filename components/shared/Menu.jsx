@@ -13,7 +13,7 @@ import styled from 'styled-components'
 import {MaterialIcons} from '@expo/vector-icons'
 import { Inter_200ExtraLight } from '@expo-google-fonts/inter';
 
-const Menu = ({ onPress, icon }) => {
+const Menu = ({ titleOne, titleTwo }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -31,7 +31,7 @@ const Menu = ({ onPress, icon }) => {
           {/*All views of Modal*/}
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modal}>
-            <Text style={styles.text}>Modal is open!</Text>
+            <Text style={styles.text}>{titleOne}</Text>
             <MaterialIcons
               name="add"
               size={24}
@@ -63,7 +63,7 @@ const Menu = ({ onPress, icon }) => {
           {/*All views of Modal*/}
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modal}>
-            <Text style={styles.text}>Modal is open!</Text>
+            <Text style={styles.text}>{titleTwo}</Text>
             <MaterialIcons
               name="add"
               size={24}

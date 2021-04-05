@@ -78,7 +78,7 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Digital World Clock")}
         ></AppButton> */}
         </View>
-        <Menu title="Menu"></Menu>
+        <Menu titleOne="Test" titleTwo='Color'></Menu>
       </SafeAreaView>
     </>
   )
