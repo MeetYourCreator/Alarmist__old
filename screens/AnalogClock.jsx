@@ -28,6 +28,7 @@ const AnalogClock = () => {
     return () => clearInterval(interval)
   }, [])
 
+  
    let [fontsLoaded] = useFonts({
      Inter_900Black,
      Monoton_400Regular

@@ -1,16 +1,56 @@
-import React from 'react'
-import { Button, TouchableOpacity, Text, View, SafeAreaView, StyleSheet } from "react-native"
-import AppButton from '../components/AppButton.jsx'
-import styled from 'styled-components'
-import Menu from '../components/shared/Menu.jsx'
+import React, { useEffect } from "react"
+import {
+  Button,
+  TouchableOpacity,
+  Text,
+  View,
+  SafeAreaView,
+  StyleSheet,
+} from "react-native"
+import AppButton from "../components/AppButton.jsx"
+import styled from "styled-components"
+import Menu from "../components/shared/Menu.jsx"
+import * as Notifications from "expo-notifications"
+import * as Permissions from "expo-permissions"
 
 const HomeScreen = ({ navigation }) => {
+  //need for ios
+  useEffect(() => {
+    Permissions.getAsync(Permissions.NOTIFICATIONS)
+      .then((statusObj) => {
+        if (statusObj.status !== "granted") {
+          return Permissions.askAsync(Permissions.NOTIFICATIONS)
+        }
+        return statusObj;
+      })
+      .then((statusObj) => {
+        if (statusObj.status !== "granted") {
+          return;
+        }
+      })
+  }, [])
+
+  const triggerNotificationsHandler = () => {
+    //create a Local Notification
+    Notifications.scheduleNotificationAsync({
+      content: {
+        title: "Notification Test",
+        body: "Testing Local Notification",
+      },
+      trigger: {
+        seconds: 10,
+      },
+    })
+  }
 
   return (
     <>
       <SafeAreaView style={styles.screenContainer}>
-        <View
-        style={styles.buttonContainer}>
+        <View style={styles.buttonContainer}>
+          <AppButton
+            title="Trigger Notifications"
+            onPress={triggerNotificationsHandler}
+          ></AppButton>
           <AppButton
             title="12 Hour Alarmist"
             onPress={() => navigation.navigate("Analog Clock")}
@@ -28,18 +68,16 @@ const HomeScreen = ({ navigation }) => {
       </SafeAreaView>
     </>
   )
-
 }
 
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   buttonContainer: {
     flex: 1,
-    justifyContent: 'center',
-
-  }
+    justifyContent: "center",
+  },
 })
-export default HomeScreen;
+export default HomeScreen

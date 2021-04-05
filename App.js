@@ -15,6 +15,7 @@ const Stack = createStackNavigator();
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
+  
   return (
     <NavigationContainer>
       <Stack.Navigator>
