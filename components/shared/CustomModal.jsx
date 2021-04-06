@@ -33,7 +33,7 @@ const CustomModal = ({ title, iconName, iconColor }) => {
         >
           {/*All views of Modal*/}
           {/*Animation can be slide, slide, none*/}
-          <View style={styles.modal}>
+          <View style={styles.modalPopUp}>
             <Text style={styles.text}>{title}</Text>
             <MaterialIcons
               name="add"
@@ -41,7 +41,11 @@ const CustomModal = ({ title, iconName, iconColor }) => {
               onPress={() => {
                 setShowModal(!showModal)
               }}
-            ></MaterialIcons>
+            />
+            <TouchableOpacity
+              style={styles.colorOptionButton}>
+              <Text>Blue</Text>
+            </TouchableOpacity>
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
@@ -77,10 +81,11 @@ const styles = StyleSheet.create({
     height: 70,
     width: "30%",
   },
-  modal: {
+  modalPopUp: {
     flex: 1,
-    alignItems: "center",
-    backgroundColor: "yellow",
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    backgroundColor: "red",
     borderColor: "black",
     borderWidth: 2,
     borderTopStartRadius: 180,
@@ -96,6 +101,17 @@ const styles = StyleSheet.create({
     color: "#3f2949",
     marginTop: 10,
   },
+  colorOptionButton: {
+    backgroundColor: 'yellow',
+    width: '20%',
+    height: '40%',
+    borderRadius: 10,
+    borderWidth: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
+
+
+  }
 })
 
 export default CustomModal
