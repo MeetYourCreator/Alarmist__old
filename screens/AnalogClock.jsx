@@ -79,7 +79,7 @@ const AnalogClock = () => {
                 style={{
                   transform: [
                     //HourHand moves up as value is lowered
-                    { translateY: 95 },
+                    { translateY: 110 },
                     //HourHand moves left as value is lowered
                     { translateX: 8 },
                     { rotate: `${hourRatio * 360}deg` },
