@@ -10,10 +10,14 @@ import {
   StyleSheet,
 } from "react-native"
 import styled from "styled-components"
+
+import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
+import { AntDesign } from "@expo/vector-icons"
+import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
-const CustomModal = ({ title }) => {
+const CustomModal = ({ title, iconName, iconColor }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -41,13 +45,14 @@ const CustomModal = ({ title }) => {
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
-        <MaterialIcons
-          name="add"
+        <Ionicons
+          name={iconName}
           size={24}
+          color={iconColor}
           onPress={() => {
             setShowModal(!showModal)
           }}
-        ></MaterialIcons>
+        ></Ionicons>
       </View>
     </SafeAreaView>
   )

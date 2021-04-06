@@ -179,9 +179,17 @@ const AnalogClock = () => {
           </AnalogClockContainer>
         </View>
         <View style={styles.menu}>
-          <CustomModal title="Clock Face"></CustomModal>
+          <CustomModal
+            title="Clock Face"
+            iconName="color-palette-sharp"
+            iconColor="blue"
+          ></CustomModal>
           {/* <CustomModal title="Clock Skin"></CustomModal> */}
-          <CustomModal title="Clock Number"></CustomModal>
+          <CustomModal
+            title="Clock Number"
+            iconName="language"
+            iconColor="black"
+          ></CustomModal>
         </View>
       </SafeAreaView>
     </>
