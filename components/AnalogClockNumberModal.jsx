@@ -96,10 +96,10 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     borderColor: "black",
     borderWidth: 2,
-    borderTopStartRadius: 180,
-    borderTopEndRadius: 180,
-    borderBottomStartRadius: 180,
-    borderBottomEndRadius: 180,
+    borderTopStartRadius: 20,
+    borderTopEndRadius: 20,
+    borderBottomStartRadius: 20,
+    borderBottomEndRadius: 20,
     marginTop: 680,
     marginRight: 10,
     marginBottom: 100,
@@ -111,12 +111,10 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     backgroundColor: "yellow",
-    width:'40%',
-    height: '80%',
     borderRadius: 10,
     borderWidth: 2,
+    flexDirection: 'row',
     justifyContent: "space-evenly",
-    alignItems: "center",
   },
 })
 
