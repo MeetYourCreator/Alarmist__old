@@ -41,13 +41,13 @@ const AnalogClockNumberModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <Text style={styles.text}>{title}</Text>
-            <MaterialIcons
-              name="add"
-              size={24}
+            <TouchableOpacity
               onPress={() => {
                 setShowModal(!showModal)
               }}
-            />
+            >
+              <Text>Close</Text>
+            </TouchableOpacity>
             <AnalogClockNumberModalButton color="blue" />
             <AnalogClockNumberModalButton color="green" />
             <AnalogClockNumberModalButton color="white" />
