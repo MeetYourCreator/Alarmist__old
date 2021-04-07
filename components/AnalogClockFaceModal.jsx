@@ -10,7 +10,7 @@ import {
   StyleSheet,
 } from "react-native"
 import styled from "styled-components"
-import ClockFaceModalButton from './AnalogClockFaceModalButton.jsx'
+import AnalogClockFaceModalButton from './AnalogClockFaceModalButton.jsx'
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -43,9 +43,9 @@ const AnalogClockFaceModal = ({ title, iconName, iconColor, clockFaceColorChoice
                 setShowModal(!showModal)
               }}
             />
-            <ClockFaceModalButton color='blue'/>
-            <ClockFaceModalButton color='green'/>
-            <ClockFaceModalButton color='white'/>
+            <AnalogClockFaceModalButton color='blue'/>
+            <AnalogClockFaceModalButton color='green'/>
+            <AnalogClockFaceModalButton color='white'/>
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}

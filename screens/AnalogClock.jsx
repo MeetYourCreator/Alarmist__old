@@ -17,7 +17,7 @@ import { HourHand } from "../components/styled/analog/HourHand.js"
 import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js"
 import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
-import AnalogClockFaceModal from "../components/shared/AnalogClockFaceModal.jsx"
+import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx"
 
 import AppLoading from "expo-app-loading"
 import { useFonts, Inter_900Black} from "@expo-google-fonts/inter"
