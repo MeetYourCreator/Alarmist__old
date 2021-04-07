@@ -48,9 +48,12 @@ const AnalogClockNumberModal = ({
             >
               <Text>Close</Text>
             </TouchableOpacity>
-            <AnalogClockNumberModalButton color="blue" />
-            <AnalogClockNumberModalButton color="green" />
-            <AnalogClockNumberModalButton color="white" />
+            <View style={styles.buttonsContainer}>
+              <AnalogClockNumberModalButton color="purple" />
+              <AnalogClockNumberModalButton color="yellow" />
+              <AnalogClockNumberModalButton color="green" />
+              <AnalogClockNumberModalButton color="black" />
+            </View>
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
@@ -106,13 +109,13 @@ const styles = StyleSheet.create({
     color: "#3f2949",
     marginTop: 10,
   },
-  colorOptionButton: {
+  buttonsContainer: {
     backgroundColor: "yellow",
-    width: "20%",
-    height: "40%",
+    width:'40%',
+    height: '80%',
     borderRadius: 10,
     borderWidth: 2,
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     alignItems: "center",
   },
 })

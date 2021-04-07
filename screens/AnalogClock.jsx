@@ -182,7 +182,7 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             title="Clock Face"
             iconName="color-palette-sharp"
-            iconColor="blue"
+            iconColor="black"
           ></AnalogClockFaceModal>
 
           <AnalogClockNumberModal

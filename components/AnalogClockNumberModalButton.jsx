@@ -20,13 +20,13 @@ const AnalogClockNumberModalButton = ({ color }) => {
 
 const styles = StyleSheet.create({
   colorOptionButton: {
-    backgroundColor: "yellow",
-    width: "20%",
-    height: "40%",
+    backgroundColor: "pink",
+    width: "80%",
+    height: "30%",
     borderRadius: 10,
     borderWidth: 2,
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: "space-evenly",
   },
 })
 
