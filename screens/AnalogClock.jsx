@@ -17,7 +17,7 @@ import { HourHand } from "../components/styled/analog/HourHand.js"
 import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js"
 import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
-import CustomModal from "../components/shared/CustomModal.jsx"
+import AnalogClockFaceModal from "../components/shared/AnalogClockFaceModal.jsx"
 
 import AppLoading from "expo-app-loading"
 import { useFonts, Inter_900Black} from "@expo-google-fonts/inter"
@@ -179,17 +179,17 @@ const AnalogClock = () => {
           </AnalogClockContainer>
         </View>
         <View style={styles.menu}>
-          <CustomModal
+          <AnalogClockFaceModal
             title="Clock Face"
             iconName="color-palette-sharp"
             iconColor="blue"
-          ></CustomModal>
+          ></AnalogClockFaceModal>
           {/* <CustomModal title="Clock Skin"></CustomModal> */}
-          <CustomModal
+          {/* <CustomModal
             title="Clock Number"
             iconName="language"
             iconColor="black"
-          ></CustomModal>
+          ></CustomModal> */}
         </View>
       </SafeAreaView>
     </>

@@ -10,7 +10,7 @@ import {
   StyleSheet,
 } from "react-native"
 import styled from "styled-components"
-import ClockFaceModalButton from './ClockFaceModalButton.jsx'
+import ClockFaceModalButton from './AnalogClockFaceModalButton.jsx'
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -18,7 +18,7 @@ import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
-const CustomModal = ({ title, iconName, iconColor, clockFaceColorChoiceOne }) => {
+const AnalogClockFaceModal = ({ title, iconName, iconColor, clockFaceColorChoiceOne }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -112,4 +112,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default CustomModal
+export default AnalogClockFaceModal;

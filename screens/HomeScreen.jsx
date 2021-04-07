@@ -10,7 +10,6 @@ import {
 } from "react-native"
 import AppButton from "../components/AppButton.jsx"
 import styled from "styled-components"
-import CustomModal from "../components/shared/CustomModal.jsx"
 import * as Notifications from "expo-notifications"
 import * as Permissions from "expo-permissions"
 

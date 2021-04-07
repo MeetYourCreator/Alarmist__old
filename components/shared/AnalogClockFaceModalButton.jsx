@@ -10,11 +10,9 @@ import {
   StyleSheet,
 } from "react-native"
 
-const ClockFaceModalButton = ({color}) => {
-
+const AnalogClockFaceModalButton = ({ color }) => {
   return (
-    <TouchableOpacity
-      style={styles.colorOptionButton}>
+    <TouchableOpacity style={styles.colorOptionButton}>
       <Text>{color}</Text>
     </TouchableOpacity>
   )
@@ -32,4 +30,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ClockFaceModalButton;
+export default AnalogClockFaceModalButton
