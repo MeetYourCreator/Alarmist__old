@@ -10,6 +10,7 @@ import {
   StyleSheet,
 } from "react-native"
 import styled from "styled-components"
+import ClockFaceModalButton from './ClockFaceModalButton.jsx'
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -17,7 +18,7 @@ import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
-const CustomModal = ({ title, iconName, iconColor }) => {
+const CustomModal = ({ title, iconName, iconColor, clockFaceColorChoiceOne }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -42,10 +43,9 @@ const CustomModal = ({ title, iconName, iconColor }) => {
                 setShowModal(!showModal)
               }}
             />
-            <TouchableOpacity
-              style={styles.colorOptionButton}>
-              <Text>Blue</Text>
-            </TouchableOpacity>
+            <ClockFaceModalButton color='blue'/>
+            <ClockFaceModalButton color='green'/>
+            <ClockFaceModalButton color='white'/>
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
@@ -109,8 +109,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     justifyContent: 'center',
     alignItems: 'center'
-
-
   }
 })
 
