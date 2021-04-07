@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   Button,
   TouchableOpacity,
@@ -20,14 +20,14 @@ const AnalogClockFaceModalButton = ({ color }) => {
 
 const styles = StyleSheet.create({
   colorOptionButton: {
-    backgroundColor: 'yellow',
-    width: '20%',
-    height: '40%',
+    backgroundColor: "yellow",
+    width: "20%",
+    height: "40%",
     borderRadius: 10,
     borderWidth: 2,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
+    justifyContent: "center",
+    alignItems: "center",
+  },
 })
 
 export default AnalogClockFaceModalButton

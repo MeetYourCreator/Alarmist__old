@@ -21,7 +21,6 @@ Notifications.setNotificationHandler({
   }
 })
 
-
 const Stack = createStackNavigator();
 
 // Build for ios View is mapped to UIView

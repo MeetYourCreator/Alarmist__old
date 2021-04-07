@@ -10,8 +10,8 @@ import {
 } from "react-native"
 import { setHour, setMinute, setSecond } from "../services/time.js"
 import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js"
-import { Clock } from '../components/styled/analog/Clock.js'
-import { SecondHand } from '../components/styled/analog/SecondHand.js'
+import { Clock } from "../components/styled/analog/Clock.js"
+import { SecondHand } from "../components/styled/analog/SecondHand.js"
 import { MinuteHand } from "../components/styled/analog/MinuteHand.js"
 import { HourHand } from "../components/styled/analog/HourHand.js"
 import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js"
@@ -21,29 +21,28 @@ import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx"
 import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx"
 
 import AppLoading from "expo-app-loading"
-import { useFonts, Inter_900Black} from "@expo-google-fonts/inter"
+import { useFonts, Inter_900Black } from "@expo-google-fonts/inter"
 import { Monoton_400Regular } from "@expo-google-fonts/monoton"
 
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setHourRatio(setHour())
       setMinuteRatio(setMinute())
       setSecondRatio(setSecond())
-    }, 1000);
+    }, 1000)
     return () => clearInterval(interval)
   }, [])
 
-  
-   let [fontsLoaded] = useFonts({
-     Inter_900Black,
-     Monoton_400Regular
-   })
-  
+  let [fontsLoaded] = useFonts({
+    Inter_900Black,
+    Monoton_400Regular,
+  })
+
   return (
     <>
       <SafeAreaView style={styles.screenContainer}>
@@ -185,7 +184,7 @@ const AnalogClock = () => {
             iconName="color-palette-sharp"
             iconColor="blue"
           ></AnalogClockFaceModal>
-        
+
           <AnalogClockNumberModal
             title="Clock Number"
             iconName="language"
@@ -205,7 +204,7 @@ const styles = StyleSheet.create({
   clockContainer: {
     flex: 1,
     marginTop: 180,
-    marginBottom: 90
+    marginBottom: 90,
   },
   number: {
     textAlign: "center",

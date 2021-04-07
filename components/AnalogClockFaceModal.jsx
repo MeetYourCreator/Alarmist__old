@@ -10,7 +10,7 @@ import {
   StyleSheet,
 } from "react-native"
 import styled from "styled-components"
-import AnalogClockFaceModalButton from './AnalogClockFaceModalButton.jsx'
+import AnalogClockFaceModalButton from "./AnalogClockFaceModalButton.jsx"
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -18,7 +18,12 @@ import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
-const AnalogClockFaceModal = ({ title, iconName, iconColor, clockFaceColorChoiceOne }) => {
+const AnalogClockFaceModal = ({
+  title,
+  iconName,
+  iconColor,
+  clockFaceColorChoiceOne,
+}) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -43,9 +48,9 @@ const AnalogClockFaceModal = ({ title, iconName, iconColor, clockFaceColorChoice
                 setShowModal(!showModal)
               }}
             />
-            <AnalogClockFaceModalButton color='blue'/>
-            <AnalogClockFaceModalButton color='green'/>
-            <AnalogClockFaceModalButton color='white'/>
+            <AnalogClockFaceModalButton color="blue" />
+            <AnalogClockFaceModalButton color="green" />
+            <AnalogClockFaceModalButton color="white" />
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
@@ -83,8 +88,8 @@ const styles = StyleSheet.create({
   },
   modalPopUp: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    flexDirection: "row",
+    justifyContent: "space-evenly",
     backgroundColor: "red",
     borderColor: "black",
     borderWidth: 2,
@@ -102,14 +107,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   colorOptionButton: {
-    backgroundColor: 'yellow',
-    width: '20%',
-    height: '40%',
+    backgroundColor: "yellow",
+    width: "20%",
+    height: "40%",
     borderRadius: 10,
     borderWidth: 2,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
+    justifyContent: "center",
+    alignItems: "center",
+  },
 })
 
-export default AnalogClockFaceModal;
+export default AnalogClockFaceModal

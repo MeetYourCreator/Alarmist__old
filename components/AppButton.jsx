@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   Button,
   TouchableOpacity,
@@ -9,13 +9,10 @@ import {
 } from "react-native"
 import styled from "styled-components"
 
-const AppButton = ({onPress, title}) => {
-
+const AppButton = ({ onPress, title }) => {
   return (
     <>
-      <View
-        style={styles.ScreenContainer}
-      >
+      <View style={styles.ScreenContainer}>
         <TouchableOpacity
           onPress={onPress}
           activeOpacity={0.5}
@@ -31,22 +28,21 @@ const AppButton = ({onPress, title}) => {
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    justifyContent: 'center',
-   
+    justifyContent: "center",
   },
   appButtonContainer: {
-    backgroundColor: '#009688',
+    backgroundColor: "#009688",
     elevation: 8,
     borderRadius: 20,
     paddingVertical: 10,
     paddingHorizontal: 15,
-    margin: 20
+    margin: 20,
   },
   buttonText: {
     fontSize: 25,
-    fontWeight: 'bold',
-    alignSelf: 'center',
+    fontWeight: "bold",
+    alignSelf: "center",
     padding: 20,
-  }
+  },
 })
-export default AppButton;
+export default AppButton

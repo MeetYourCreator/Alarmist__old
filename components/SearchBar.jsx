@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react"
 import { StyleSheet, Text, TextInput, View, SafeAreaView } from "react-native"
 
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [searchResults, setSearchResults] = useState('')
+  const [searchTerm, setSearchTerm] = useState("")
+  const [searchResults, setSearchResults] = useState("")
 
-  useEffect(() => {
-   
-  })
+  useEffect(() => {})
 
-  const handleChange = event => {
-  event.preventDefault()
-  setSearchTerm(event.target.value)
+  const handleChange = (event) => {
+    event.preventDefault()
+    setSearchTerm(event.target.value)
   }
 
   return (
@@ -34,8 +32,8 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     margin: 10,
-    borderWidth: 4
-  }
+    borderWidth: 4,
+  },
 })
 
-export default SearchBar;
+export default SearchBar

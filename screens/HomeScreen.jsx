@@ -36,7 +36,7 @@ const HomeScreen = ({ navigation }) => {
       (notification) => {
         alert(notification)
       }
-    );
+    )
 
     return () => {
       subscription.remove()
