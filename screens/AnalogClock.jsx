@@ -18,6 +18,7 @@ import { ClockNumberContainer } from "../components/styled/analog/ClockNumberCon
 import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
 import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx"
+import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx"
 
 import AppLoading from "expo-app-loading"
 import { useFonts, Inter_900Black} from "@expo-google-fonts/inter"
@@ -184,12 +185,12 @@ const AnalogClock = () => {
             iconName="color-palette-sharp"
             iconColor="blue"
           ></AnalogClockFaceModal>
-          {/* <CustomModal title="Clock Skin"></CustomModal> */}
-          {/* <CustomModal
+        
+          <AnalogClockNumberModal
             title="Clock Number"
             iconName="language"
             iconColor="black"
-          ></CustomModal> */}
+          ></AnalogClockNumberModal>
         </View>
       </SafeAreaView>
     </>

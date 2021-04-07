@@ -10,7 +10,7 @@ import {
   StyleSheet,
 } from "react-native"
 import styled from "styled-components"
-import AnalogClockNumberModalButton from "./AAnalogClockNumberModalButton.jsx"
+import AnalogClockNumberModalButton from "./AnalogClockNumberModalButton.jsx"
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
