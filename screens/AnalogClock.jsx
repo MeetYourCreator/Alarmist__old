@@ -186,7 +186,7 @@ const AnalogClock = () => {
           ></AnalogClockFaceModal>
 
           <AnalogClockNumberModal
-            title="Clock Number"
+            
             iconName="language"
             iconColor="black"
           ></AnalogClockNumberModal>

@@ -40,6 +40,15 @@ const AnalogClockNumberModal = ({
           {/*All views of Modal*/}
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
+            <View style={styles.buttonsContainer}>
+              <AnalogClockNumberModalButton color="purple" />
+              <AnalogClockNumberModalButton color="yellow" />
+              <AnalogClockNumberModalButton color="green" />
+              <AnalogClockNumberModalButton color="black" />
+              <AnalogClockNumberModalButton color="orange" />
+              <AnalogClockNumberModalButton color="blue" />
+              <AnalogClockNumberModalButton color="pink" />
+            </View>
             <Text style={styles.text}>{title}</Text>
             <TouchableOpacity
               onPress={() => {
@@ -48,12 +57,6 @@ const AnalogClockNumberModal = ({
             >
               <Text>Close</Text>
             </TouchableOpacity>
-            <View style={styles.buttonsContainer}>
-              <AnalogClockNumberModalButton color="purple" />
-              <AnalogClockNumberModalButton color="yellow" />
-              <AnalogClockNumberModalButton color="green" />
-              <AnalogClockNumberModalButton color="black" />
-            </View>
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
@@ -91,29 +94,22 @@ const styles = StyleSheet.create({
   },
   modalPopUp: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    backgroundColor: "red",
-    borderColor: "black",
-    borderWidth: 2,
-    borderTopStartRadius: 20,
-    borderTopEndRadius: 20,
-    borderBottomStartRadius: 20,
-    borderBottomEndRadius: 20,
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center",
     marginTop: 680,
     marginRight: 10,
     marginBottom: 100,
     marginLeft: 10,
   },
   text: {
+    justifyContent: "center",
+    alignItems: "center",
     color: "#3f2949",
     marginTop: 10,
   },
   buttonsContainer: {
-    backgroundColor: "yellow",
-    borderRadius: 10,
-    borderWidth: 2,
-    flexDirection: 'row',
+    flexDirection: "row",
     justifyContent: "space-evenly",
   },
 })
