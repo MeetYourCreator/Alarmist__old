@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react"
 import {
   Button,
   TouchableOpacity,
-  Modal,
   Pressable,
   Text,
   View,
   SafeAreaView,
   StyleSheet,
 } from "react-native"
+import Modal from "react-native-modal"
 import styled from "styled-components"
 import AnalogClockNumberModalButton from "./AnalogClockNumberModalButton.jsx"
 
@@ -33,6 +33,7 @@ const AnalogClockNumberModal = ({
           animationType={"slide"}
           transparent={true}
           visible={showModal}
+          onBackdropPress={() => setShowModal(false)}
           onRequestClose={() => {
             console.log("Modal has been closed.")
           }}
@@ -55,7 +56,6 @@ const AnalogClockNumberModal = ({
                 setShowModal(!showModal)
               }}
             >
-              <Text>Close</Text>
             </TouchableOpacity>
           </View>
         </Modal>
