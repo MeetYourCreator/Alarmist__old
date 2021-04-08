@@ -10,7 +10,7 @@ import {
 } from "react-native"
 import Modal from "react-native-modal"
 import styled from "styled-components"
-import AnalogClockNumberModalButton from "./AnalogClockNumberModalButton.jsx"
+import MenuColorButton from "./MenuColorButton.jsx"
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -42,13 +42,13 @@ const AnalogClockNumberModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <AnalogClockNumberModalButton color="purple" />
-              <AnalogClockNumberModalButton color="yellow" />
-              <AnalogClockNumberModalButton color="green" />
-              <AnalogClockNumberModalButton color="black" />
-              <AnalogClockNumberModalButton color="orange" />
-              <AnalogClockNumberModalButton color="blue" />
-              <AnalogClockNumberModalButton color="pink" />
+              <MenuColorButton color="purple" />
+              <MenuColorButton color="yellow" />
+              <MenuColorButton color="green" />
+              <MenuColorButton color="black" />
+              <MenuColorButton color="orange" />
+              <MenuColorButton color="blue" />
+              <MenuColorButton color="pink" />
             </View>
             <Text style={styles.text}>{title}</Text>
             <TouchableOpacity

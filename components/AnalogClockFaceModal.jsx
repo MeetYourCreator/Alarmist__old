@@ -10,7 +10,7 @@ import {
 } from "react-native"
 import Modal from 'react-native-modal'
 import styled from "styled-components"
-import AnalogClockFaceModalButton from "./AnalogClockFaceModalButton.jsx"
+import MenuColorButton from "./MenuColorButton.jsx"
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -42,20 +42,19 @@ const AnalogClockFaceModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <AnalogClockFaceModalButton color="purple" />
-              <AnalogClockFaceModalButton color="yellow" />
-              <AnalogClockFaceModalButton color="green" />
-              <AnalogClockFaceModalButton color="black" />
-              <AnalogClockFaceModalButton color="orange" />
-              <AnalogClockFaceModalButton color="blue" />
-              <AnalogClockFaceModalButton color="pink" />
+              <MenuColorButton color="purple" />
+              <MenuColorButton color="yellow" />
+              <MenuColorButton color="green" />
+              <MenuColorButton color="black" />
+              <MenuColorButton color="orange" />
+              <MenuColorButton color="blue" />
+              <MenuColorButton color="pink" />
             </View>
             <TouchableOpacity
               onPress={() => {
                 setShowModal(!showModal)
               }}
-            >
-            </TouchableOpacity>
+            ></TouchableOpacity>
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
