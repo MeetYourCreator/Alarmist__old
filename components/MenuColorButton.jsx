@@ -9,27 +9,26 @@ import {
   SafeAreaView,
   StyleSheet,
 } from "react-native"
+import styled from 'styled-components'
 
-const MenuColorButton = ({ color }) => {
+const MenuColorButton = ({color}) => {
   return (
-    <TouchableOpacity style={styles.colorOptionButton}>
-      <Text>{color}</Text>
-    </TouchableOpacity>
+    <ColorOptionButton color={color }/>
   )
 }
 
-const styles = StyleSheet.create({
-  colorOptionButton: {
-    backgroundColor: "pink",
-    width: 40,
-    height: 40,
-    padding: 10,
-    borderRadius: 20,
-    borderWidth: 2,
-    margin: 20,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-  },
-})
+const ColorOptionButton = styled.TouchableOpacity`
+  background-color: ${(props) => props.color};
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 20px;
+  border-width: 2px;
+  margin: 20px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: ${(props) => props.color};
+`
+
 
 export default MenuColorButton;

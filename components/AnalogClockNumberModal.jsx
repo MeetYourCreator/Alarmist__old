@@ -55,8 +55,7 @@ const AnalogClockNumberModal = ({
               onPress={() => {
                 setShowModal(!showModal)
               }}
-            >
-            </TouchableOpacity>
+            ></TouchableOpacity>
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
