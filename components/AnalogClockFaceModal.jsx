@@ -40,7 +40,15 @@ const AnalogClockFaceModal = ({
           {/*All views of Modal*/}
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
-            <Text style={styles.text}>{title}</Text>
+            <View style={styles.buttonsContainer}>
+              <AnalogClockFaceModalButton color="purple" />
+              <AnalogClockFaceModalButton color="yellow" />
+              <AnalogClockFaceModalButton color="green" />
+              <AnalogClockFaceModalButton color="black" />
+              <AnalogClockFaceModalButton color="orange" />
+              <AnalogClockFaceModalButton color="blue" />
+              <AnalogClockFaceModalButton color="pink" />
+            </View>
             <TouchableOpacity
               onPress={() => {
                 setShowModal(!showModal)
@@ -48,10 +56,6 @@ const AnalogClockFaceModal = ({
             >
               <Text>Close</Text>
             </TouchableOpacity>
-            <AnalogClockFaceModalButton color="blue" />
-            <AnalogClockFaceModalButton color="pink" />
-            <AnalogClockFaceModalButton color="white" />
-            <AnalogClockFaceModalButton color="red" />
           </View>
         </Modal>
         {/*Updating the state to make Modal Visible*/}
@@ -89,32 +93,23 @@ const styles = StyleSheet.create({
   },
   modalPopUp: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    backgroundColor: "red",
-    borderColor: "black",
-    borderWidth: 2,
-    borderTopStartRadius: 20,
-    borderTopEndRadius: 20,
-    borderBottomStartRadius: 180,
-    borderBottomEndRadius: 180,
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center",
     marginTop: 680,
     marginRight: 10,
     marginBottom: 100,
     marginLeft: 10,
   },
   text: {
+    justifyContent: "center",
+    alignItems: "center",
     color: "#3f2949",
     marginTop: 10,
   },
-  colorOptionButton: {
-    backgroundColor: "yellow",
-    width: "20%",
-    height: "40%",
-    borderRadius: 10,
-    borderWidth: 2,
-    justifyContent: "center",
-    alignItems: "center",
+  buttonsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
   },
 })
 
