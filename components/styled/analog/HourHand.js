@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const HourHand = styled.View`
   position: absolute;
-  bottom: 55%;
-  left: 40%;
+  bottom: 60%;
+  left: 50%;
   width: 10px;
   height: 38%;
   background-color: ${(props) => props.color ? props.color : 'black'};
