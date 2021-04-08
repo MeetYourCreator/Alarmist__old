@@ -180,13 +180,11 @@ const AnalogClock = () => {
         </View>
         <View style={styles.menu}>
           <AnalogClockFaceModal
-            title="Clock Face"
             iconName="color-palette-sharp"
             iconColor="black"
           ></AnalogClockFaceModal>
 
           <AnalogClockNumberModal
-            
             iconName="language"
             iconColor="black"
           ></AnalogClockNumberModal>

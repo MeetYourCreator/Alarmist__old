@@ -21,12 +21,12 @@ const MenuColorButton = ({ color }) => {
 const styles = StyleSheet.create({
   colorOptionButton: {
     backgroundColor: "pink",
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     padding: 10,
-    borderRadius: 25,
+    borderRadius: 20,
     borderWidth: 2,
-    margin: 10,
+    margin: 20,
     flexDirection: "row",
     justifyContent: "space-evenly",
   },
