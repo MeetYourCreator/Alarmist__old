@@ -1,28 +1,22 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import {
-  Button,
   TouchableOpacity,
-  Pressable,
-  Text,
   View,
   SafeAreaView,
   StyleSheet,
-} from "react-native"
-import Modal from 'react-native-modal'
-import styled from "styled-components"
-import MenuColorButton from "./MenuColorButton.jsx"
+} from "react-native";
+import Modal from 'react-native-modal';
+import MenuColorButton from "./MenuColorButton.jsx";
 
-import { Ionicons } from "@expo/vector-icons"
+import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
 const AnalogClockFaceModal = ({
-  title,
   iconName,
-  iconColor,
-  clockFaceColorChoiceOne,
+  iconColor
 }) => {
   const [showModal, setShowModal] = useState(false)
 

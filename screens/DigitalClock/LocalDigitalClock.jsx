@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"
-import { showLocalTime } from "../../services/time.js"
-import { DigitalClockContainer } from "../../components/styled/digital/DigitalClockContainer.js"
-import { Clock } from "../../components/styled/digital/Clock.js"
-import { ClockText } from "../../components/styled/digital/ClockText.js"
-import { Location } from "../../components/styled/digital/Location.js"
+import React, { useEffect, useState } from "react";
+import { showLocalTime } from "../../services/time.js";
+import { DigitalClockContainer } from "../../components/styled/digital/DigitalClockContainer.js";
+import { Clock } from "../../components/styled/digital/Clock.js";
+import { ClockText } from "../../components/styled/digital/ClockText.js";
+import { Location } from "../../components/styled/digital/Location.js";
 
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime())
@@ -29,4 +29,4 @@ const LocalDigitalClock = () => {
   )
 }
 
-export default LocalDigitalClock
+export default LocalDigitalClock;

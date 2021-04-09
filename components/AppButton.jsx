@@ -1,13 +1,10 @@
-import React from "react"
+import React from "react";
 import {
-  Button,
   TouchableOpacity,
   Text,
   View,
-  SafeAreaView,
   StyleSheet,
-} from "react-native"
-import styled from "styled-components"
+} from "react-native";
 
 const AppButton = ({ onPress, title }) => {
   return (
@@ -45,4 +42,4 @@ const styles = StyleSheet.create({
     padding: 20,
   },
 })
-export default AppButton
+export default AppButton;

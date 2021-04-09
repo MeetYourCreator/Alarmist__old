@@ -1,15 +1,14 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import HomeScreen from './screens/HomeScreen.jsx'
-import AnalogClock from './screens/AnalogClock.jsx'
-import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx'
-import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock/WorldDigitalClockContainer.jsx'
-import { StyleSheet, Text, TextInput, SafeAreaView, View } from 'react-native';
+import HomeScreen from './screens/HomeScreen.jsx';
+import AnalogClock from './screens/AnalogClock.jsx';
+import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
+import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock/WorldDigitalClockContainer.jsx';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack'
-import * as Notifications from "expo-notifications"
-import * as Permissions from "expo-permissions"
+import { createStackNavigator } from '@react-navigation/stack';
+import * as Notifications from "expo-notifications";
+import * as Permissions from "expo-permissions";
 
 //function exectued to let os know what tpo dpo with incoming Notification before the Notification is displayed to the user
 Notifications.setNotificationHandler({

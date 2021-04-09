@@ -1,15 +1,5 @@
-import React from "react"
-import {
-  Button,
-  TouchableOpacity,
-  Modal,
-  Pressable,
-  Text,
-  View,
-  SafeAreaView,
-  StyleSheet,
-} from "react-native"
-import styled from 'styled-components'
+import React from "react";
+import styled from 'styled-components';
 
 const MenuColorButton = ({color}) => {
   return (

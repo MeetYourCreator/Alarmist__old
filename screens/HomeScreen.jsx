@@ -1,17 +1,12 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 import {
-  Button,
-  TouchableOpacity,
-  Text,
-  Modal,
   View,
   SafeAreaView,
   StyleSheet,
-} from "react-native"
-import AppButton from "../components/AppButton.jsx"
-import styled from "styled-components"
-import * as Notifications from "expo-notifications"
-import * as Permissions from "expo-permissions"
+} from "react-native";
+import AppButton from "../components/AppButton.jsx";
+import * as Notifications from "expo-notifications";
+import * as Permissions from "expo-permissions";
 
 const HomeScreen = ({ navigation }) => {
   //Permissions needed for ios
@@ -107,4 +102,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 })
-export default HomeScreen
+export default HomeScreen;

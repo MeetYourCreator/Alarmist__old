@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react"
-import { StyleSheet, Text, TextInput, View, SafeAreaView } from "react-native"
-
-import styled from "styled-components"
+import React, { useEffect, useState } from "react";
+import { StyleSheet, TextInput, SafeAreaView } from "react-native";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("")
@@ -36,4 +34,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default SearchBar
+export default SearchBar;
