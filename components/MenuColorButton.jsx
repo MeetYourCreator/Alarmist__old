@@ -13,7 +13,7 @@ import styled from 'styled-components'
 
 const MenuColorButton = ({color}) => {
   return (
-    <ColorOptionButton color={color }/>
+    <ColorOptionButton color={color}/>
   )
 }
 
@@ -29,6 +29,5 @@ const ColorOptionButton = styled.TouchableOpacity`
   justify-content: space-evenly;
   color: ${(props) => props.color};
 `
-
 
 export default MenuColorButton;

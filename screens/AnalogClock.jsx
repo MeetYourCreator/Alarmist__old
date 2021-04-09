@@ -17,6 +17,7 @@ import { HourHand } from "../components/styled/analog/HourHand.js"
 import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js"
 import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
+import AnalogClockFace from "../components/AnalogClockFace.jsx"
 import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx"
 import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx"
 
@@ -49,7 +50,7 @@ const AnalogClock = () => {
         <View style={styles.clockContainer}>
           <AnalogClockContainer>
             <ClockCenter />
-            <Clock color="blue" borderColor="red">
+            <Clock>
               <SecondHand
                 color="white"
                 style={{
@@ -225,4 +226,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 })
-export default AnalogClock
+
+export default AnalogClock;
