@@ -16,7 +16,8 @@ import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
 const AnalogClockFaceModal = ({
   iconName,
-  iconColor
+  iconColor,
+  onPress
 }) => {
   const [showModal, setShowModal] = useState(false)
 
@@ -44,34 +45,13 @@ const AnalogClockFaceModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton
-                customColor="purple"
-                onPress={() => setPurple(purple)}
-              />
-              <MenuColorButton
-                customColor="yellow"
-                onPress={() => setYellow(yellow)}
-              />
-              <MenuColorButton
-                customColor="green"
-                onPress={() => setGreen(green)}
-              />
-              <MenuColorButton
-                customColor="black"
-                onPress={() => setBlack(black)}
-              />
-              <MenuColorButton
-                customColor="orange"
-                onPress={() => setOrange(orange)}
-              />
-              <MenuColorButton
-                customColor="blue"
-                onPress={() => setBlue(blue)}
-              />
-              <MenuColorButton
-                customColor="pink"
-                onPress={() => setPink(pink)}
-              />
+              <MenuColorButton customColor="purple" onPress={onPress} />
+              <MenuColorButton customColor="yellow" onPress={onPress} />
+              <MenuColorButton customColor="green" onPress={onPress} />
+              <MenuColorButton customColor="black" onPress={onPress} />
+              <MenuColorButton customColor="orange" onPress={onPress} />
+              <MenuColorButton customColor="blue" onPress={onPress} />
+              <MenuColorButton customColor="pink" onPress={onPress} />
             </View>
             <TouchableOpacity
               onPress={() => {

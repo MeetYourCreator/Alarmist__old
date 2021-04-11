@@ -26,10 +26,20 @@ const AnalogClock = () => {
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
 
-  const [color, setColor] = useState()
+  const [color, setColor] = useState({
+    purple: "purple",
+    yellow: "yellow",
+    green: "green",
+    orange: "orange",
+    blue: "blue",
+    pink: "pink"
+  },
+  )
 
-  const handleSetColor = () => {
-  
+
+  const handleSetColor = (prevColor) => {
+    prevColor = color;
+    setColor(prevColor);
   }
 
   useEffect(() => {
@@ -37,6 +47,7 @@ const AnalogClock = () => {
       setHourRatio(setHour())
       setMinuteRatio(setMinute())
       setSecondRatio(setSecond())
+      setColor(color)
     }, 1000)
     return () => clearInterval(interval)
   }, [])
@@ -91,7 +102,7 @@ const AnalogClock = () => {
                     { rotate: `${hourRatio * 360}deg` },
                     { translateY: -65 },
                     //moves left as value is lowered
-                    { translateX: -5 },
+                    { translateX: 5 },
                   ],
                 }}
               />
@@ -188,6 +199,7 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
+            onPress={() => handleSetColor(color)}
            
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
