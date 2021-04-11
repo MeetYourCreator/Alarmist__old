@@ -188,11 +188,11 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
+           
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"
             iconColor="black"
-            
           ></AnalogClockNumberModal>
         </View>
       </SafeAreaView>

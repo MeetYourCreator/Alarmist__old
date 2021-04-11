@@ -15,10 +15,8 @@ import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
 const AnalogClockFaceModal = ({
-  title,
   iconName,
-  iconColor,
-  onPress,
+  iconColor
 }) => {
   const [showModal, setShowModal] = useState(false)
 
@@ -46,7 +44,7 @@ const AnalogClockFaceModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton customColor={purple} onPress={onPress}/>
+              <MenuColorButton customColor={purple} />
               <MenuColorButton customColor={yellow} />
               <MenuColorButton customColor={green} />
               <MenuColorButton customColor={black} />

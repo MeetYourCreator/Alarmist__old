@@ -16,7 +16,7 @@ import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 import { setStatusBarBackgroundColor } from "expo-status-bar";
 
-const AnalogClockNumberModal = ({ title, iconName, iconColor, onPress }) => {
+const AnalogClockNumberModal = ({ iconName, iconColor }) => {
   const [showModal, setShowModal] = useState(false)
  
 
