@@ -1,9 +1,12 @@
 import React from "react";
+import { Text, TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import styled from 'styled-components';
 
-const MenuColorButton = ({color}) => {
+const MenuColorButton = ({color, onPress}) => {
   return (
-    <ColorOptionButton color={color}/>
+    <ColorOptionButton
+      color={color}
+      onPress={onPress} />
   )
 }
 
