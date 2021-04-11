@@ -2,12 +2,8 @@ import React from "react";
 import { Text, TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import styled from 'styled-components';
 
-const MenuColorButton = ({color, onPress}) => {
-  return (
-    <ColorOptionButton
-      color={color}
-      onPress={onPress} />
-  )
+const MenuColorButton = ({ customColor, onPress }) => {
+  return <ColorOptionButton color={customColor} onPress={onPress} />
 }
 
 const ColorOptionButton = styled.TouchableOpacity`

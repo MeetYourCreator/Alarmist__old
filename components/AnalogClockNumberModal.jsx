@@ -15,11 +15,7 @@ import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 
-const AnalogClockNumberModal = ({
-  title,
-  iconName,
-  iconColor
-}) => {
+const AnalogClockNumberModal = ({ title, iconName, iconColor }) => {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -27,9 +23,9 @@ const AnalogClockNumberModal = ({
       <View style={styles.container}>
         <Modal
           animationType={"slide"}
+          onBackdropPress={() => setShowModal(false)}
           transparent={true}
           visible={showModal}
-          onBackdropPress={() => setShowModal(false)}
           onRequestClose={() => {
             console.log("Modal has been closed.")
           }}
@@ -38,15 +34,14 @@ const AnalogClockNumberModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton color="purple" />
-              <MenuColorButton color="yellow" />
-              <MenuColorButton color="green" />
-              <MenuColorButton color="black" />
-              <MenuColorButton color="orange" />
-              <MenuColorButton color="blue" />
-              <MenuColorButton color="pink" />
+              <MenuColorButton customColor="purple" />
+              <MenuColorButton customColor="yellow" />
+              <MenuColorButton customColor="green" />
+              <MenuColorButton customColor="black" />
+              <MenuColorButton customColor="orange" />
+              <MenuColorButton customColor="blue" />
+              <MenuColorButton customColor="pink" />
             </View>
-            <Text style={styles.text}>{title}</Text>
             <TouchableOpacity
               onPress={() => {
                 setShowModal(!showModal)
