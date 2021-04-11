@@ -1,5 +1,4 @@
 import React from "react";
-import { Text, TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import styled from 'styled-components';
 
 const MenuColorButton = ({ customColor, onPress }) => {
