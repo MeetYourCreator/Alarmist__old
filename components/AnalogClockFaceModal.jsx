@@ -26,7 +26,7 @@ const AnalogClockFaceModal = ({
   const [black, setBlack] = useState("black")
   const [orange, setOrange] = useState("orange")
   const [blue, setBlue] = useState("blue")
-   const [pink, setPink] = useState("pink")
+  const [pink, setPink] = useState("pink")
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -44,13 +44,34 @@ const AnalogClockFaceModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton customColor={purple} />
-              <MenuColorButton customColor={yellow} />
-              <MenuColorButton customColor={green} />
-              <MenuColorButton customColor={black} />
-              <MenuColorButton customColor={orange} />
-              <MenuColorButton customColor={blue}/>
-              <MenuColorButton customColor={pink} />
+              <MenuColorButton
+                customColor="purple"
+                onPress={() => setPurple(purple)}
+              />
+              <MenuColorButton
+                customColor="yellow"
+                onPress={() => setYellow(yellow)}
+              />
+              <MenuColorButton
+                customColor="green"
+                onPress={() => setGreen(green)}
+              />
+              <MenuColorButton
+                customColor="black"
+                onPress={() => setBlack(black)}
+              />
+              <MenuColorButton
+                customColor="orange"
+                onPress={() => setOrange(orange)}
+              />
+              <MenuColorButton
+                customColor="blue"
+                onPress={() => setBlue(blue)}
+              />
+              <MenuColorButton
+                customColor="pink"
+                onPress={() => setPink(pink)}
+              />
             </View>
             <TouchableOpacity
               onPress={() => {
