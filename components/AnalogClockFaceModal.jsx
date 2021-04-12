@@ -17,6 +17,7 @@ import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
 const AnalogClockFaceModal = ({
   iconName,
   iconColor,
+  value,
   onPress
 }) => {
   const [showModal, setShowModal] = useState(false)
@@ -47,8 +48,8 @@ const AnalogClockFaceModal = ({
             <View style={styles.buttonsContainer}>
               <MenuColorButton
                 customColor="purple"
-                value={purple}
-                onPress={setPurple}
+                value={value}
+                onPress={onPress}
               />
               <MenuColorButton
                 customColor="yellow"

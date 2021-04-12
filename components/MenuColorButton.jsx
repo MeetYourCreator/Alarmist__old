@@ -2,9 +2,10 @@ import React from "react";
 import styled from 'styled-components';
 
 const MenuColorButton = ({ customColor, value, onPress }) => {
-  return <ColorOptionButton color={customColor} value={value} onPress={e => {
-  onPress(e.target.value)
-  }} />
+  return <ColorOptionButton
+    color={customColor}
+    value={value}
+     />
 }
 
 const ColorOptionButton = styled.TouchableOpacity`

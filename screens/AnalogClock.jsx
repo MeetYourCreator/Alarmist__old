@@ -25,7 +25,9 @@ const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
-
+  
+  const [color, setColor] =useState()
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setHourRatio(setHour())
@@ -34,6 +36,8 @@ const AnalogClock = () => {
     }, 1000)
     return () => clearInterval(interval)
   }, [])
+
+
 
   let [fontsLoaded] = useFonts({
     Inter_900Black,
@@ -184,7 +188,8 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
-          
+            value={color}
+            onPress={setColor}
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"
