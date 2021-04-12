@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import HomeScreen from './screens/HomeScreen.jsx';
 import AnalogClock from './screens/AnalogClock.jsx';
 import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
@@ -32,6 +32,15 @@ const fetchFonts = () => {
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
+  const [dataLoaded, setDataLoaded] = useState(false)
+
+  if (!dataLoaded) {
+    return <AppLoading
+      startAsync={fetchFonts}
+      onFinish={() => setDataLoaded(true)}
+      onError={(error) => conssole.log(error)}
+    />
+  }
 
   return (
     <NavigationContainer>
