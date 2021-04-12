@@ -7,7 +7,7 @@ import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
 import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock/WorldDigitalClockContainer.jsx';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import { AppLoading } from 'expo'
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
 import * as Font from 'expo-font'
