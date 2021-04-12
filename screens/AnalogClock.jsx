@@ -26,28 +26,11 @@ const AnalogClock = () => {
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
 
-  const [color, setColor] = useState({
-    purple: "purple",
-    yellow: "yellow",
-    green: "green",
-    orange: "orange",
-    blue: "blue",
-    pink: "pink"
-  },
-  )
-
-
-  const handleSetColor = (prevColor) => {
-    prevColor = color;
-    setColor(prevColor);
-  }
-
   useEffect(() => {
     const interval = setInterval(() => {
       setHourRatio(setHour())
       setMinuteRatio(setMinute())
       setSecondRatio(setSecond())
-      setColor(color)
     }, 1000)
     return () => clearInterval(interval)
   }, [])
@@ -57,6 +40,8 @@ const AnalogClock = () => {
     Monoton_400Regular,
   })
 
+  
+  
   return (
     <>
       <SafeAreaView style={styles.screenContainer}>
@@ -64,7 +49,7 @@ const AnalogClock = () => {
           <AnalogClockContainer>
             <ClockCenter />
             <Clock
-             
+           
         
             >
               <SecondHand
@@ -199,8 +184,7 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
-            onPress={() => handleSetColor(color)}
-           
+          
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"

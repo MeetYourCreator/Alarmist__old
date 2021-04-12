@@ -45,13 +45,41 @@ const AnalogClockFaceModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton customColor="purple" onPress={onPress} />
-              <MenuColorButton customColor="yellow" onPress={onPress} />
-              <MenuColorButton customColor="green" onPress={onPress} />
-              <MenuColorButton customColor="black" onPress={onPress} />
-              <MenuColorButton customColor="orange" onPress={onPress} />
-              <MenuColorButton customColor="blue" onPress={onPress} />
-              <MenuColorButton customColor="pink" onPress={onPress} />
+              <MenuColorButton
+                customColor="purple"
+                value={purple}
+                onPress={setPurple}
+              />
+              <MenuColorButton
+                customColor="yellow"
+                value={yellow}
+                onPress={setYellow}
+              />
+              <MenuColorButton
+                customColor="green"
+                value={green}
+                onPress={setGreen}
+              />
+              <MenuColorButton
+                customColor="black"
+                value={black}
+                onPress={setBlack}
+              />
+              <MenuColorButton
+                customColor="orange"
+                value={orange}
+                onPress={setOrange}
+              />
+              <MenuColorButton
+                customColor="blue"
+                value={blue}
+                onPress={setBlue}
+              />
+              <MenuColorButton
+                customColor="pink"
+                value={pink}
+                onPress={setPink}
+              />
             </View>
             <TouchableOpacity
               onPress={() => {
