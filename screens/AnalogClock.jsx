@@ -26,7 +26,9 @@ const AnalogClock = () => {
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
   
-  const [color, setColor] =useState()
+  const [color, setColor] = useState(
+  true
+  )
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,7 +47,8 @@ const AnalogClock = () => {
   })
 
   
-  
+  const currentColor = `${color}`
+
   return (
     <>
       <SafeAreaView style={styles.screenContainer}>
@@ -53,7 +56,7 @@ const AnalogClock = () => {
           <AnalogClockContainer>
             <ClockCenter />
             <Clock
-           
+              currentColor={"blue"}
         
             >
               <SecondHand
@@ -87,9 +90,9 @@ const AnalogClock = () => {
                     //HourHand moves up as value is lowered
                     { translateY: 80 },
                     //HourHand moves left as value is lowered
-                    { translateX: 5 },
+                    { translateX: 0 },
                     { rotate: `${hourRatio * 360}deg` },
-                    { translateY: -65 },
+                    { translateY: -60 },
                     //moves left as value is lowered
                     { translateX: 5 },
                   ],
@@ -188,8 +191,7 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
-            value={color}
-            onPress={setColor}
+            
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"
