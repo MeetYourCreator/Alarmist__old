@@ -17,6 +17,7 @@ import { ClockCenter } from "../components/styled/analog/ClockCenter.js";
 import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
 import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
 
+
 import AppLoading from "expo-app-loading"
 import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 import { Monoton_400Regular } from "@expo-google-fonts/monoton";
@@ -80,7 +81,7 @@ const AnalogClock = () => {
                     { translateX: -5 },
                     { rotate: `${minuteRatio * 360}deg` },
                     { translateY: -75 },
-                    { translateX: 0 },
+                    { translateX: 5 },
                   ],
                 }}
               />
@@ -90,7 +91,7 @@ const AnalogClock = () => {
                     //HourHand moves up as value is lowered
                     { translateY: 80 },
                     //HourHand moves left as value is lowered
-                    { translateX: 0 },
+                    { translateX: -5 },
                     { rotate: `${hourRatio * 360}deg` },
                     { translateY: -60 },
                     //moves left as value is lowered

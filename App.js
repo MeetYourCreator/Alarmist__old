@@ -7,8 +7,10 @@ import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
 import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock/WorldDigitalClockContainer.jsx';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
+import * as Font from 'expo-font'
 
 //function exectued to let os know what tpo dpo with incoming Notification before the Notification is displayed to the user
 Notifications.setNotificationHandler({
@@ -22,6 +24,11 @@ Notifications.setNotificationHandler({
 
 const Stack = createStackNavigator();
 
+const fetchFonts = () => {
+  return Font.loadAsync({
+    'press-start-2p': require('./assets/fonts/PressStart2P-Regular.ttf')
+  });
+}
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
