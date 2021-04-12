@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const ClockNumberFont = styled.Text`
 text-align: center;
-font-size: 30px;
-font-family: ${(props) => props.fontFamily ? props.fontFamily : 'press-start-2p'};
+font-size: 27px;
+font-family: ${(props) => props.fontFamily ? props.fontFamily : 'diplomatica'};
 margin-top: 10px;
-color: ${(props) => props.color ? props.color : 'yellow'};
+color: ${(props) => props.color ? props.color : 'black'};
 `

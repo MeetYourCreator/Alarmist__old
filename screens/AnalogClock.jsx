@@ -17,11 +17,6 @@ import { ClockCenter } from "../components/styled/analog/ClockCenter.js";
 import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
 import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
 
-
-import AppLoading from "expo-app-loading"
-import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
-import { Monoton_400Regular } from "@expo-google-fonts/monoton";
-
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
@@ -40,14 +35,6 @@ const AnalogClock = () => {
     return () => clearInterval(interval)
   }, [])
 
-
-
-  let [fontsLoaded] = useFonts({
-    Inter_900Black,
-    Monoton_400Regular,
-  })
-
-  
   const currentColor = `${color}`
 
   return (
@@ -56,10 +43,7 @@ const AnalogClock = () => {
         <View style={styles.clockContainer}>
           <AnalogClockContainer>
             <ClockCenter />
-            <Clock
-              currentColor={"blue"}
-        
-            >
+            <Clock currentColor={"blue"}>
               <SecondHand
                 color="white"
                 style={{
@@ -104,9 +88,7 @@ const AnalogClock = () => {
                   transform: [{ rotate: "30deg" }],
                 }}
               >
-                <ClockNumberFont fontFamily="Monoton_400Regular">
-                  1
-                </ClockNumberFont>
+                <ClockNumberFont>1</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
@@ -120,70 +102,70 @@ const AnalogClock = () => {
                   transform: [{ rotate: "90deg" }],
                 }}
               >
-                <Text style={styles.number}>3</Text>
+                <ClockNumberFont>3</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "120deg" }],
                 }}
               >
-                <Text style={styles.number}>4</Text>
+                <ClockNumberFont>4</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "150deg" }],
                 }}
               >
-                <Text style={styles.number}>5</Text>
+                <ClockNumberFont>5</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "180deg" }],
                 }}
               >
-                <Text style={styles.number}>6</Text>
+                <ClockNumberFont>6</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "210deg" }],
                 }}
               >
-                <Text style={styles.number}>7</Text>
+                <ClockNumberFont>7</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "240deg" }],
                 }}
               >
-                <Text style={styles.number}>8</Text>
+                <ClockNumberFont>8</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "270deg" }],
                 }}
               >
-                <Text style={styles.number}>9</Text>
+                <ClockNumberFont>9</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "300deg" }],
                 }}
               >
-                <Text style={styles.number}>10</Text>
+                <ClockNumberFont>10</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "330deg" }],
                 }}
               >
-                <Text style={styles.number}>11</Text>
+                <ClockNumberFont>11</ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "360deg" }],
                 }}
               >
-                <Text style={styles.number}>12</Text>
+                <ClockNumberFont>12</ClockNumberFont>
               </ClockNumberContainer>
             </Clock>
           </AnalogClockContainer>
@@ -192,7 +174,6 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
-            
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"
@@ -213,12 +194,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 180,
     marginBottom: 90,
-  },
-  number: {
-    textAlign: "center",
-    fontSize: 30,
-    marginTop: 10,
-    fontFamily: "Inter_900Black",
   },
   menu: {
     flex: 1,

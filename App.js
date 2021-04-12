@@ -26,7 +26,12 @@ const Stack = createStackNavigator();
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    'press-start-2p': require('./assets/fonts/PressStart2P-Regular.ttf')
+    'press-start-2p': require('./assets/fonts/PressStart2P-Regular.ttf'),
+    'audiowide': require('./assets/fonts/Audiowide-Regular.ttf'),
+    'codystar-regular': require('./assets/fonts/Codystar-Regular.ttf'),
+    'diplomatica': require('./assets/fonts/DiplomataSC-Regular.ttf'),
+    'monoton': require('./assets/fonts/Monoton-Regular.ttf'),
+    'nosifer': require('./assets/fonts/Nosifer-Regular.ttf'),
   });
 }
 // Build for ios View is mapped to UIView
