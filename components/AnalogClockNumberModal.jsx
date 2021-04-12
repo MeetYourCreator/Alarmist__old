@@ -9,15 +9,7 @@ import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 
 const AnalogClockNumberModal = ({ iconName, iconColor, value, onPress }) => {
-  const [showModal, setShowModal] = useState(false)
-
-  const [nosifer, setNosifer] = useState("nosifer")
-  const [yellow, setYellow] = useState("yellow")
-  const [green, setGreen] = useState("green")
-  const [black, setBlack] = useState("black")
-  const [orange, setOrange] = useState("orange")
-  const [blue, setBlue] = useState("blue")
-  const [pink, setPink] = useState("pink")
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -37,6 +29,31 @@ const AnalogClockNumberModal = ({ iconName, iconColor, value, onPress }) => {
             <View style={styles.buttonsContainer}>
               <MenuFontButton
                 customFont="nosifer"
+                fontDisplay="123"
+                value={value}
+                onPress={onPress}
+              />
+              <MenuFontButton
+                customFont="audiowide"
+                fontDisplay="123"
+                value={value}
+                onPress={onPress}
+              />
+              <MenuFontButton
+                customFont="codystar-regular"
+                fontDisplay="123"
+                value={value}
+                onPress={onPress}
+              />
+              <MenuFontButton
+                customFont="press-start-2p"
+                fontDisplay="123"
+                value={value}
+                onPress={onPress}
+              />
+              <MenuFontButton
+                customFont="monoton"
+                fontDisplay="123"
                 value={value}
                 onPress={onPress}
               />
