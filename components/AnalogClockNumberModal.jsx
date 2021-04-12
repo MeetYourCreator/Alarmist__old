@@ -1,24 +1,23 @@
-import React, { useEffect, useState } from "react";
-import {
-  TouchableOpacity,
-  Text,
-  View,
-  SafeAreaView,
-  StyleSheet,
-} from "react-native";
-import Modal from "react-native-modal";
-import MenuColorButton from "./MenuColorButton.jsx";
+import React, { useEffect, useState } from "react"
+import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
+import Modal from "react-native-modal"
+import MenuFontButton from "./MenuFontButton.jsx"
 
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
-import { Inter_200ExtraLight } from "@expo-google-fonts/inter"
-import { setStatusBarBackgroundColor } from "expo-status-bar";
 
-const AnalogClockNumberModal = ({ iconName, iconColor }) => {
+const AnalogClockNumberModal = ({ iconName, iconColor, value, onPress }) => {
   const [showModal, setShowModal] = useState(false)
- 
+
+  const [nosifer, setNosifer] = useState("nosifer")
+  const [yellow, setYellow] = useState("yellow")
+  const [green, setGreen] = useState("green")
+  const [black, setBlack] = useState("black")
+  const [orange, setOrange] = useState("orange")
+  const [blue, setBlue] = useState("blue")
+  const [pink, setPink] = useState("pink")
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -36,13 +35,11 @@ const AnalogClockNumberModal = ({ iconName, iconColor }) => {
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton customColor="purple" />
-              <MenuColorButton customColor="yellow" />
-              <MenuColorButton customColor="green" />
-              <MenuColorButton customColor="black" />
-              <MenuColorButton customColor="orange" />
-              <MenuColorButton customColor="blue" />
-              <MenuColorButton customColor="pink" />
+              <MenuFontButton
+                customFont="nosifer"
+                value={value}
+                onPress={onPress}
+              />
             </View>
             <TouchableOpacity
               onPress={() => {

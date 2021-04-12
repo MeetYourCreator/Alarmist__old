@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MinuteHand = styled.View`
-  bottom: 45%;
+  bottom: 38%;
   left: 50%;
   width: 9px;
   height: 45%;
