@@ -20,11 +20,11 @@ const FontOptionButton = styled.TouchableOpacity`
   color: ${(props) => (props.color ? props.color : "black")};
 `
 const FontOption = styled.Text`
-font-family: ${(props) => props.fontFamily}
-flex-direction: row;
+  font-family: ${(props) => props.fontFamily}
+  font-size: 15px;
+  text-align: center;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
-  font-size: 15px;
-
-`
+  `
 export default MenuFontButton;
