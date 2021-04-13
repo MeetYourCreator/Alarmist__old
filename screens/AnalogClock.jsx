@@ -43,7 +43,7 @@ const AnalogClock = () => {
         <View style={styles.clockContainer}>
           <AnalogClockContainer>
             <ClockCenter />
-            <Clock currentColor={"blue"}>
+            <Clock currentColor={"#FF6495"}>
               <SecondHand
                 color="white"
                 style={{

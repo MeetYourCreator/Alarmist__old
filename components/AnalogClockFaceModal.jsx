@@ -46,37 +46,37 @@ const AnalogClockFaceModal = ({
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
               <MenuColorButton
-                customColor="purple"
+                customColor="#FF6495"
                 value={value}
                 onPress={onPress}
               />
               <MenuColorButton
-                customColor="yellow"
+                customColor="#78FFF1"
                 value={yellow}
                 onPress={setYellow}
               />
               <MenuColorButton
-                customColor="green"
+                customColor="#361999"
                 value={green}
                 onPress={setGreen}
               />
               <MenuColorButton
-                customColor="black"
+                customColor="#FF4838"
                 value={black}
                 onPress={setBlack}
               />
               <MenuColorButton
-                customColor="orange"
+                customColor="#F1B814"
                 value={orange}
                 onPress={setOrange}
               />
               <MenuColorButton
-                customColor="blue"
+                customColor="#00ABE1"
                 value={blue}
                 onPress={setBlue}
               />
               <MenuColorButton
-                customColor="pink"
+                customColor="#F7F7F7"
                 value={pink}
                 onPress={setPink}
               />
