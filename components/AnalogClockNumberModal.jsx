@@ -57,6 +57,12 @@ const AnalogClockNumberModal = ({ iconName, iconColor, value, onPress }) => {
                 value={value}
                 onPress={onPress}
               />
+              <MenuFontButton
+                customFont="diplomatica"
+                fontDisplay="123"
+                value={value}
+                onPress={onPress}
+              />
             </View>
             <TouchableOpacity
               onPress={() => {
