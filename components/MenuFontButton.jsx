@@ -27,4 +27,5 @@ const FontOption = styled.Text`
   justify-content: center;
   flex-wrap: nowrap;
   `
+  
 export default MenuFontButton;
