@@ -46,27 +46,27 @@ const DigitalClockNumberColorModal = ({ iconName, iconColor, value, onPress }) =
                 onPress={setYellow}
               />
               <MenuColorButton
-                customColor="#361999"
+                customColor="#75D5FD"
                 value={green}
                 onPress={setGreen}
               />
               <MenuColorButton
-                customColor="#FF4838"
+                customColor="#09FBD3"
                 value={black}
                 onPress={setBlack}
               />
               <MenuColorButton
-                customColor="#F1B814"
+                customColor="#7122FA"
                 value={orange}
                 onPress={setOrange}
               />
               <MenuColorButton
-                customColor="#00ABE1"
+                customColor="#EF281E"
                 value={blue}
                 onPress={setBlue}
               />
               <MenuColorButton
-                customColor="#F7F7F7"
+                customColor="#0000FF"
                 value={pink}
                 onPress={setPink}
               />
