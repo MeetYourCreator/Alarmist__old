@@ -1,5 +1,5 @@
-{
-  colors: [
+
+  let colors = [
     {
       color: '#E8E500'
     },
@@ -21,12 +21,4 @@
     {
       color: '#0000FF'
     },
-  ],
-    fonts: [
-    {
-      fontFamily: 'nosifer'
-    }
-    
-    ]
-
-}
+  ]

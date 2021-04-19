@@ -1,6 +1,4 @@
-import { createStore } from 'redux';
-
-export const colorsReducer = (state = {value: color}, action) => {
+export const colorsReducer = (state, action) => {
   if (action.type === 'SET_E8E500')
     return state.filter(color => color === '#E8E500');
   else if (action.type === 'SET_FF2281')

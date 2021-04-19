@@ -13,6 +13,8 @@ import * as Permissions from "expo-permissions";
 import * as Font from 'expo-font'
 import store from './app/store.js'
 
+console.log(store)
+
 //function exectued to let os know what tpo dpo with incoming Notification before the Notification is displayed to the user
 Notifications.setNotificationHandler({
   handleNotification: async () => {
