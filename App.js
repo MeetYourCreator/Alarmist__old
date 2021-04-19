@@ -15,6 +15,17 @@ import store from './app/store.js'
 
 console.log(store)
 
+store.subscribe(() => {
+
+})
+
+// store.dispatch({
+//   type: 'SET_E8E500',
+//   payload: {
+//     description: '#E8E500'
+//   }
+// })
+
 //function exectued to let os know what tpo dpo with incoming Notification before the Notification is displayed to the user
 Notifications.setNotificationHandler({
   handleNotification: async () => {
