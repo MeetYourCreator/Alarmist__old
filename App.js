@@ -11,6 +11,7 @@ import AppLoading from 'expo-app-loading'
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
 import * as Font from 'expo-font'
+import store from './app/store.js'
 
 //function exectued to let os know what tpo dpo with incoming Notification before the Notification is displayed to the user
 Notifications.setNotificationHandler({

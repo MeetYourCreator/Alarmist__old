@@ -22,7 +22,7 @@
       color: '#0000FF'
     },
   ],
-    font: [
+    fonts: [
     {
       fontFamily: 'nosifer'
     }
