@@ -12,7 +12,7 @@ import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
 import * as Font from 'expo-font'
 import store from './app/store.js'
-
+import { Provider } from 'react-redux'
 console.log(store)
 
 store.subscribe(() => {
@@ -62,6 +62,7 @@ export default function App() {
   }
 
   return (
+    <Provider store={store}>
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
@@ -85,6 +86,7 @@ export default function App() {
           options={{ title: 'Analog Alarmist' }}
         />
       </Stack.Navigator>
-    </NavigationContainer>
+      </NavigationContainer>
+    </Provider>
   );
 }

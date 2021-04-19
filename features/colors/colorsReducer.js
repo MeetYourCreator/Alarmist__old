@@ -1,4 +1,4 @@
-export const colorsReducer = (state, action) => {
+export const colorsReducer = (state = { color: '#FF2281'}, action) => {
   if (action.type === 'SET_E8E500')
     return state.filter(color => color === '#E8E500');
   else if (action.type === 'SET_FF2281')
