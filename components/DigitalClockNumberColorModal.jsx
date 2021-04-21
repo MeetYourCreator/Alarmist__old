@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import Modal from "react-native-modal"
 import MenuColorButton from "./MenuColorButton.jsx"
+import {useSelector} from 'react-redux'
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"

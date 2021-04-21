@@ -7,17 +7,20 @@ import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
 import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock/WorldDigitalClockContainer.jsx';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import AppLoading from 'expo-app-loading'
+import AppLoading from 'expo-app-loading';
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
-import * as Font from 'expo-font'
-import store from './store/store.js'
-import { Provider } from 'react-redux'
+import * as Font from 'expo-font';
+
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 console.log(store)
 
-store.subscribe(() => {
-
+const rootReducer = combineReducers({
+  colors: colorsReducer
 })
+
+const store = createStore(rootReducer);
 
 // store.dispatch({
 //   type: 'SET_E8E500',
@@ -75,11 +78,6 @@ export default function App() {
           component={LocalDigitalClock}
           options={{ title: 'Digital Alarmist' }}
         />
-        {/* <Stack.Screen
-          name='Digital World Clock'
-          component={WorldDigitalClockContainer}
-          options={{ title: 'World Alarmist' }}
-        /> */}
         <Stack.Screen
           name='Analog Clock'
           component={AnalogClock}

@@ -1,4 +1,13 @@
-export const colorsReducer = (state = { color: '#FF2281'}, action) => {
+import {COLORS} from '../../data/colors.js'
+
+const initialState = {
+
+  colors: COLORS,
+  filteredColors: COLORS,
+
+}
+
+export const colorsReducer = (state = initialState, action) => {
   if (action.type === 'SET_E8E500')
     return state.filter(color => color === '#E8E500');
   else if (action.type === 'SET_FF2281')
