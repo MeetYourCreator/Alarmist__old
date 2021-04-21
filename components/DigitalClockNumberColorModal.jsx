@@ -20,6 +20,8 @@ const DigitalClockNumberColorModal = ({ iconName, iconColor, value, onPress }) =
   const [blue, setBlue] = useState("blue")
   const [pink, setPink] = useState("pink")
 
+  const availableColors = useSelector(state => state.colors.filteredColors)
+
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
