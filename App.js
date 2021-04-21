@@ -12,9 +12,10 @@ import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
 import * as Font from 'expo-font';
 
+import colorsReducer from './store/reducers/colorsReducer.js'
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-console.log(store)
+// console.log(store)
 
 const rootReducer = combineReducers({
   colors: colorsReducer
