@@ -11,7 +11,7 @@ import AppLoading from 'expo-app-loading'
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
 import * as Font from 'expo-font'
-import store from './app/store.js'
+import store from './store/store.js'
 import { Provider } from 'react-redux'
 console.log(store)
 
