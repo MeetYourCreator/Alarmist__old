@@ -16,16 +16,51 @@ import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js";
 import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
 import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
+import { _E8E500 } from "../data/colors2.js"
+import { _FF2281 } from "../data/colors2.js"
+import { _75D5FD } from "../data/colors2.js"
+import { _09FBD3 } from "../data/colors2.js"
+import { _7122FA } from "../data/colors2.js"
+import { _EF281E } from "../data/colors2.js"
+import { _0000FF } from "../data/colors2.js"
+
+const colors = [
+  {
+    value: _E8E500,
+  },
+  {
+    value: _FF2281,
+  },
+  {
+    value: _75D5FD,
+  },
+  {
+    value: _09FBD3,
+  },
+  {
+    value: _7122FA,
+  },
+  {
+    value: _EF281E,
+  },
+  {
+    value: _0000FF,
+  },
+]
 
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
-  
+   const [colorValue, setColorValue] = useState(colors)
   const [color, setColor] = useState(
   true
   )
   
+  let handleColors = (e) => {
+    setColorValue(e.value)
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       setHourRatio(setHour())
@@ -176,6 +211,7 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
+
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"
