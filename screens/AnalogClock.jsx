@@ -52,10 +52,7 @@ const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
-   const [colorValue, setColorValue] = useState(colors)
-  const [color, setColor] = useState(
-  true
-  )
+  const [colorValue, setColorValue] = useState('#FF2281')
   
   let handleColors = (e) => {
     setColorValue(e.value)
@@ -70,7 +67,7 @@ const AnalogClock = () => {
     return () => clearInterval(interval)
   }, [])
 
-  const currentColor = `${color}`
+  const currentColor = colorValue
 
   return (
     <>
@@ -79,139 +76,140 @@ const AnalogClock = () => {
           <AnalogClockContainer>
             <ClockCenter />
 
-            <Clock style={[styles.clockFace, { backgroundColor: currentColor}]}>
-              
-                <SecondHand
-                  color="white"
-                  style={{
-                    transform: [
-                      { translateY: 70 },
-                      { translateX: 0 },
-                      { rotate: `${secondRatio * 360}deg` },
-                      { translateY: -70 },
-                      { translateX: 0 },
-                    ],
-                  }}
-                />
-                <MinuteHand
-                  style={{
-                    transform: [
-                      //MinuteHand moves up as value is lowered
-                      { translateY: 60 },
-                      //MinuteHand moves left as value is lowered
-                      { translateX: 10 },
-                      { rotate: `${minuteRatio * 360}deg` },
-                      { translateY: -70 },
-                      { translateX: 5 },
-                    ],
-                  }}
-                />
-                <HourHand
-                  style={{
-                    transform: [
-                      //HourHand moves up as value is lowered
-                      { translateY: 80 },
-                      //HourHand moves left as value is lowered
-                      { translateX: -5 },
-                      { rotate: `${hourRatio * 360}deg` },
-                      { translateY: -60 },
-                      //moves left as value is lowered
-                      { translateX: 0 },
-                    ],
-                  }}
-                />
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "30deg" }],
-                  }}
-                >
-                  <ClockNumberFont>1</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "60deg" }],
-                  }}
-                >
-                  <ClockNumberFont>2</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "90deg" }],
-                  }}
-                >
-                  <ClockNumberFont>3</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "120deg" }],
-                  }}
-                >
-                  <ClockNumberFont>4</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "150deg" }],
-                  }}
-                >
-                  <ClockNumberFont>5</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "180deg" }],
-                  }}
-                >
-                  <ClockNumberFont>6</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "210deg" }],
-                  }}
-                >
-                  <ClockNumberFont>7</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "240deg" }],
-                  }}
-                >
-                  <ClockNumberFont>8</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "270deg" }],
-                  }}
-                >
-                  <ClockNumberFont>9</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "300deg" }],
-                  }}
-                >
-                  <ClockNumberFont>10</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "330deg" }],
-                  }}
-                >
-                  <ClockNumberFont>11</ClockNumberFont>
-                </ClockNumberContainer>
-                <ClockNumberContainer
-                  style={{
-                    transform: [{ rotate: "360deg" }],
-                  }}
-                >
-                  <ClockNumberFont>12</ClockNumberFont>
-                </ClockNumberContainer>
-              </Clock>
+            <Clock
+              style={[styles.clockFace, { backgroundColor: currentColor }]}
+            >
+              <SecondHand
+                color="white"
+                style={{
+                  transform: [
+                    { translateY: 70 },
+                    { translateX: 0 },
+                    { rotate: `${secondRatio * 360}deg` },
+                    { translateY: -70 },
+                    { translateX: 0 },
+                  ],
+                }}
+              />
+              <MinuteHand
+                style={{
+                  transform: [
+                    //MinuteHand moves up as value is lowered
+                    { translateY: 60 },
+                    //MinuteHand moves left as value is lowered
+                    { translateX: 10 },
+                    { rotate: `${minuteRatio * 360}deg` },
+                    { translateY: -70 },
+                    { translateX: 5 },
+                  ],
+                }}
+              />
+              <HourHand
+                style={{
+                  transform: [
+                    //HourHand moves up as value is lowered
+                    { translateY: 80 },
+                    //HourHand moves left as value is lowered
+                    { translateX: -5 },
+                    { rotate: `${hourRatio * 360}deg` },
+                    { translateY: -60 },
+                    //moves left as value is lowered
+                    { translateX: 0 },
+                  ],
+                }}
+              />
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "30deg" }],
+                }}
+              >
+                <ClockNumberFont>1</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "60deg" }],
+                }}
+              >
+                <ClockNumberFont>2</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "90deg" }],
+                }}
+              >
+                <ClockNumberFont>3</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "120deg" }],
+                }}
+              >
+                <ClockNumberFont>4</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "150deg" }],
+                }}
+              >
+                <ClockNumberFont>5</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "180deg" }],
+                }}
+              >
+                <ClockNumberFont>6</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "210deg" }],
+                }}
+              >
+                <ClockNumberFont>7</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "240deg" }],
+                }}
+              >
+                <ClockNumberFont>8</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "270deg" }],
+                }}
+              >
+                <ClockNumberFont>9</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "300deg" }],
+                }}
+              >
+                <ClockNumberFont>10</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "330deg" }],
+                }}
+              >
+                <ClockNumberFont>11</ClockNumberFont>
+              </ClockNumberContainer>
+              <ClockNumberContainer
+                style={{
+                  transform: [{ rotate: "360deg" }],
+                }}
+              >
+                <ClockNumberFont>12</ClockNumberFont>
+              </ClockNumberContainer>
+            </Clock>
           </AnalogClockContainer>
         </View>
         <View style={styles.menu}>
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
-
+            onPress={handleColors}
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"

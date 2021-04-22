@@ -52,33 +52,33 @@ const AnalogClockFaceModal = ({
               />
               <MenuColorButton
                 customColor="#78FFF1"
-                value={yellow}
-                onPress={setYellow}
+                value={value}
+                onPress={onPress}
               />
               <MenuColorButton
                 customColor="#361999"
-                value={green}
-                onPress={setGreen}
+                value={value}
+                onPress={onPress}
               />
               <MenuColorButton
                 customColor="#FF4838"
-                value={black}
-                onPress={setBlack}
+                value={value}
+                onPress={onPress}
               />
               <MenuColorButton
                 customColor="#F1B814"
-                value={orange}
-                onPress={setOrange}
+                value={value}
+                onPress={onPress}
               />
               <MenuColorButton
                 customColor="#00ABE1"
-                value={blue}
-                onPress={setBlue}
+                value={value}
+                onPress={onPress}
               />
               <MenuColorButton
                 customColor="#F7F7F7"
-                value={pink}
-                onPress={setPink}
+                value={value}
+                onPress={onPress}
               />
             </View>
             <TouchableOpacity
