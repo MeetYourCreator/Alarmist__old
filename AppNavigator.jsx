@@ -6,9 +6,10 @@ import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+  
 const AppNavigator = () => {
 
-  const Stack = createStackNavigator();
+  const Stack = createStackNavigator()
 
   return (
     <NavigationContainer>

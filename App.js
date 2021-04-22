@@ -1,15 +1,12 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import HomeScreen from './screens/HomeScreen.jsx';
-import AnalogClock from './screens/AnalogClock.jsx';
-import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
-import WorldDigitalClockContainer from './screens/DigitalClock/WorldDigitalClock/WorldDigitalClockContainer.jsx';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import AppNavigator from './AppNavigator.jsx';
+
 import AppLoading from 'expo-app-loading';
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
+
 import * as Font from 'expo-font';
 
 import colorsReducer from './store/reducers/colorsReducer.js'
@@ -17,20 +14,8 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 // console.log(store)
 
-const rootReducer = combineReducers({
-  colors: colorsReducer
-})
-
-const store = createStore(rootReducer);
-
-// store.dispatch({
-//   type: 'SET_E8E500',
-//   payload: {
-//     description: '#E8E500'
-//   }
-// })
-
-//function exectued to let os know what tpo dpo with incoming Notification before the Notification is displayed to the user
+//Notifications
+//function exectued to let os know what to dpo with incoming Notification before the Notification is displayed to the user
 Notifications.setNotificationHandler({
   handleNotification: async () => {
     return {
@@ -40,8 +25,7 @@ Notifications.setNotificationHandler({
   }
 })
 
-const Stack = createStackNavigator();
-
+//Fonts
 const fetchFonts = () => {
   return Font.loadAsync({
     'press-start-2p': require('./assets/fonts/PressStart2P-Regular.ttf'),
@@ -52,6 +36,14 @@ const fetchFonts = () => {
     'nosifer': require('./assets/fonts/Nosifer-Regular.ttf'),
   });
 }
+
+//Redux
+const rootReducer = combineReducers({
+  colors: colorsReducer
+})
+
+const store = createStore(rootReducer);
+
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
@@ -67,25 +59,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name='Home'
-          component={HomeScreen}
-          options={{ title: 'Choose Your Alarmist Clock' }}
-        />
-        <Stack.Screen
-          name='Digital Local Clock'
-          component={LocalDigitalClock}
-          options={{ title: 'Digital Alarmist' }}
-        />
-        <Stack.Screen
-          name='Analog Clock'
-          component={AnalogClock}
-          options={{ title: 'Analog Alarmist' }}
-        />
-      </Stack.Navigator>
-      </NavigationContainer>
+  <AppNavigator />
     </Provider>
   );
 }
