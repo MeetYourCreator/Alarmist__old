@@ -4,7 +4,6 @@ export const SET_75D5FD = 'SET_75D5FD';
 export const SET_09FBD3 = 'SET_09FBD3';
 export const SET_7122FA = 'SET_7122FA';
 export const SET_EF281E = 'SET_EF281E';
-export const SET_E8E500 = 'SET_E8E500';
 export const SET_0000FF = 'SET_0000FF';
 
 export const setE8E500 = (id) => {
@@ -45,13 +44,6 @@ export const set7122FA = (id) => {
 export const setEF281E = (id) => {
   return {
     type: SET_EF281E,
-    colorId: id
-  }
-}
-
-export const setE8E500 = (id) => {
-  return {
-    type: SET_E8E500,
     colorId: id
   }
 }
