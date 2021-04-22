@@ -1,10 +1,8 @@
-import {COLORS} from '../../data/colors.js'
+import { COLORS } from '../../data/colors.js'
 
 const initialState = {
-
   colors: COLORS,
   filteredColors: COLORS,
-
 }
 
 export const colorsReducer = (state = initialState, action) => {
