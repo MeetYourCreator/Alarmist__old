@@ -5,6 +5,7 @@ const MenuColorButton = ({ customColor, value, onPress }) => {
   return <ColorOptionButton
     color={customColor}
     value={value}
+    onPress={onPress}
      />
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import Modal from "react-native-modal"
 import MenuColorButton from "./MenuColorButton.jsx"
+import {useSelector} from 'react-redux'
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -18,6 +19,8 @@ const DigitalClockNumberColorModal = ({ iconName, iconColor, value, onPress }) =
   const [orange, setOrange] = useState("orange")
   const [blue, setBlue] = useState("blue")
   const [pink, setPink] = useState("pink")
+
+  const availableColors = useSelector(state => state.colors.filteredColors)
 
   return (
     <SafeAreaView style={styles.wrapper}>

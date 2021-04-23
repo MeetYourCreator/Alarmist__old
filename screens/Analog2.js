@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Text,
-  View,
-  SafeAreaView,
-  StyleSheet,
-} from "react-native";
+import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import { setHour, setMinute, setSecond } from "../services/time.js";
 import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js";
 import { Clock } from "../components/styled/analog/Clock.js";
@@ -15,6 +10,9 @@ import { ClockNumberContainer } from "../components/styled/analog/ClockNumberCon
 import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js";
 import { ClockCenter } from "../components/styled/analog/ClockCenter.js";
 import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
+import Modal from "react-native-modal"
+import MenuColorButton from "../components/MenuColorButton.jsx"
+import { Ionicons } from "@expo/vector-icons"
 import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
 import { _E8E500 } from "../data/colors2.js"
 import { _FF2281 } from "../data/colors2.js"
@@ -52,11 +50,17 @@ const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
-  const [colorValue, setColorValue] = useState('')
-  
-  let colorHandler = event => {
-    setColorValue(event)
+
+  const [showModal, setShowModal] = useState(false)
+  const [colorValues, setColorValues] = useState(colors)
+
+  let handleColors = (e) => {
+    setColorValues(e.value)
   }
+
+  const [color, setColor] = useState(
+    true
+  )
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,7 +71,7 @@ const AnalogClock = () => {
     return () => clearInterval(interval)
   }, [])
 
-  const currentColor = colorValue
+  const currentColor = `${colorValues}`
 
   return (
     <>
@@ -75,10 +79,7 @@ const AnalogClock = () => {
         <View style={styles.clockContainer}>
           <AnalogClockContainer>
             <ClockCenter />
-
-            <Clock
-              style={[styles.clockFace, { backgroundColor: currentColor }]}
-            >
+            <Clock currentColor={currentColor}>
               <SecondHand
                 color="white"
                 style={{
@@ -206,11 +207,47 @@ const AnalogClock = () => {
           </AnalogClockContainer>
         </View>
         <View style={styles.menu}>
-          <AnalogClockFaceModal
-            iconName="color-palette-sharp"
-            iconColor="black"
-            onColorHandle={colorHandler}
-          ></AnalogClockFaceModal>
+          <SafeAreaView style={styles.wrapper}>
+            <View style={styles.container}>
+              <Modal
+                animationType={"slide"}
+                onBackdropPress={() => setShowModal(false)}
+                transparent={true}
+                visible={showModal}
+                onRequestClose={() => {
+                  console.log("Modal has been closed.")
+                }}
+              >
+                {/*All views of Modal*/}
+                {/*Animation can be slide, slide, none*/}
+                <View style={styles.modalPopUp}>
+                  <View style={styles.buttonsContainer}>
+                    {colorValues.map((color) => {
+                      <MenuColorButton
+                        customColor={color.value}
+                        onPress={handleColors}
+                        style={colorValues}
+                      />
+                    })}
+                    <TouchableOpacity
+                      onPress={() => {
+                        setShowModal(!showModal)
+                      }}
+                    ></TouchableOpacity>
+                  </View>
+                </View>
+              </Modal>
+              {/*Updating the state to make Modal Visible*/}
+              <Ionicons
+                name="color-palette-sharp"
+                size={24}
+                color="black"
+                onPress={() => {
+                  setShowModal(!showModal)
+                }}
+              ></Ionicons>
+            </View>
+          </SafeAreaView>
           <AnalogClockNumberModal
             iconName="language"
             iconColor="black"
@@ -231,14 +268,6 @@ const styles = StyleSheet.create({
     marginTop: 180,
     marginBottom: 90,
   },
-  clockFace: {
-    borderColor: '#162B32',
-    borderWidth: 5,
-    borderRadius: 170,
-    width: 325,
-    height: 325,
-    position: 'relative'
-  },
   menu: {
     flex: 1,
     flexDirection: "row",
@@ -253,6 +282,44 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
   },
+  wrapper: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "flex-end",
+    marginTop: 40,
+    marginLeft: 20,
+    marginRight: 20,
+    height: 10,
+  },
+  container: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    height: 70,
+    width: "30%",
+  },
+  modalPopUp: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center",
+    marginTop: 680,
+    marginRight: 10,
+    marginBottom: 100,
+    marginLeft: 10,
+  },
+  text: {
+    justifyContent: "center",
+    alignItems: "center",
+    color: "#3f2949",
+    marginTop: 10,
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
 })
 
-export default AnalogClock
+export default AnalogClock;

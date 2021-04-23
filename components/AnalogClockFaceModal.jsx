@@ -1,33 +1,53 @@
-import React, { useEffect, useState } from "react";
-import {
-  TouchableOpacity,
-  View,
-  SafeAreaView,
-  StyleSheet,
-} from "react-native";
-import Modal from 'react-native-modal';
-import MenuColorButton from "./MenuColorButton.jsx";
+import React, { useEffect, useState } from "react"
+import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
+import Modal from "react-native-modal"
+import MenuColorButton from "./MenuColorButton.jsx"
 
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 
-const AnalogClockFaceModal = ({
-  iconName,
-  iconColor,
-  value,
-  onPress
-}) => {
+const AnalogClockFaceModal = (props) => {
   const [showModal, setShowModal] = useState(false)
 
-  const [purple, setPurple] = useState("purple")
-  const [yellow, setYellow] = useState("yellow")
-  const [green, setGreen] = useState("green")
-  const [black, setBlack] = useState("black")
-  const [orange, setOrange] = useState("orange")
-  const [blue, setBlue] = useState("blue")
-  const [pink, setPink] = useState("pink")
+  const [_FF6495, set_FF6495] = useState("#FF6495")
+  const [_78FFF1, set_78FFF1] = useState("#78FFF1")
+  const [_361999, set_361999] = useState("#361999")
+  const [_FF4838, set_FF4838] = useState("#FF4838")
+  const [_F1B814, set_F1B814] = useState("#F1B814")
+  const [_00ABE1, set_00ABE1] = useState("#00ABE1")
+  const [_F7F7F7, set_F7F7F7] = useState("#F7F7F7")
+
+  const handleSet_FF6495 = (_FF6495) => {
+    set_FF6495(FF6495)
+  }
+
+  const handleSet_78FFF1 = (_78FFF1) => {
+    set_78FFF1(_78FFF1)
+  }
+
+  const handleSet_361999 = (_361999) => {
+    set_361999(_361999)
+  }
+
+  const handleSet_FF4838 = (_FF4838) => {
+    set_FF4838(_FF4838)
+  }
+
+  const handleSet_F1B814 = (_F1B814) => {
+    set_F1B814(_F1B814)
+  }
+
+  const handleSet_00ABE1 = (_00ABE1) => {
+    set_00ABE1(_00ABE1)
+  }
+
+  const handleSet_F7F7F7 = (_F7F7F7) => {
+    set_F7F7F7(_F7F7F7)
+  }
+
+  let { iconName, iconColor, value, onColorHandle } = props
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -47,38 +67,38 @@ const AnalogClockFaceModal = ({
             <View style={styles.buttonsContainer}>
               <MenuColorButton
                 customColor="#FF6495"
-                value={value}
-                onPress={onPress}
+                onChange={handleSet_FF6495}
+                onPress={() => onColorHandle(_FF6495)}
               />
               <MenuColorButton
                 customColor="#78FFF1"
-                value={yellow}
-                onPress={setYellow}
+                onChange={handleSet_78FFF1}
+                onPress={() => onColorHandle(_78FFF1)}
               />
               <MenuColorButton
                 customColor="#361999"
-                value={green}
-                onPress={setGreen}
+                onChange={handleSet_361999}
+                onPress={() => onColorHandle(_361999)}
               />
               <MenuColorButton
                 customColor="#FF4838"
-                value={black}
-                onPress={setBlack}
+                onChange={handleSet_FF4838}
+                onPress={() => onColorHandle(_FF4838)}
               />
               <MenuColorButton
                 customColor="#F1B814"
-                value={orange}
-                onPress={setOrange}
+                onChange={handleSet_F1B814}
+                onPress={() => onColorHandle(_F1B814)}
               />
               <MenuColorButton
                 customColor="#00ABE1"
-                value={blue}
-                onPress={setBlue}
+                onChange={handleSet_00ABE1}
+                onPress={() => onColorHandle(_00ABE1)}
               />
               <MenuColorButton
                 customColor="#F7F7F7"
-                value={pink}
-                onPress={setPink}
+                onChange={handleSet_F7F7F7}
+                onPress={() => onColorHandle(_F7F7F7)}
               />
             </View>
             <TouchableOpacity
