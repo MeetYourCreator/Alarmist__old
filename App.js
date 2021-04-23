@@ -9,9 +9,6 @@ import * as Permissions from "expo-permissions";
 
 import * as Font from 'expo-font';
 
-import colorsReducer from './store/reducers/colorsReducer.js'
-import { createStore, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
 // console.log(store)
 
 //Notifications
@@ -37,13 +34,6 @@ const fetchFonts = () => {
   });
 }
 
-//Redux
-const rootReducer = combineReducers({
-  colors: colorsReducer
-})
-
-const store = createStore(rootReducer);
-
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
 export default function App() {
@@ -58,8 +48,6 @@ export default function App() {
   }
 
   return (
-    <Provider store={store}>
   <AppNavigator />
-    </Provider>
   );
 }

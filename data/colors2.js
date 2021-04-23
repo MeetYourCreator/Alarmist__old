@@ -1,7 +1,0 @@
-export const _E8E500 = '#E8E500'
-export const _FF2281 = '#FF2281'
-export const _75D5FD = '#75D5FD'
-export const _09FBD3 = '#09FBD3'
-export const _7122FA = '#7122FA'
-export const _EF281E = '#EF281E'
-export const _0000FF = '#0000FF'
