@@ -19,9 +19,9 @@ const AnalogClockFaceModal = props => {
   const [_FF6495, set_FF6495] = useState("#FF6495")
   const [_78FFF1, set_78FFF1] = useState("#78FFF1")
   const [_361999, set_361999] = useState("#361999")
-  const [black, setBlack] = useState("black")
-  const [orange, setOrange] = useState("orange")
-  const [blue, setBlue] = useState("blue")
+  const [_FF4838, set_FF4838] = useState("#FF4838")
+  const [_F1B814, set_F1B814] = useState("orange")
+  const [_00ABE1, set_00ABE1] = useState("blue")
   const [pink, setPink] = useState("pink")
 
   const handleSet_FF6495 = (_FF6495) => {
@@ -34,6 +34,18 @@ const AnalogClockFaceModal = props => {
 
   const handleSet_361999 = (_361999) => {
     set_361999(_361999)
+  }
+
+  const handleSet_FF4838 = (_FF4838) => {
+    set_FF4838(_FF4838)
+  }
+
+  const handleSet_F1B814 = (_F1B814) => {
+    set_F1B814(_F1B814)
+  }
+
+  const handleSet_00ABE1 = (_00ABE1) => {
+    set_00ABE1(_00ABE1)
   }
 
   let { iconName, iconColor, value, onColorHandle } = props;
@@ -75,17 +87,20 @@ const AnalogClockFaceModal = props => {
               <MenuColorButton
                 customColor="#FF4838"
                 value={value}
-                onPress={() => onColorHandle()}
+                onChange={handleSet_FF4838}
+                onPress={() => onColorHandle(_FF4838)}
               />
               <MenuColorButton
                 customColor="#F1B814"
                 value={value}
-                onPress={() => onColorHandle()}
+                onChange={handleSet_F1B814}
+                onPress={() => onColorHandle(_F1B814)}
               />
               <MenuColorButton
                 customColor="#00ABE1"
                 value={value}
-                onPress={() => onColorHandle()}
+                nChange={handleSet_00ABE1}
+                onPress={() => onColorHandle(_00ABE1)}
               />
               <MenuColorButton
                 customColor="#F7F7F7"
