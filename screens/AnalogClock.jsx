@@ -52,10 +52,10 @@ const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())
   const [minuteRatio, setMinuteRatio] = useState(setMinute())
   const [secondRatio, setSecondRatio] = useState(setSecond())
-  const [colorValue, setColorValue] = useState('#FF2281')
+  const [colorValue, setColorValue] = useState('')
   
-  let handleColors = (e) => {
-    setColorValue(e.value)
+  let colorHandler = event => {
+    setColorValue(event)
   }
 
   useEffect(() => {
@@ -209,7 +209,7 @@ const AnalogClock = () => {
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
             iconColor="black"
-            onPress={handleColors}
+            onColorHandle={colorHandler}
           ></AnalogClockFaceModal>
           <AnalogClockNumberModal
             iconName="language"

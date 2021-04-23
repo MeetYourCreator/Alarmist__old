@@ -13,21 +13,30 @@ import { MaterialIcons } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 
-const AnalogClockFaceModal = ({
-  iconName,
-  iconColor,
-  value,
-  onPress
-}) => {
+const AnalogClockFaceModal = props => {
   const [showModal, setShowModal] = useState(false)
 
-  const [purple, setPurple] = useState("purple")
-  const [yellow, setYellow] = useState("yellow")
-  const [green, setGreen] = useState("green")
+  const [_FF6495, set_FF6495] = useState("#FF6495")
+  const [_78FFF1, set_78FFF1] = useState("#78FFF1")
+  const [_361999, set_361999] = useState("#361999")
   const [black, setBlack] = useState("black")
   const [orange, setOrange] = useState("orange")
   const [blue, setBlue] = useState("blue")
   const [pink, setPink] = useState("pink")
+
+  const handleSet_FF6495 = (_FF6495) => {
+    set_FF6495(FF6495)
+  }
+
+  const handleSet_78FFF1 = (_78FFF1) => {
+    set_78FFF1(_78FFF1)
+  }
+
+  const handleSet_361999 = (_361999) => {
+    set_361999(_361999)
+  }
+
+  let { iconName, iconColor, value, onColorHandle } = props;
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -48,37 +57,40 @@ const AnalogClockFaceModal = ({
               <MenuColorButton
                 customColor="#FF6495"
                 value={value}
-                onPress={onPress}
+                onChange={handleSet_FF6495}
+                onPress={() => onColorHandle(_FF6495)}
               />
               <MenuColorButton
                 customColor="#78FFF1"
                 value={value}
-                onPress={onPress}
+                onChange={handleSet_78FFF1}
+                onPress={() => onColorHandle(_78FFF1)}
               />
               <MenuColorButton
                 customColor="#361999"
                 value={value}
-                onPress={onPress}
+                onChange={handleSet_361999}
+                onPress={() => onColorHandle(_361999)}
               />
               <MenuColorButton
                 customColor="#FF4838"
                 value={value}
-                onPress={onPress}
+                onPress={() => onColorHandle()}
               />
               <MenuColorButton
                 customColor="#F1B814"
                 value={value}
-                onPress={onPress}
+                onPress={() => onColorHandle()}
               />
               <MenuColorButton
                 customColor="#00ABE1"
                 value={value}
-                onPress={onPress}
+                onPress={() => onColorHandle()}
               />
               <MenuColorButton
                 customColor="#F7F7F7"
                 value={value}
-                onPress={onPress}
+                onPress={() => onColorHandle()}
               />
             </View>
             <TouchableOpacity
