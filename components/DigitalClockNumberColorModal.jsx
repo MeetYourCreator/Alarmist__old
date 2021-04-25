@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react"
 import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import Modal from "react-native-modal"
 import MenuColorButton from "./MenuColorButton.jsx"
-import {useSelector} from 'react-redux'
 
 import { Ionicons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 
-const DigitalClockNumberColorModal = ({ iconName, iconColor, value, onPress }) => {
+const DigitalClockNumberColorModal = ({
+  iconName,
+  iconColor,
+  onPress,
+}) => {
   const [showModal, setShowModal] = useState(false)
 
   const [purple, setPurple] = useState("purple")
@@ -19,8 +22,6 @@ const DigitalClockNumberColorModal = ({ iconName, iconColor, value, onPress }) =
   const [orange, setOrange] = useState("orange")
   const [blue, setBlue] = useState("blue")
   const [pink, setPink] = useState("pink")
-
-  const availableColors = useSelector(state => state.colors.filteredColors)
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -38,41 +39,13 @@ const DigitalClockNumberColorModal = ({ iconName, iconColor, value, onPress }) =
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton
-                customColor="#E8E500"
-                value={value}
-                onPress={onPress}
-              />
-              <MenuColorButton
-                customColor="#FF2281"
-                value={yellow}
-                onPress={setYellow}
-              />
-              <MenuColorButton
-                customColor="#75D5FD"
-                value={green}
-                onPress={setGreen}
-              />
-              <MenuColorButton
-                customColor="#09FBD3"
-                value={black}
-                onPress={setBlack}
-              />
-              <MenuColorButton
-                customColor="#7122FA"
-                value={orange}
-                onPress={setOrange}
-              />
-              <MenuColorButton
-                customColor="#EF281E"
-                value={blue}
-                onPress={setBlue}
-              />
-              <MenuColorButton
-                customColor="#0000FF"
-                value={pink}
-                onPress={setPink}
-              />
+              <MenuColorButton customColor="#E8E500" onPress={setPurple} />
+              <MenuColorButton customColor="#FF2281" onPress={setPurple} />
+              <MenuColorButton customColor="#75D5FD" onPress={setPurple} />
+              <MenuColorButton customColor="#09FBD3" onPress={setPurple} />
+              <MenuColorButton customColor="#7122FA" onPress={setPurple} />
+              <MenuColorButton customColor="#EF281E" onPress={setPurple} />
+              <MenuColorButton customColor="#0000FF" onPress={setPurple} />
             </View>
             <TouchableOpacity
               onPress={() => {
@@ -123,12 +96,6 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginBottom: 100,
     marginLeft: 10,
-  },
-  text: {
-    justifyContent: "center",
-    alignItems: "center",
-    color: "#3f2949",
-    marginTop: 10,
   },
   buttonsContainer: {
     flexDirection: "row",

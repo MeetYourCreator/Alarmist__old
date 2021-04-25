@@ -21,10 +21,10 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
     set_nosifer(_nosifer)
   }
 
-   const handleSet_audiowide = (_audiowide) => {
-     set_audiowide(_audiowide)
-   }
-  
+  const handleSet_audiowide = (_audiowide) => {
+    set_audiowide(_audiowide)
+  }
+
   const handleSet_codystarRegular = (_codystarRegular) => {
     set_codystarRegular(_codystarRegular)
   }
@@ -33,13 +33,13 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
     set_pressStart2p(_pressStart2p)
   }
 
-   const handleSet_monoton = (_monoton) => {
-     set_monoton(_monoton)
-   }
+  const handleSet_monoton = (_monoton) => {
+    set_monoton(_monoton)
+  }
 
-   const handleSet_diplomatica = (_diplomatica) => {
-     set_diplomatica(_diplomatica)
-   }
+  const handleSet_diplomatica = (_diplomatica) => {
+    set_diplomatica(_diplomatica)
+  }
 
   return (
     <SafeAreaView style={styles.wrapper}>

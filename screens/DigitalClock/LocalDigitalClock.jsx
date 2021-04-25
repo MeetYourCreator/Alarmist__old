@@ -6,11 +6,18 @@ import { Clock } from "../../components/styled/digital/Clock.js";
 import { ClockText } from "../../components/styled/digital/ClockText.js";
 import { Location } from "../../components/styled/digital/Location.js";
 
-import DigitalClockBackgroundModal from '../../components/DigitalClockNumberColorModal.jsx'
-import DigitalClockNumberModal from "../../components/DigitalClockNumberFontModal.jsx"
+import DigitalClockNumberColorModal from '../../components/DigitalClockNumberColorModal.jsx'
+import DigitalClockNumberFontModal from "../../components/DigitalClockNumberFontModal.jsx"
 
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime())
+  const [colorValue, setColorValue] = useState('')
+
+  const colorHandler = event => {
+    setColorValue(event)
+  }
+
+  const currentColor = colorValue;
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -25,7 +32,7 @@ const LocalDigitalClock = () => {
         <View style={styles.clockContainer}>
           <DigitalClockContainer>
             <Clock>
-              <ClockText color="blue" textShadowColor="blue">
+              <ClockText style={[styles.clockText, {color: currentColor, textShadow: currentColor}]}>
                 {localTime}
               </ClockText>
             </Clock>
@@ -33,16 +40,17 @@ const LocalDigitalClock = () => {
           </DigitalClockContainer>
         </View>
         <View style={styles.menu}>
-          <DigitalClockBackgroundModal
+          <DigitalClockNumberColorModal
             iconName="color-palette-sharp"
             iconColor="black"
+            onColorHandle={colorHandler}
           >
-          </DigitalClockBackgroundModal>
-          <DigitalClockNumberModal
+          </DigitalClockNumberColorModal>
+          <DigitalClockNumberFontModal
             iconName="language"
             iconColor="black"
           >
-          </DigitalClockNumberModal>
+          </DigitalClockNumberFontModal>
         </View>
       </SafeAreaView>
     </>
@@ -58,6 +66,15 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 180,
     marginBottom: 90,
+  },
+  clockText: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 15,
+    textAlign: "center",
+    fontSize: 65,
+    textShadowColor: "#f70300",
   },
   menu: {
     flex: 1,
