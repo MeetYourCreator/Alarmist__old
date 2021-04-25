@@ -11,18 +11,45 @@ import { Entypo } from "@expo/vector-icons"
 const DigitalClockNumberColorModal = ({
   iconName,
   iconColor,
-  onPress,
+  onColorHandle,
 }) => {
   const [showModal, setShowModal] = useState(false)
 
-  const [purple, setPurple] = useState("purple")
-  const [yellow, setYellow] = useState("yellow")
-  const [green, setGreen] = useState("green")
-  const [black, setBlack] = useState("black")
-  const [orange, setOrange] = useState("orange")
-  const [blue, setBlue] = useState("blue")
-  const [pink, setPink] = useState("pink")
+  const [_E8E500, set_E8E500] = useState("#E8E500")
+  const [_FF2281, set_FF2281] = useState("#FF2281")
+  const [_75D5FD, set_75D5FD] = useState("#75D5FD")
+  const [_09FBD3, set_09FBD3] = useState("#09FBD3")
+  const [_7122FA, set_7122FA] = useState("#7122FA")
+  const [_EF281E, set_EF281E] = useState("#EF281E")
+  const [_0000FF, set_0000FF] = useState("#0000FF")
 
+  const handleSet_E8E500 = (_E8E500) => {
+    set_E8E500(_E8E500)
+  }
+
+  const handleSet_FF2281 = (_FF2281) => {
+    set_FF2281(_FF2281)
+  }
+
+  const handleSet_75D5FD = (_75D5FD) => {
+    set_75D5FD(_75D5FD)
+  }
+
+  const handleSet_09FBD3 = (_09FBD3) => {
+    set_09FBD3(_09FBD3)
+  }
+
+  const handleSet_7122FA = (_7122FA) => {
+      set_7122FA(_7122FA)
+  }
+  
+    const handleSet_EF281E = (_EF281E) => {
+      set_EF281E(_EF281E)
+    }
+
+    const handleSet_0000FF = (_0000FF) => {
+      set_0000FF(_0000FF)
+    }
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
@@ -39,13 +66,41 @@ const DigitalClockNumberColorModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton customColor="#E8E500" onPress={setPurple} />
-              <MenuColorButton customColor="#FF2281" onPress={setPurple} />
-              <MenuColorButton customColor="#75D5FD" onPress={setPurple} />
-              <MenuColorButton customColor="#09FBD3" onPress={setPurple} />
-              <MenuColorButton customColor="#7122FA" onPress={setPurple} />
-              <MenuColorButton customColor="#EF281E" onPress={setPurple} />
-              <MenuColorButton customColor="#0000FF" onPress={setPurple} />
+              <MenuColorButton
+                customColor="#E8E500"
+                onChange={handleSet_E8E500}
+                onPress={() => onColorHandle(_E8E500)}
+              />
+              <MenuColorButton
+                customColor="#FF2281"
+                onChange={handleSet_FF2281}
+                onPress={() => onColorHandle(_FF2281)}
+              />
+              <MenuColorButton
+                customColor="#75D5FD"
+                onChange={handleSet_75D5FD}
+                onPress={() => onColorHandle(_75D5FD)}
+              />
+              <MenuColorButton
+                customColor="#09FBD3"
+                onChange={handleSet_09FBD3}
+                onPress={() => onColorHandle(_09FBD3)}
+              />
+              <MenuColorButton
+                customColor="#7122FA"
+                onChange={handleSet_7122FA}
+                onPress={() => onColorHandle(_7122FA)}
+              />
+              <MenuColorButton
+                customColor="#EF281E"
+                onChange={handleSet_EF281E}
+                onPress={() => onColorHandle(_EF281E)}
+              />
+              <MenuColorButton
+                customColor="#0000FF"
+                onChange={handleSet_0000FF}
+                onPress={() => onColorHandle(_0000FF)}
+              />
             </View>
             <TouchableOpacity
               onPress={() => {
