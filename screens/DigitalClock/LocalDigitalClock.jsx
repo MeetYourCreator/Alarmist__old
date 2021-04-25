@@ -11,13 +11,18 @@ import DigitalClockNumberFontModal from "../../components/DigitalClockNumberFont
 
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime())
-  const [colorValue, setColorValue] = useState('')
+  const [colorValue, setColorValue] = useState("#0000FF")
+  const [fontValue, setFontValue] = useState("press-start-2p")
 
   const colorHandler = event => {
     setColorValue(event)
   }
 
+  const fontHandler = event =>
+    setFontValue(event)
+
   const currentColor = colorValue;
+  const currentFont = fontValue;
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -32,7 +37,7 @@ const LocalDigitalClock = () => {
         <View style={styles.clockContainer}>
           <DigitalClockContainer>
             <Clock>
-              <ClockText style={[styles.clockText, {color: currentColor, textShadowColor: currentColor}]}>
+              <ClockText style={[styles.clockText, {color: currentColor, textShadowColor: currentColor, fontFamily: currentFont}]}>
                 {localTime}
               </ClockText>
             </Clock>
@@ -49,6 +54,7 @@ const LocalDigitalClock = () => {
           <DigitalClockNumberFontModal
             iconName="language"
             iconColor="black"
+            onFontHandle={fontHandler}
           >
           </DigitalClockNumberFontModal>
         </View>
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     margin: 15,
     textAlign: "center",
-    fontSize: 65,
+    fontSize: 35,
     textShadowColor: "#f70300",
   },
   menu: {

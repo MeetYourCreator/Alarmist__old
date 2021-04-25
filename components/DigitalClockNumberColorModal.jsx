@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import Modal from "react-native-modal"
 import MenuColorButton from "./MenuColorButton.jsx"
@@ -40,16 +40,16 @@ const DigitalClockNumberColorModal = ({
   }
 
   const handleSet_7122FA = (_7122FA) => {
-      set_7122FA(_7122FA)
+    set_7122FA(_7122FA)
   }
-  
-    const handleSet_EF281E = (_EF281E) => {
-      set_EF281E(_EF281E)
-    }
 
-    const handleSet_0000FF = (_0000FF) => {
-      set_0000FF(_0000FF)
-    }
+  const handleSet_EF281E = (_EF281E) => {
+    set_EF281E(_EF281E)
+  }
+
+  const handleSet_0000FF = (_0000FF) => {
+    set_0000FF(_0000FF)
+  }
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
