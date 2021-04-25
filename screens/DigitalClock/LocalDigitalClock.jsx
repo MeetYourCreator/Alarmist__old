@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import { View, SafeAreaView, StyleSheet } from "react-native"
-import { showLocalTime } from "../../services/time.js";
-import { DigitalClockContainer } from "../../components/styled/digital/DigitalClockContainer.js";
-import { Clock } from "../../components/styled/digital/Clock.js";
-import { ClockText } from "../../components/styled/digital/ClockText.js";
-import { Location } from "../../components/styled/digital/Location.js";
+import { showLocalTime } from "../../services/time.js"
+import { DigitalClockContainer } from "../../components/styled/digital/DigitalClockContainer.js"
+import { Clock } from "../../components/styled/digital/Clock.js"
+import { ClockText } from "../../components/styled/digital/ClockText.js"
+import { Location } from "../../components/styled/digital/Location.js"
 
-import DigitalClockNumberColorModal from '../../components/DigitalClockNumberColorModal.jsx'
+import DigitalClockNumberColorModal from "../../components/DigitalClockNumberColorModal.jsx"
 import DigitalClockNumberFontModal from "../../components/DigitalClockNumberFontModal.jsx"
 
 const LocalDigitalClock = () => {
@@ -14,15 +14,14 @@ const LocalDigitalClock = () => {
   const [colorValue, setColorValue] = useState("#0000FF")
   const [fontValue, setFontValue] = useState("press-start-2p")
 
-  const colorHandler = event => {
+  const colorHandler = (event) => {
     setColorValue(event)
   }
 
-  const fontHandler = event =>
-    setFontValue(event)
+  const fontHandler = (event) => setFontValue(event)
 
-  const currentColor = colorValue;
-  const currentFont = fontValue;
+  const currentColor = colorValue
+  const currentFont = fontValue
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -37,7 +36,16 @@ const LocalDigitalClock = () => {
         <View style={styles.clockContainer}>
           <DigitalClockContainer>
             <Clock>
-              <ClockText style={[styles.clockText, {color: currentColor, textShadowColor: currentColor, fontFamily: currentFont}]}>
+              <ClockText
+                style={[
+                  styles.clockText,
+                  {
+                    color: currentColor,
+                    textShadowColor: currentColor,
+                    fontFamily: currentFont,
+                  },
+                ]}
+              >
                 {localTime}
               </ClockText>
             </Clock>
@@ -49,14 +57,12 @@ const LocalDigitalClock = () => {
             iconName="color-palette-sharp"
             iconColor="black"
             onColorHandle={colorHandler}
-          >
-          </DigitalClockNumberColorModal>
+          ></DigitalClockNumberColorModal>
           <DigitalClockNumberFontModal
             iconName="language"
             iconColor="black"
             onFontHandle={fontHandler}
-          >
-          </DigitalClockNumberFontModal>
+          ></DigitalClockNumberFontModal>
         </View>
       </SafeAreaView>
     </>

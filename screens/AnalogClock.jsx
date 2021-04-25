@@ -1,34 +1,29 @@
-import React, { useState, useEffect } from "react";
-import {
-  Text,
-  View,
-  SafeAreaView,
-  StyleSheet,
-} from "react-native";
-import { setHour, setMinute, setSecond } from "../services/time.js";
-import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js";
-import { Clock } from "../components/styled/analog/Clock.js";
-import { SecondHand } from "../components/styled/analog/SecondHand.js";
-import { MinuteHand } from "../components/styled/analog/MinuteHand.js";
-import { HourHand } from "../components/styled/analog/HourHand.js";
-import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js";
-import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js";
-import { ClockCenter } from "../components/styled/analog/ClockCenter.js";
-import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
-import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
+import React, { useState, useEffect } from "react"
+import { Text, View, SafeAreaView, StyleSheet } from "react-native"
+import { setHour, setMinute, setSecond } from "../services/time.js"
+import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js"
+import { Clock } from "../components/styled/analog/Clock.js"
+import { SecondHand } from "../components/styled/analog/SecondHand.js"
+import { MinuteHand } from "../components/styled/analog/MinuteHand.js"
+import { HourHand } from "../components/styled/analog/HourHand.js"
+import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js"
+import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
+import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
+import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx"
+import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx"
 
 const AnalogClock = () => {
-  const [hourRatio, setHourRatio] = useState(setHour());
-  const [minuteRatio, setMinuteRatio] = useState(setMinute());
-  const [secondRatio, setSecondRatio] = useState(setSecond());
-  const [colorValue, setColorValue] = useState('');
-  const [fontValue, setcurrentFont] = useState('diplomatica');
-  
-  let colorHandler = event => {
+  const [hourRatio, setHourRatio] = useState(setHour())
+  const [minuteRatio, setMinuteRatio] = useState(setMinute())
+  const [secondRatio, setSecondRatio] = useState(setSecond())
+  const [colorValue, setColorValue] = useState("")
+  const [fontValue, setcurrentFont] = useState("diplomatica")
+
+  let colorHandler = (event) => {
     setColorValue(event)
   }
 
-  let fontHandler = event => {
+  let fontHandler = (event) => {
     setcurrentFont(event)
   }
 
@@ -98,84 +93,132 @@ const AnalogClock = () => {
                   transform: [{ rotate: "30deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>1</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  1
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "60deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>2</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  2
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "90deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>3</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  3
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "120deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>4</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  4
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "150deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>5</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  5
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "180deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>6</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  6
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "210deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>7</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  7
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "240deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>8</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  8
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "270deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>9</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  9
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "300deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>10</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  10
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "330deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>11</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  11
+                </ClockNumberFont>
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
                   transform: [{ rotate: "360deg" }],
                 }}
               >
-                <ClockNumberFont style={[styles.clockNumber, {fontFamily: currentFont}]}>12</ClockNumberFont>
+                <ClockNumberFont
+                  style={[styles.clockNumber, { fontFamily: currentFont }]}
+                >
+                  12
+                </ClockNumberFont>
               </ClockNumberContainer>
             </Clock>
           </AnalogClockContainer>
@@ -237,4 +280,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default AnalogClock
+export default AnalogClock;
