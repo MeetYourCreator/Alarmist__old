@@ -3,12 +3,12 @@
     "name": "Alarmist",
     "slug": "Alarmist",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#171717"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,12 +22,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#171717"
       },
       "useNextNotifications": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+    }
   }
 }
