@@ -1,10 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
 
-const MenuColorButton = ({ customColor, value, onPress }) => {
+const MenuColorButton = ({ customColor, onPress }) => {
   return <ColorOptionButton
     color={customColor}
-    value={value}
     onPress={onPress}
      />
 }

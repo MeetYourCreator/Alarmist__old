@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-const MenuFontButton = ({ customColor, value, onPress, customFont, fontDisplay }) => {
+const MenuFontButton = ({ onPress, customFont, fontDisplay }) => {
   return <FontOptionButton>
     <FontOption
-      fontFamily={customFont}>{fontDisplay}</FontOption>
+      fontFamily={customFont}
+      onPress={onPress}>{fontDisplay}</FontOption>
   </FontOptionButton>
 }
 

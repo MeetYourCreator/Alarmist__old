@@ -11,10 +11,35 @@ import { Entypo } from "@expo/vector-icons"
 const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
   const [showModal, setShowModal] = useState(false)
   const [_nosifer, set_nosifer] = useState("nosifer")
+  const [_audiowide, set_audiowide] = useState("audiowide")
+  const [_codystarRegular, set_codystarRegular] = useState("codystar-regular")
+  const [_pressStart2p, set_pressStart2p] = useState("press-start-2p")
+  const [_monoton, set_monoton] = useState("monoton")
+  const [_diplomatica, set_diplomatica] = useState("diplomatica")
 
   const handleSet_nosifer = (_nosifer) => {
     set_nosifer(_nosifer)
   }
+
+   const handleSet_audiowide = (_audiowide) => {
+     set_audiowide(_audiowide)
+   }
+  
+  const handleSet_codystarRegular = (_codystarRegular) => {
+    set_codystarRegular(_codystarRegular)
+  }
+
+  const handleSet_pressStart2p = (_pressStart2p) => {
+    set_pressStart2p(_pressStart2p)
+  }
+
+   const handleSet_monoton = (_monoton) => {
+     set_monoton(_monoton)
+   }
+
+   const handleSet_diplomatica = (_diplomatica) => {
+     set_diplomatica(_diplomatica)
+   }
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -41,27 +66,32 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
               <MenuFontButton
                 customFont="audiowide"
                 fontDisplay="123"
-                onPress={() => onFontHandle()}
+                onChange={handleSet_audiowide}
+                onPress={() => onFontHandle(_audiowide)}
               />
               <MenuFontButton
                 customFont="codystar-regular"
                 fontDisplay="123"
-                onPress={() => onFontHandle()}
+                onChange={handleSet_codystarRegular}
+                onPress={() => onFontHandle(_codystarRegular)}
               />
               <MenuFontButton
                 customFont="press-start-2p"
                 fontDisplay="123"
-                onPress={() => onFontHandle()}
+                onChange={handleSet_pressStart2p}
+                onPress={() => onFontHandle(_pressStart2p)}
               />
               <MenuFontButton
                 customFont="monoton"
                 fontDisplay="123"
-                onPress={() => onFontHandle()}
+                onChange={handleSet_monoton}
+                onPress={() => onFontHandle(_monoton)}
               />
               <MenuFontButton
                 customFont="diplomatica"
                 fontDisplay="123"
-                onPress={() => onFontHandle()}
+                onChange={handleSet_diplomatica}
+                onPress={() => onFontHandle(_diplomatica)}
               />
             </View>
             <TouchableOpacity

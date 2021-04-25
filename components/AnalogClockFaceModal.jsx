@@ -47,7 +47,7 @@ const AnalogClockFaceModal = (props) => {
     set_F7F7F7(_F7F7F7)
   }
 
-  let { iconName, iconColor, value, onColorHandle } = props
+  let { iconName, iconColor, onColorHandle } = props
 
   return (
     <SafeAreaView style={styles.wrapper}>
