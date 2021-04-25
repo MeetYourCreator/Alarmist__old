@@ -18,13 +18,18 @@ import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
 import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
 
 const AnalogClock = () => {
-  const [hourRatio, setHourRatio] = useState(setHour())
-  const [minuteRatio, setMinuteRatio] = useState(setMinute())
-  const [secondRatio, setSecondRatio] = useState(setSecond())
-  const [colorValue, setColorValue] = useState('')
+  const [hourRatio, setHourRatio] = useState(setHour());
+  const [minuteRatio, setMinuteRatio] = useState(setMinute());
+  const [secondRatio, setSecondRatio] = useState(setSecond());
+  const [colorValue, setColorValue] = useState('');
+  const [fontValue, setFontValue] = useState('');
   
   let colorHandler = event => {
     setColorValue(event)
+  }
+
+  let fontHandler = event => {
+    setFontHandler(event)
   }
 
   useEffect(() => {
@@ -183,6 +188,7 @@ const AnalogClock = () => {
           <AnalogClockNumberModal
             iconName="language"
             iconColor="black"
+            onFontHandler={fontHandle}
           ></AnalogClockNumberModal>
         </View>
       </SafeAreaView>

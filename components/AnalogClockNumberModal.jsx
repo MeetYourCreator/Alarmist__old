@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
 import Modal from "react-native-modal"
 import MenuFontButton from "./MenuFontButton.jsx"
@@ -8,8 +8,13 @@ import { MaterialIcons } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { Entypo } from "@expo/vector-icons"
 
-const AnalogClockNumberModal = ({ iconName, iconColor, value, onPress }) => {
-  const [showModal, setShowModal] = useState(false);
+const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
+  const [showModal, setShowModal] = useState(false)
+  const [_nosifer, set_nosifer] = useState("nosifer")
+
+  const handleSet_nosifer = (_nosifer) => {
+    set_nosifer(_nosifer)
+  }
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -30,38 +35,33 @@ const AnalogClockNumberModal = ({ iconName, iconColor, value, onPress }) => {
               <MenuFontButton
                 customFont="nosifer"
                 fontDisplay="123"
-                value={value}
-                onPress={onPress}
+                onChange={handleSet_nosifer}
+                onPress={() => onFontHandle(_nosifer)}
               />
               <MenuFontButton
                 customFont="audiowide"
                 fontDisplay="123"
-                value={value}
-                onPress={onPress}
+                onPress={() => onFontHandle()}
               />
               <MenuFontButton
                 customFont="codystar-regular"
                 fontDisplay="123"
-                value={value}
-                onPress={onPress}
+                onPress={() => onFontHandle()}
               />
               <MenuFontButton
                 customFont="press-start-2p"
                 fontDisplay="123"
-                value={value}
-                onPress={onPress}
+                onPress={() => onFontHandle()}
               />
               <MenuFontButton
                 customFont="monoton"
                 fontDisplay="123"
-                value={value}
-                onPress={onPress}
+                onPress={() => onFontHandle()}
               />
               <MenuFontButton
                 customFont="diplomatica"
                 fontDisplay="123"
-                value={value}
-                onPress={onPress}
+                onPress={() => onFontHandle()}
               />
             </View>
             <TouchableOpacity
@@ -126,4 +126,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default AnalogClockNumberModal;
+export default AnalogClockNumberModal

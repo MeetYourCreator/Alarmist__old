@@ -20,7 +20,7 @@ const AnalogClockFaceModal = (props) => {
   const [_F7F7F7, set_F7F7F7] = useState("#F7F7F7")
 
   const handleSet_FF6495 = (_FF6495) => {
-    set_FF6495(FF6495)
+    set_FF6495(_F6495)
   }
 
   const handleSet_78FFF1 = (_78FFF1) => {
