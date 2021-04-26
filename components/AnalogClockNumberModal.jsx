@@ -16,6 +16,7 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
   const [_pressStart2p, set_pressStart2p] = useState("press-start-2p")
   const [_monoton, set_monoton] = useState("monoton")
   const [_diplomatica, set_diplomatica] = useState("diplomatica")
+  const [_hennyPenny, set_hennyPenny] = useState('henny-penny')
 
   const handleSet_nosifer = (_nosifer) => {
     set_nosifer(_nosifer)
@@ -41,6 +42,9 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
     set_diplomatica(_diplomatica)
   }
 
+  const handleSet_hennyPenny = (_hennyPenny) => {
+    set_hennyPenny(_hennyPenny)
+  }
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
@@ -93,6 +97,12 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
                 onChange={handleSet_diplomatica}
                 onPress={() => onFontHandle(_diplomatica)}
               />
+              <MenuFontButton
+                customFont='henny-penny'
+                fontDisplay='123'
+                onChange={handleSet_hennyPenny}
+                onPress={() => onFontHandle(_hennyPenny)}
+                />
             </View>
             <TouchableOpacity
               onPress={() => {

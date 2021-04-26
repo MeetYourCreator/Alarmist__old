@@ -12,7 +12,7 @@ import * as Font from 'expo-font';
 // console.log(store)
 
 //Notifications
-//function exectued to let os know what to dpo with incoming Notification before the Notification is displayed to the user
+//function exectued to let us know what to do with incoming Notification before the Notification is displayed to the user
 Notifications.setNotificationHandler({
   handleNotification: async () => {
     return {
@@ -31,6 +31,7 @@ const fetchFonts = () => {
     'diplomatica': require('./assets/fonts/DiplomataSC-Regular.ttf'),
     'monoton': require('./assets/fonts/Monoton-Regular.ttf'),
     'nosifer': require('./assets/fonts/Nosifer-Regular.ttf'),
+    'henny-penny': require('./assets/fonts/HennyPenny-Regular.ttf')
   });
 }
 
