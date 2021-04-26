@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import Geolocation from "@react-native-community/geolocation"
 import { View, Text } from "react-native"
 
@@ -36,4 +36,4 @@ const CurrentPosition = () => {
   )
 }
 
-export default CurrentPosition
+export default CurrentPosition;

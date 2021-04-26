@@ -2,11 +2,13 @@ import React from "react"
 import styled from "styled-components"
 
 const MenuFontButton = ({ onPress, customFont, fontDisplay }) => {
-  return <FontOptionButton>
-    <FontOption
-      fontFamily={customFont}
-      onPress={onPress}>{fontDisplay}</FontOption>
-  </FontOptionButton>
+  return (
+    <FontOptionButton>
+      <FontOption fontFamily={customFont} onPress={onPress}>
+        {fontDisplay}
+      </FontOption>
+    </FontOptionButton>
+  )
 }
 
 const FontOptionButton = styled.TouchableOpacity`
@@ -28,5 +30,5 @@ const FontOption = styled.Text`
   justify-content: center;
   flex-wrap: nowrap;
   `
-  
+
 export default MenuFontButton;
