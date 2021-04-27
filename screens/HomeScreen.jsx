@@ -68,11 +68,6 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Digital World Clock")}
         ></AppButton> */}
         </View>
-        {/* <View style={styles.menu}>
-          <CustomModal title="Clock Text Color"></CustomModal>
-          <CustomModal title="Clock Skin"></CustomModal>
-          <CustomModal title="Test"></CustomModal>
-        </View> */}
       </SafeAreaView>
     </>
   )

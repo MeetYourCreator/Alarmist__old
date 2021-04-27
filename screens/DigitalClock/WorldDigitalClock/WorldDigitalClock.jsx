@@ -1,20 +1,22 @@
 import React from "react"
-import { Text, View, SafeAreaView, StyleSheet } from "react-native"
+import { Text, View, SafeAreaView, StyleSheet, ScrollView } from "react-native"
 import styled from "styled-components"
 
 const WorldDigitalClock = ({ id, unix, zonename, country }) => {
   return (
     <>
-      {country !== zonename && (
-        <WorldClockContainer>
-          <Clock>
-            <ClockText>{unix}</ClockText>
-          </Clock>
-          <Location>
-            {zonename}, {country}
-          </Location>
-        </WorldClockContainer>
-      )}
+      <ScrollView>
+        {country !== zonename && (
+          <WorldClockContainer>
+            <Clock>
+              <ClockText>{unix}</ClockText>
+            </Clock>
+            <Location>
+              {zonename}, {country}
+            </Location>
+          </WorldClockContainer>
+        )}
+      </ScrollView>
     </>
   )
 }
@@ -62,4 +64,4 @@ const Location = styled.Text`
   font-size: 13px;
   font-variant: small-caps;
 `
-export default WorldDigitalClock
+export default WorldDigitalClock;
