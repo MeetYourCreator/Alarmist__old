@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
+
 import AppNavigator from './AppNavigator.jsx';
 
 import AppLoading from 'expo-app-loading';

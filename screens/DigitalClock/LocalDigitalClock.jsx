@@ -35,7 +35,7 @@ const LocalDigitalClock = () => {
       <SafeAreaView style={styles.screenContainer}>
         <View style={styles.clockContainer}>
           <DigitalClockContainer>
-            <Clock>
+            <Clock style={styles.clock}>
               <ClockText
                 style={[
                   styles.clockText,
@@ -75,15 +75,30 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   clockContainer: {
+    display: "flex",
     flex: 1,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 40,
     marginTop: 180,
     marginBottom: 90,
+  },
+  clock: {
+    position: 'relative',
+    width: 350,
+    height: 100,
+    borderWidth: 8,
+    borderColor: "#2d2d2d",
+    borderRadius: 15,
+    backgroundColor: "#151617",
   },
   clockText: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: 15,
+    marginTop: 'auto',
+    marginBottom: 'auto',
     textAlign: "center",
     fontSize: 35,
     textShadowColor: "#f70300",
@@ -104,4 +119,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default LocalDigitalClock;
+export default LocalDigitalClock
