@@ -49,7 +49,7 @@ const LocalDigitalClock = () => {
                 {localTime}
               </ClockText>
             </Clock>
-            <Location>LocalTime</Location>
+            <Location style={styles.location}>LocalTime</Location>
           </DigitalClockContainer>
         </View>
         <View style={styles.menu}>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     marginBottom: 90,
   },
   clock: {
-    position: 'relative',
+    position: "relative",
     width: 350,
     height: 100,
     borderWidth: 8,
@@ -97,11 +97,22 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 'auto',
-    marginBottom: 'auto',
+    marginTop: "auto",
+    marginBottom: "auto",
     textAlign: "center",
     fontSize: 35,
     textShadowColor: "#f70300",
+  },
+  location: {
+    marginTop: 15,
+    marginRight: 7,
+    marginBottom: 5,
+    marginLeft: 7,
+    borderTopWidth: 2,
+    textAlign: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex"
   },
   menu: {
     flex: 1,
@@ -119,4 +130,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default LocalDigitalClock
+export default LocalDigitalClock;
