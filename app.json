@@ -33,8 +33,7 @@
         "WRITE_EXTERNAL_STORAGE",
         "READ_CALENDAR",
         "WRITE_CALENDAR"
-      ],
-      "useNextNotifications": true
+      ]
     }
   }
 }
