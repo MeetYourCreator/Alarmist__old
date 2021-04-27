@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react"
-import { Text, View, SafeAreaView, StyleSheet } from "react-native"
-import { setHour, setMinute, setSecond } from "../services/time.js"
-import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js"
-import { Clock } from "../components/styled/analog/Clock.js"
-import { SecondHand } from "../components/styled/analog/SecondHand.js"
-import { MinuteHand } from "../components/styled/analog/MinuteHand.js"
-import { HourHand } from "../components/styled/analog/HourHand.js"
-import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js"
-import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js"
-import { ClockCenter } from "../components/styled/analog/ClockCenter.js"
-import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx"
-import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx"
+import React, { useState, useEffect } from "react";
+import { Text, View, SafeAreaView, StyleSheet } from "react-native";
+import { setHour, setMinute, setSecond } from "../services/time.js";
+import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js";
+import { Clock } from "../components/styled/analog/Clock.js";
+import { SecondHand } from "../components/styled/analog/SecondHand.js";
+import { MinuteHand } from "../components/styled/analog/MinuteHand.js";
+import { HourHand } from "../components/styled/analog/HourHand.js";
+import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js";
+import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js";
+import { ClockCenter } from "../components/styled/analog/ClockCenter.js";
+import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
+import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
 
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour())

@@ -1,6 +1,6 @@
-import React from "react"
-import { Text, View, SafeAreaView, StyleSheet, ScrollView } from "react-native"
-import styled from "styled-components"
+import React from "react";
+import { ScrollView } from "react-native";
+import styled from "styled-components";
 
 const WorldDigitalClock = ({ id, unix, zonename, country }) => {
   return (

@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native"
-import Modal from "react-native-modal"
-import MenuFontButton from "./MenuFontButton.jsx"
+import React, { useState } from "react";
+import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native";
+import Modal from "react-native-modal";
+import MenuFontButton from "./MenuFontButton.jsx";
 
-import { Ionicons } from "@expo/vector-icons"
-import { MaterialIcons } from "@expo/vector-icons"
-import { AntDesign } from "@expo/vector-icons"
-import { Entypo } from "@expo/vector-icons"
+import { Ionicons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 
 const DigitalClockNumberFontModal = ({ iconName, iconColor, onFontHandle }) => {
   const [showModal, setShowModal] = useState(false)

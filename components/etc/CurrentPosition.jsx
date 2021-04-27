@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import Geolocation from "@react-native-community/geolocation"
-import { View, Text } from "react-native"
+import React, { useState } from "react";
+import Geolocation from "@react-native-community/geolocation";
+import { View, Text } from "react-native";
 
 const CurrentPosition = () => {
   const [error, setError] = useState("")

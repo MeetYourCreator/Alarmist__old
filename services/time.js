@@ -19,7 +19,6 @@ export const setSecond = () => {
   const date = new Date();
   const secondRatio = date.getSeconds() / 60;
   return secondRatio
-
 }
 
 export const showLocalTime = () => {
@@ -33,9 +32,7 @@ export const showLocalTime = () => {
   second = second < 10 ? '0' + second : second;
 
   return hour + ':' + minute + ':' + second
-
 }
-
 
 export const getAllTimeZones = async () => {
   const url = `https://api.timezonedb.com/v2.1/list-time-zone?key=7KJHTP7QS6J7&format=json`;

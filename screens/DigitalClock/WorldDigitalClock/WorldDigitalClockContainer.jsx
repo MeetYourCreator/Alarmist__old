@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from "react"
-import uuid from "uuid-random"
-import { getAllTimeZones, showISO } from "../../../services/time.js"
-import { formatZoneName } from '../../../services/etc.js'
-import WorldDigitalClock from "./WorldDigitalClock.jsx"
-import SearchBar from '../../../components/SearchBar.jsx'
-import styled from 'styled-components'
-
-const TestStyleWrapper = styled.SafeAreaView`
-  background-color: #ffff02;
-  overflow: visible;
-`
+import React, { useEffect, useState } from "react";
+import uuid from "uuid-random";
+import { getAllTimeZones, showISO } from "../../../services/time.js";
+import { formatZoneName } from "../../../services/etc.js";
+import WorldDigitalClock from "./WorldDigitalClock.jsx";
+import SearchBar from "../../../components/SearchBar.jsx";
+import styled from "styled-components";
 
 const WorldDigitalClockContainer = () => {
   const [allTimeZones, setAllTimeZones] = useState([])
@@ -25,10 +20,8 @@ const WorldDigitalClockContainer = () => {
     const timeout = setTimeout(() => {
       fetchWorldTimeZones()
     }, 1000)
-      // console.log("4-after setTimeout")
-      return() => clearTimeout(timeout)
-  
-    
+    // console.log("4-after setTimeout")
+    return () => clearTimeout(timeout)
   }, [])
   // console.log("2-after useEffect")
 
@@ -58,4 +51,9 @@ const WorldDigitalClockContainer = () => {
   )
 }
 
-export default WorldDigitalClockContainer
+const TestStyleWrapper = styled.SafeAreaView`
+  background-color: #ffff02;
+  overflow: visible;
+`
+
+export default WorldDigitalClockContainer;

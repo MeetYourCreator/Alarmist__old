@@ -32,4 +32,4 @@ export const formatZoneName = (zoneStr) => {
 export const searchInput = (input, regexp) => {
   const results = input.filter(entry => entry.toLowerCase().includes(regexp))
   return results
-  }
+}

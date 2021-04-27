@@ -1,8 +1,8 @@
-import React, { useEffect } from "react"
-import { View, SafeAreaView, StyleSheet } from "react-native"
-import AppButton from "../components/AppButton.jsx"
-import * as Notifications from "expo-notifications"
-import * as Permissions from "expo-permissions"
+import React, { useEffect } from "react";
+import { View, SafeAreaView, StyleSheet } from "react-native";
+import AppButton from "../components/AppButton.jsx";
+import * as Notifications from "expo-notifications";
+import * as Permissions from "expo-permissions";
 
 const HomeScreen = ({ navigation }) => {
   //Permissions needed for ios
