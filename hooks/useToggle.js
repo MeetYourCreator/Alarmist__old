@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function useToggle(initialValue) {
+const useToggle = (initialValue) => {
 
   const [value, setValue] = useState(initialValue);
   const toggleColor = React.useCallback(() => {
@@ -8,3 +8,5 @@ export default function useToggle(initialValue) {
   }, []);
   return [value, toggleColor];
 }
+
+export default useToggle;
