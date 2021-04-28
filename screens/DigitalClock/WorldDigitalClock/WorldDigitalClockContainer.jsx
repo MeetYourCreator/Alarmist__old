@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import uuid from "uuid-random";
-import { getAllTimeZones, showISO } from "../../../services/time.js";
-import { formatZoneName } from "../../../services/etc.js";
-import WorldDigitalClock from "./WorldDigitalClock.jsx";
-import SearchBar from "../../../components/SearchBar.jsx";
-import styled from "styled-components";
+import React, { useEffect, useState } from 'react';
+import uuid from 'uuid-random';
+import { getAllTimeZones, showISO } from '../../../services/time.js';
+import { formatZoneName } from '../../../services/etc.js';
+import WorldDigitalClock from './WorldDigitalClock.jsx';
+import SearchBar from '../../../components/SearchBar.jsx';
+import styled from 'styled-components';
 
 const WorldDigitalClockContainer = () => {
-  const [allTimeZones, setAllTimeZones] = useState([])
+  const [allTimeZones, setAllTimeZones] = useState([]);
   // console.log(
   //   "%c%s",
   //   "color: green; font-weight: 700",
@@ -18,20 +18,20 @@ const WorldDigitalClockContainer = () => {
   useEffect(() => {
     // console.log("3-inside useEffect")
     const timeout = setTimeout(() => {
-      fetchWorldTimeZones()
-    }, 1000)
+      fetchWorldTimeZones();
+    }, 1000);
     // console.log("4-after setTimeout")
-    return () => clearTimeout(timeout)
-  }, [])
+    return () => clearTimeout(timeout);
+  }, []);
   // console.log("2-after useEffect")
 
   const fetchWorldTimeZones = async () => {
     //getAllTimeZones from services/time.js
-    const timezones = await getAllTimeZones()
+    const timezones = await getAllTimeZones();
     // console.log("6-data recieved")
     //setAllTimeZones with the value of the timezones that were just received
-    setAllTimeZones(timezones)
-  }
+    setAllTimeZones(timezones);
+  };
 
   return (
     <>
@@ -48,12 +48,12 @@ const WorldDigitalClockContainer = () => {
         ))}
       </TestStyleWrapper>
     </>
-  )
-}
+  );
+};
 
 const TestStyleWrapper = styled.SafeAreaView`
   background-color: #ffff02;
   overflow: visible;
-`
+`;
 
 export default WorldDigitalClockContainer;

@@ -1,60 +1,60 @@
-import React, { useState } from "react";
-import { TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native";
-import Modal from "react-native-modal";
-import MenuFontButton from "./MenuFontButton.jsx";
+import React, { useState } from 'react';
+import { TouchableOpacity, View, SafeAreaView, StyleSheet } from 'react-native';
+import Modal from 'react-native-modal';
+import MenuFontButton from './MenuFontButton.jsx';
 
-import { Ionicons } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
-import { Entypo } from "@expo/vector-icons";
+import { Ionicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 
 const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
-  const [showModal, setShowModal] = useState(false)
-  const [_nosifer, set_nosifer] = useState("nosifer")
-  const [_audiowide, set_audiowide] = useState("audiowide")
-  const [_codystarRegular, set_codystarRegular] = useState("codystar-regular")
-  const [_pressStart2p, set_pressStart2p] = useState("press-start-2p")
-  const [_monoton, set_monoton] = useState("monoton")
-  const [_diplomatica, set_diplomatica] = useState("diplomatica")
-  const [_hennyPenny, set_hennyPenny] = useState("henny-penny")
+  const [showModal, setShowModal] = useState(false);
+  const [_nosifer, set_nosifer] = useState('nosifer');
+  const [_audiowide, set_audiowide] = useState('audiowide');
+  const [_codystarRegular, set_codystarRegular] = useState('codystar-regular');
+  const [_pressStart2p, set_pressStart2p] = useState('press-start-2p');
+  const [_monoton, set_monoton] = useState('monoton');
+  const [_diplomatica, set_diplomatica] = useState('diplomatica');
+  const [_hennyPenny, set_hennyPenny] = useState('henny-penny');
 
   const handleSet_nosifer = (_nosifer) => {
-    set_nosifer(_nosifer)
-  }
+    set_nosifer(_nosifer);
+  };
 
   const handleSet_audiowide = (_audiowide) => {
-    set_audiowide(_audiowide)
-  }
+    set_audiowide(_audiowide);
+  };
 
   const handleSet_codystarRegular = (_codystarRegular) => {
-    set_codystarRegular(_codystarRegular)
-  }
+    set_codystarRegular(_codystarRegular);
+  };
 
   const handleSet_pressStart2p = (_pressStart2p) => {
-    set_pressStart2p(_pressStart2p)
-  }
+    set_pressStart2p(_pressStart2p);
+  };
 
   const handleSet_monoton = (_monoton) => {
-    set_monoton(_monoton)
-  }
+    set_monoton(_monoton);
+  };
 
   const handleSet_diplomatica = (_diplomatica) => {
-    set_diplomatica(_diplomatica)
-  }
+    set_diplomatica(_diplomatica);
+  };
 
   const handleSet_hennyPenny = (_hennyPenny) => {
-    set_hennyPenny(_hennyPenny)
-  }
+    set_hennyPenny(_hennyPenny);
+  };
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
         <Modal
-          animationType={"slide"}
+          animationType={'slide'}
           onBackdropPress={() => setShowModal(false)}
           transparent={true}
           visible={showModal}
           onRequestClose={() => {
-            console.log("Modal has been closed.")
+            console.log('Modal has been closed.');
           }}
         >
           {/*All views of Modal*/}
@@ -106,7 +106,7 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
             </View>
             <TouchableOpacity
               onPress={() => {
-                setShowModal(!showModal)
+                setShowModal(!showModal);
               }}
             ></TouchableOpacity>
           </View>
@@ -117,20 +117,20 @@ const AnalogClockNumberModal = ({ iconName, iconColor, onFontHandle }) => {
           size={24}
           color={iconColor}
           onPress={() => {
-            setShowModal(!showModal)
+            setShowModal(!showModal);
           }}
         ></Ionicons>
       </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "flex-end",
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-end',
     marginTop: 40,
     marginLeft: 20,
     marginRight: 20,
@@ -138,32 +138,32 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     height: 70,
-    width: "30%",
+    width: '30%',
   },
   modalPopUp: {
     flex: 1,
-    flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "center",
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     marginTop: 680,
     marginRight: 10,
     marginBottom: 100,
     marginLeft: 10,
   },
   text: {
-    justifyContent: "center",
-    alignItems: "center",
-    color: "#3f2949",
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: '#3f2949',
     marginTop: 10,
   },
   buttonsContainer: {
-    flexDirection: "row",
-    justifyContent: "space-evenly",
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
-})
+});
 
 export default AnalogClockNumberModal;

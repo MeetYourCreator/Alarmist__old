@@ -1,6 +1,6 @@
-import React from "react";
-import { ScrollView } from "react-native";
-import styled from "styled-components";
+import React from 'react';
+import { ScrollView } from 'react-native';
+import styled from 'styled-components';
 
 const WorldDigitalClock = ({ id, unix, zonename, country }) => {
   return (
@@ -18,8 +18,8 @@ const WorldDigitalClock = ({ id, unix, zonename, country }) => {
         )}
       </ScrollView>
     </>
-  )
-}
+  );
+};
 
 const WorldClockContainer = styled.SafeAreaView`
   display: flex;
@@ -28,7 +28,7 @@ const WorldClockContainer = styled.SafeAreaView`
   align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
-`
+`;
 
 const Clock = styled.View`
   position: relative;
@@ -38,7 +38,7 @@ const Clock = styled.View`
   border-color; #000000;
   border-radius: 15px;
   background-color: #151617;
-`
+`;
 const ClockText = styled.Text`
   display: flex;
   padding: 10px;
@@ -48,7 +48,7 @@ const ClockText = styled.Text`
   text-align: center;
   font-size: 80px;
   color: rgb(247, 1, 3);
-`
+`;
 const Location = styled.Text`
   margin-top: 15px;
   margin-right: 7px;
@@ -63,5 +63,5 @@ const Location = styled.Text`
   color: #000000;
   font-size: 13px;
   font-variant: small-caps;
-`
+`;
 export default WorldDigitalClock;

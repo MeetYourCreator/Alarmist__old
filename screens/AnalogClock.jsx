@@ -1,43 +1,43 @@
-import React, { useState, useEffect } from "react";
-import { Text, View, SafeAreaView, StyleSheet } from "react-native";
-import { setHour, setMinute, setSecond } from "../services/time.js";
-import { AnalogClockContainer } from "../components/styled/analog/AnalogClockContainer.js";
-import { Clock } from "../components/styled/analog/Clock.js";
-import { SecondHand } from "../components/styled/analog/SecondHand.js";
-import { MinuteHand } from "../components/styled/analog/MinuteHand.js";
-import { HourHand } from "../components/styled/analog/HourHand.js";
-import { ClockNumberContainer } from "../components/styled/analog/ClockNumberContainer.js";
-import { ClockNumberFont } from "../components/styled/analog/ClockNumberFont.js";
-import { ClockCenter } from "../components/styled/analog/ClockCenter.js";
-import AnalogClockFaceModal from "../components/AnalogClockFaceModal.jsx";
-import AnalogClockNumberModal from "../components/AnalogClockNumberModal.jsx";
+import React, { useState, useEffect } from 'react';
+import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
+import { setHour, setMinute, setSecond } from '../services/time.js';
+import { AnalogClockContainer } from '../components/styled/analog/AnalogClockContainer.js';
+import { Clock } from '../components/styled/analog/Clock.js';
+import { SecondHand } from '../components/styled/analog/SecondHand.js';
+import { MinuteHand } from '../components/styled/analog/MinuteHand.js';
+import { HourHand } from '../components/styled/analog/HourHand.js';
+import { ClockNumberContainer } from '../components/styled/analog/ClockNumberContainer.js';
+import { ClockNumberFont } from '../components/styled/analog/ClockNumberFont.js';
+import { ClockCenter } from '../components/styled/analog/ClockCenter.js';
+import AnalogClockFaceModal from '../components/AnalogClockFaceModal.jsx';
+import AnalogClockNumberModal from '../components/AnalogClockNumberModal.jsx';
 
 const AnalogClock = () => {
-  const [hourRatio, setHourRatio] = useState(setHour())
-  const [minuteRatio, setMinuteRatio] = useState(setMinute())
-  const [secondRatio, setSecondRatio] = useState(setSecond())
-  const [colorValue, setColorValue] = useState("")
-  const [fontValue, setcurrentFont] = useState("diplomatica")
+  const [hourRatio, setHourRatio] = useState(setHour());
+  const [minuteRatio, setMinuteRatio] = useState(setMinute());
+  const [secondRatio, setSecondRatio] = useState(setSecond());
+  const [colorValue, setColorValue] = useState('#F1B814');
+  const [fontValue, setcurrentFont] = useState('diplomatica');
 
   let colorHandler = (event) => {
-    setColorValue(event)
-  }
+    setColorValue(event);
+  };
 
   let fontHandler = (event) => {
-    setcurrentFont(event)
-  }
+    setcurrentFont(event);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHourRatio(setHour())
-      setMinuteRatio(setMinute())
-      setSecondRatio(setSecond())
-    }, 1000)
-    return () => clearInterval(interval)
-  }, [])
+      setHourRatio(setHour());
+      setMinuteRatio(setMinute());
+      setSecondRatio(setSecond());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
-  const currentColor = colorValue
-  const currentFont = fontValue
+  const currentColor = colorValue;
+  const currentFont = fontValue;
 
   return (
     <>
@@ -45,7 +45,6 @@ const AnalogClock = () => {
         <View style={styles.clockContainer}>
           <AnalogClockContainer>
             <ClockCenter />
-
             <Clock
               style={[styles.clockFace, { backgroundColor: currentColor }]}
             >
@@ -90,7 +89,7 @@ const AnalogClock = () => {
               />
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "30deg" }],
+                  transform: [{ rotate: '30deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -101,7 +100,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "60deg" }],
+                  transform: [{ rotate: '60deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -112,7 +111,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "90deg" }],
+                  transform: [{ rotate: '90deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -123,7 +122,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "120deg" }],
+                  transform: [{ rotate: '120deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -134,7 +133,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "150deg" }],
+                  transform: [{ rotate: '150deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -145,7 +144,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "180deg" }],
+                  transform: [{ rotate: '180deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -156,7 +155,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "210deg" }],
+                  transform: [{ rotate: '210deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -167,7 +166,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "240deg" }],
+                  transform: [{ rotate: '240deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -178,7 +177,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "270deg" }],
+                  transform: [{ rotate: '270deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -189,7 +188,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "300deg" }],
+                  transform: [{ rotate: '300deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -200,7 +199,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "330deg" }],
+                  transform: [{ rotate: '330deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -211,7 +210,7 @@ const AnalogClock = () => {
               </ClockNumberContainer>
               <ClockNumberContainer
                 style={{
-                  transform: [{ rotate: "360deg" }],
+                  transform: [{ rotate: '360deg' }],
                 }}
               >
                 <ClockNumberFont
@@ -237,13 +236,13 @@ const AnalogClock = () => {
         </View>
       </SafeAreaView>
     </>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    justifyContent: "space-between",
+    justifyContent: 'space-between',
   },
   clockContainer: {
     flex: 1,
@@ -251,24 +250,24 @@ const styles = StyleSheet.create({
     marginBottom: 90,
   },
   clockFace: {
-    borderColor: "#162B32",
+    borderColor: '#162B32',
     borderWidth: 5,
     borderRadius: 170,
     width: 325,
     height: 325,
-    position: "relative",
+    position: 'relative',
   },
   clockNumber: {
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: 27,
     marginTop: 10,
-    color: "#162B32",
+    color: '#162B32',
   },
   menu: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "flex-end",
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-end',
     marginTop: 0,
     marginLeft: 20,
     marginRight: 20,
@@ -276,8 +275,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: 'center',
   },
-})
+});
 
 export default AnalogClock;

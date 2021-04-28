@@ -1,5 +1,5 @@
-import React from "react";
-import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
+import React from 'react';
+import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
 
 const AppButton = ({ onPress, title }) => {
   return (
@@ -14,16 +14,16 @@ const AppButton = ({ onPress, title }) => {
         </TouchableOpacity>
       </View>
     </>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: 'center',
   },
   appButtonContainer: {
-    backgroundColor: "#009688",
+    backgroundColor: '#009688',
     elevation: 8,
     borderRadius: 20,
     paddingVertical: 10,
@@ -32,9 +32,9 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 25,
-    fontWeight: "bold",
-    alignSelf: "center",
+    fontWeight: 'bold',
+    alignSelf: 'center',
     padding: 20,
   },
-})
+});
 export default AppButton;

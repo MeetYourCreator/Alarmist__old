@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import Geolocation from "@react-native-community/geolocation";
-import { View, Text } from "react-native";
+import React, { useState } from 'react';
+import Geolocation from '@react-native-community/geolocation';
+import { View, Text } from 'react-native';
 
 const CurrentPosition = () => {
-  const [error, setError] = useState("")
+  const [error, setError] = useState('');
   const [position, setPosition] = useState({
     longitude: 0,
     latitude: 0,
-  })
+  });
 
   const getPosition = () => {
     Geolocation.getCurrentPosition(
       (position) => {
-        setError("")
+        setError('');
         setPosition({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-        })
+        });
       },
       (e) => setError(e.message)
-    )
-  }
+    );
+  };
 
   return (
     <View onLoad={getPosition}>
@@ -33,7 +33,7 @@ const CurrentPosition = () => {
         </>
       )}
     </View>
-  )
-}
+  );
+};
 
 export default CurrentPosition;

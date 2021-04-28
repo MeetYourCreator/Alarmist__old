@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const MenuFontButton = ({ onPress, customFont, fontDisplay }) => {
   return (
@@ -8,8 +8,8 @@ const MenuFontButton = ({ onPress, customFont, fontDisplay }) => {
         {fontDisplay}
       </FontOption>
     </FontOptionButton>
-  )
-}
+  );
+};
 
 const FontOptionButton = styled.TouchableOpacity`
   background-color: transparent;
@@ -20,8 +20,8 @@ const FontOptionButton = styled.TouchableOpacity`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
-  color: ${(props) => (props.color ? props.color : "black")};
-`
+  color: ${(props) => (props.color ? props.color : 'black')};
+`;
 const FontOption = styled.Text`
   font-family: ${(props) => props.fontFamily}
   font-size: 15px;
@@ -29,6 +29,6 @@ const FontOption = styled.Text`
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
-  `
+  `;
 
 export default MenuFontButton;

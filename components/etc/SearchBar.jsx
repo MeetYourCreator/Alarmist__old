@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet, TextInput, SafeAreaView } from "react-native";
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, TextInput, SafeAreaView } from 'react-native';
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [searchResults, setSearchResults] = useState("")
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState('');
 
-  useEffect(() => {})
+  useEffect(() => {});
 
   const handleChange = (event) => {
-    event.preventDefault()
-    setSearchTerm(event.target.value)
-  }
+    event.preventDefault();
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <>
@@ -23,8 +23,8 @@ const SearchBar = () => {
         ></TextInput>
       </SafeAreaView>
     </>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   input: {
@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     margin: 10,
     borderWidth: 4,
   },
-})
+});
 
 export default SearchBar;
