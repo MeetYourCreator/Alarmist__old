@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     width: 300,
     backgroundColor: 'blue',
     borderWidth: 2,
-    borderColor: 'black'
+    borderColor: 'black',
   },
   menu: {
     flex: 1,
