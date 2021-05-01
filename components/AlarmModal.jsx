@@ -4,9 +4,6 @@ import Modal from 'react-native-modal';
 import MenuColorButton from './MenuColorButton.jsx';
 
 import { Ionicons } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
 
 const AlarmModal = ({
   iconName,
@@ -50,6 +47,7 @@ const AlarmModal = ({
   const handleSet_0000FF = (_0000FF) => {
     set_0000FF(_0000FF);
   };
+
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
@@ -67,34 +65,9 @@ const AlarmModal = ({
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
               <MenuColorButton
-                customColor="#E8E500"
-                onChange={handleSet_E8E500}
-                onPress={() => onColorHandle(_E8E500)}
-              />
-              <MenuColorButton
-                customColor="#FF2281"
-                onChange={handleSet_FF2281}
-                onPress={() => onColorHandle(_FF2281)}
-              />
-              <MenuColorButton
                 customColor="#75D5FD"
                 onChange={handleSet_75D5FD}
                 onPress={() => onColorHandle(_75D5FD)}
-              />
-              <MenuColorButton
-                customColor="#09FBD3"
-                onChange={handleSet_09FBD3}
-                onPress={() => onColorHandle(_09FBD3)}
-              />
-              <MenuColorButton
-                customColor="#7122FA"
-                onChange={handleSet_7122FA}
-                onPress={() => onColorHandle(_7122FA)}
-              />
-              <MenuColorButton
-                customColor="#EF281E"
-                onChange={handleSet_EF281E}
-                onPress={() => onColorHandle(_EF281E)}
               />
               <MenuColorButton
                 customColor="#0000FF"
@@ -145,16 +118,18 @@ const styles = StyleSheet.create({
   modalPopUp: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    marginTop: 680,
-    marginRight: 10,
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(192,192,192,.7)',
+    marginTop: 100,
+    
     marginBottom: 100,
-    marginLeft: 10,
+    
+    borderWidth: 5,
+    borderColor: 'black',
   },
   buttonsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
   },
 });
 
