@@ -9,6 +9,7 @@ import { Location } from '../../components/styled/digital/Location.js';
 import DigitalClockNumberColorModal from '../../components/DigitalClockNumberColorModal.jsx';
 import DigitalClockNumberFontModal from '../../components/DigitalClockNumberFontModal.jsx';
 import Alarm from '../../components/Alarm.jsx';
+import AlarmModal from '../../components/AlarmModal.jsx'
 
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
@@ -67,6 +68,10 @@ const LocalDigitalClock = () => {
             iconColor="black"
             onFontHandle={fontHandler}
           ></DigitalClockNumberFontModal>
+          <AlarmModal
+            iconName="language"
+            iconColor="black"
+          ></AlarmModal>
         </View>
       </SafeAreaView>
     </>
