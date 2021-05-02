@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, View, SafeAreaView, StyleSheet } from 'react-native';
+import {
+  Text,
+  TouchableOpacity,
+  View,
+  SafeAreaView,
+  StyleSheet,
+} from 'react-native';
 import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
 
 import { Ionicons } from '@expo/vector-icons';
 
-const AlarmModal = ({
-  iconName,
-  iconColor,
-  onColorHandle,
-}) => {
+const AlarmModal = ({ iconName, iconColor, onColorHandle }) => {
   const [showModal, setShowModal] = useState(false);
 
   const [_75D5FD, set_75D5FD] = useState('#75D5FD');
@@ -40,19 +42,22 @@ const AlarmModal = ({
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
               <GenericButton
-                customColor="#75D5FD"
+                backgroundColor="#ff00ff"
+                color="#ff00ff"
                 onChange={handleSet_75D5FD}
-                borderRadius='0px'
-                borderWidth='0px'
-                onPress={() => onColorHandle(_75D5FD)}
+                borderRadius="1px"
+                borderWidth="0px"
               />
               <GenericButton
-                customColor="#0000FF"
-                onChange={handleSet_0000FF}
-                borderRadius='0px'
-                borderWidth='0px'
-                onPress={() => onColorHandle(_0000FF)}
-              />
+                backgroundColor="#ff00ff"
+                color="#ff00ff"
+                borderRadius="1px"
+                borderWidth="0px"
+                width="40px"
+                height="40px"
+              >
+                <Text>Edit</Text>
+              </GenericButton>
             </View>
             <TouchableOpacity
               onPress={() => {
@@ -100,9 +105,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: 'rgba(192,192,192,.7)',
     marginTop: 100,
-    
+
     marginBottom: 100,
-    
+
     borderWidth: 5,
     borderColor: 'black',
   },
