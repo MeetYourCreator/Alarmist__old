@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, View, SafeAreaView, StyleSheet } from 'react-native';
 import Modal from 'react-native-modal';
-import MenuColorButton from './MenuColorButton.jsx';
+import GenericButton from './GenericButton.jsx';
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -12,36 +12,11 @@ const AlarmModal = ({
 }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const [_E8E500, set_E8E500] = useState('#E8E500');
-  const [_FF2281, set_FF2281] = useState('#FF2281');
   const [_75D5FD, set_75D5FD] = useState('#75D5FD');
-  const [_09FBD3, set_09FBD3] = useState('#09FBD3');
-  const [_7122FA, set_7122FA] = useState('#7122FA');
-  const [_EF281E, set_EF281E] = useState('#EF281E');
   const [_0000FF, set_0000FF] = useState('#0000FF');
-
-  const handleSet_E8E500 = (_E8E500) => {
-    set_E8E500(_E8E500);
-  };
-
-  const handleSet_FF2281 = (_FF2281) => {
-    set_FF2281(_FF2281);
-  };
 
   const handleSet_75D5FD = (_75D5FD) => {
     set_75D5FD(_75D5FD);
-  };
-
-  const handleSet_09FBD3 = (_09FBD3) => {
-    set_09FBD3(_09FBD3);
-  };
-
-  const handleSet_7122FA = (_7122FA) => {
-    set_7122FA(_7122FA);
-  };
-
-  const handleSet_EF281E = (_EF281E) => {
-    set_EF281E(_EF281E);
   };
 
   const handleSet_0000FF = (_0000FF) => {
@@ -64,14 +39,18 @@ const AlarmModal = ({
           {/*Animation can be slide, slide, none*/}
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
-              <MenuColorButton
+              <GenericButton
                 customColor="#75D5FD"
                 onChange={handleSet_75D5FD}
+                borderRadius='0px'
+                borderWidth='0px'
                 onPress={() => onColorHandle(_75D5FD)}
               />
-              <MenuColorButton
+              <GenericButton
                 customColor="#0000FF"
                 onChange={handleSet_0000FF}
+                borderRadius='0px'
+                borderWidth='0px'
                 onPress={() => onColorHandle(_0000FF)}
               />
             </View>
