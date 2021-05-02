@@ -11,12 +11,13 @@ import styled from 'styled-components';
 import { Ionicons } from '@expo/vector-icons';
 
 const GenericButton = ({
+  backgroundColor,
   borderRadius,
   borderWidth,
-  backgroundColor,
   color,
   width,
   height,
+  value,
   onPress,
 }) => {
   return (
@@ -28,7 +29,9 @@ const GenericButton = ({
         height={height}
         borderRadius={borderRadius}
         borderWidth={borderWidth}
-      />
+      >
+        {value}
+      </CustomGenericButton>
     </View>
   );
 };
@@ -49,9 +52,7 @@ const CustomGenericButton = styled.TouchableOpacity`
   border-radius: ${(props) => props.borderRadius};
   border-width: ${(props) => props.borderWidth};
   margin: 20px;
-
   color: ${(props) => props.color};
-  font-size: 24px;
 `;
 
 export default GenericButton;

@@ -42,22 +42,21 @@ const AlarmModal = ({ iconName, iconColor, onColorHandle }) => {
           <View style={styles.modalPopUp}>
             <View style={styles.buttonsContainer}>
               <GenericButton
-                backgroundColor="#ff00ff"
-                color="#ff00ff"
-                onChange={handleSet_75D5FD}
-                borderRadius="1px"
-                borderWidth="0px"
-              />
-              <GenericButton
-                backgroundColor="#ff00ff"
-                color="#ff00ff"
+                backgroundColor="transparent"
+                color="black"
                 borderRadius="1px"
                 borderWidth="0px"
                 width="40px"
                 height="40px"
-              >
-                <Text>Edit</Text>
-              </GenericButton>
+              />
+              <GenericButton
+                backgroundColor="transparent"
+                color="black"
+                borderRadius="1px"
+                borderWidth="0px"
+                width="40px"
+                height="40px"
+              ></GenericButton>
             </View>
             <TouchableOpacity
               onPress={() => {
