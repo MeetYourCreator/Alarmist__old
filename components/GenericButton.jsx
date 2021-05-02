@@ -18,6 +18,8 @@ const GenericButton = ({
   width,
   height,
   value,
+  fontFamily,
+  fontVariant,
   onPress,
 }) => {
   return (
@@ -25,12 +27,13 @@ const GenericButton = ({
       <CustomGenericButton
         backgroundColor={backgroundColor}
         color={color}
+        fontFamily={fontFamily}
         width={width}
         height={height}
         borderRadius={borderRadius}
         borderWidth={borderWidth}
       >
-        {value}
+        <Text style={styles.text}>{value}</Text>
       </CustomGenericButton>
     </View>
   );
@@ -38,21 +41,25 @@ const GenericButton = ({
 
 const styles = StyleSheet.create({
   genericButtonWrapper: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
+  text: {
+    fontSize: 23,
+  }
 });
 
 const CustomGenericButton = styled.TouchableOpacity`
   background-color: ${(props) => props.backgroundColor};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  padding: 10px;
+  padding: 1px;
   border-radius: ${(props) => props.borderRadius};
   border-width: ${(props) => props.borderWidth};
   margin: 20px;
   color: ${(props) => props.color};
+  font-family: ${(props) =>
+    props.fontFamily ? props.fontFamily : 'audiowide'};
 `;
 
 export default GenericButton;

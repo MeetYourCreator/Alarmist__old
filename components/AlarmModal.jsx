@@ -48,6 +48,8 @@ const AlarmModal = ({ iconName, iconColor, onColorHandle }) => {
                 borderWidth="0px"
                 width="40px"
                 height="40px"
+                value="+"
+                fontFamily="audiowide"
               />
               <GenericButton
                 backgroundColor="transparent"
@@ -56,6 +58,8 @@ const AlarmModal = ({ iconName, iconColor, onColorHandle }) => {
                 borderWidth="0px"
                 width="40px"
                 height="40px"
+                value="Edit"
+                fontFamily="audiowide"
               ></GenericButton>
             </View>
             <TouchableOpacity
@@ -104,11 +108,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: 'rgba(192,192,192,.7)',
     marginTop: 100,
-
     marginBottom: 100,
-
     borderWidth: 5,
     borderColor: 'black',
+  },
+  buttonText: {
+    color: 'black',
   },
   buttonsContainer: {
     flexDirection: 'row',
