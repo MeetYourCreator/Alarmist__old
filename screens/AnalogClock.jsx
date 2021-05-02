@@ -11,6 +11,7 @@ import { ClockNumberFont } from '../components/styled/analog/ClockNumberFont.js'
 import { ClockCenter } from '../components/styled/analog/ClockCenter.js';
 import AnalogClockFaceModal from '../components/AnalogClockFaceModal.jsx';
 import AnalogClockNumberModal from '../components/AnalogClockNumberModal.jsx';
+import AlarmModal from '../components/AlarmModal.jsx';
 
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour());
@@ -233,6 +234,10 @@ const AnalogClock = () => {
             iconColor="black"
             onFontHandle={fontHandler}
           ></AnalogClockNumberModal>
+          <AlarmModal
+            iconName="alarm"
+            iconColor="black">
+          </AlarmModal>
         </View>
       </SafeAreaView>
     </>

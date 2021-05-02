@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 23,
-  }
+  },
 });
 
 const CustomGenericButton = styled.TouchableOpacity`
