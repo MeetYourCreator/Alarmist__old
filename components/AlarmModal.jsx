@@ -11,19 +11,14 @@ import GenericButton from './GenericButton.jsx';
 
 import { Ionicons } from '@expo/vector-icons';
 
-const AlarmModal = ({ iconName, iconColor, onColorHandle }) => {
+const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const [_75D5FD, set_75D5FD] = useState('#75D5FD');
-  const [_0000FF, set_0000FF] = useState('#0000FF');
-
-  const handleSet_75D5FD = (_75D5FD) => {
-    set_75D5FD(_75D5FD);
-  };
-
-  const handleSet_0000FF = (_0000FF) => {
-    set_0000FF(_0000FF);
-  };
+   const [inputTime, setInputTime] = useState(0);
+ 
+ const handleInput = (event) => {
+   setInputTime(event.target.value);
+ };
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -50,6 +45,8 @@ const AlarmModal = ({ iconName, iconColor, onColorHandle }) => {
                 height="40px"
                 value="+"
                 fontFamily="audiowide"
+                onChange={handleInput}
+                onPress={() => onAlarmHandle(inputTime)}
               />
               <GenericButton
                 backgroundColor="transparent"
@@ -60,6 +57,8 @@ const AlarmModal = ({ iconName, iconColor, onColorHandle }) => {
                 height="40px"
                 value="Edit"
                 fontFamily="audiowide"
+                onChange={handleInput}
+                onPress={() => onAlarmHandle(inputTime)}
               ></GenericButton>
             </View>
             <TouchableOpacity

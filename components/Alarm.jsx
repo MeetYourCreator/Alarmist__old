@@ -3,13 +3,11 @@ import { View, SafeAreaView, StyleSheet, Text, TextInput } from 'react-native';
 import AlarmBeep from '../assets/sounds/alarm-beep.mp3';
 
 const Alarm = () => {
-  const [inputTime, setInputTime] = useState('');
+ 
 
   const alarmSound = { AlarmBeep };
 
-  const handleInput = (event) => {
-    setInputTime(event.target.value);
-  };
+  
 
   return (
     <>

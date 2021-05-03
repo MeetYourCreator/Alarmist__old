@@ -14,12 +14,15 @@ const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
   const [colorValue, setColorValue] = useState('#0000FF');
   const [fontValue, setFontValue] = useState('press-start-2p');
+  const [alarmValue, setAlarmValue] = useState(0)
 
   const colorHandler = (event) => {
     setColorValue(event);
   };
 
   const fontHandler = (event) => setFontValue(event);
+
+  const alarmHandler = (event) => setAlarmValue(event);
 
   const currentColor = colorValue;
   const currentFont = fontValue;
@@ -67,6 +70,7 @@ const LocalDigitalClock = () => {
           <AlarmModal
             iconName="alarm"
             iconColor="black"
+            onAlarmHandle={alarmHandler}
           ></AlarmModal>
         </View>
       </SafeAreaView>

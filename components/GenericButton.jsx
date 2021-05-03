@@ -1,14 +1,10 @@
 import React from 'react';
 import {
   Text,
-  TouchableOpacity,
   View,
-  SafeAreaView,
   StyleSheet,
 } from 'react-native';
 import styled from 'styled-components';
-
-import { Ionicons } from '@expo/vector-icons';
 
 const GenericButton = ({
   backgroundColor,
@@ -19,7 +15,6 @@ const GenericButton = ({
   height,
   value,
   fontFamily,
-  fontVariant,
   onPress,
 }) => {
   return (
@@ -32,6 +27,7 @@ const GenericButton = ({
         height={height}
         borderRadius={borderRadius}
         borderWidth={borderWidth}
+        onPress={onPress}
       >
         <Text style={styles.text}>{value}</Text>
       </CustomGenericButton>
@@ -59,7 +55,7 @@ const CustomGenericButton = styled.TouchableOpacity`
   margin: 20px;
   color: ${(props) => props.color};
   font-family: ${(props) =>
-    props.fontFamily ? props.fontFamily : 'audiowide'};
+  props.fontFamily ? props.fontFamily : 'audiowide'};
 `;
 
 export default GenericButton;
