@@ -8,13 +8,13 @@ import { Location } from '../../components/styled/digital/Location.js';
 
 import DigitalClockNumberColorModal from '../../components/DigitalClockNumberColorModal.jsx';
 import DigitalClockNumberFontModal from '../../components/DigitalClockNumberFontModal.jsx';
-import AlarmModal from '../../components/AlarmModal.jsx'
+import AlarmModal from '../../components/AlarmModal.jsx';
 
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
   const [colorValue, setColorValue] = useState('#0000FF');
   const [fontValue, setFontValue] = useState('press-start-2p');
-  const [alarmValue, setAlarmValue] = useState(0)
+  const [alarmValue, setAlarmValue] = useState(0);
 
   const colorHandler = (event) => {
     setColorValue(event);
