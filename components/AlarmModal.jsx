@@ -8,13 +8,13 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
+import AlarmDetail from './AlarmDetail.jsx'
 
 import { Ionicons } from '@expo/vector-icons';
 
 const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
   const [showModal, setShowModal] = useState(false);
-
-   const [inputTime, setInputTime] = useState(0);
+  const [showAlarm, setShowAlarm] = useState();
  
  const handleInput = (event) => {
    setInputTime(event.target.value);
@@ -41,13 +41,12 @@ const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
                 color="black"
                 borderRadius="1px"
                 borderWidth="0px"
-                width="40px"
+                width="60px"
                 height="40px"
-                value="+"
+                value="Cancel"
                 fontFamily="audiowide"
-                onChange={handleInput}
-                onPress={() => onAlarmHandle(inputTime)}
               />
+
               <GenericButton
                 backgroundColor="transparent"
                 color="black"
@@ -55,11 +54,15 @@ const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
                 borderWidth="0px"
                 width="40px"
                 height="40px"
-                value="Edit"
+                value="Save"
                 fontFamily="audiowide"
                 onChange={handleInput}
-                onPress={() => onAlarmHandle(inputTime)}
               ></GenericButton>
+            </View>
+            <View>
+              <Text>Time</Text>
+              <Text>Repeat</Text>
+              <Text>Sound</Text>
             </View>
             <TouchableOpacity
               onPress={() => {

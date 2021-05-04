@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   text: {
-    fontSize: 23,
+    fontSize: 13,
   },
 });
 
