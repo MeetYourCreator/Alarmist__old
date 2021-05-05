@@ -8,17 +8,17 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
-import AlarmDetail from './AlarmDetail.jsx'
+import AlarmDetail from './AlarmDetail.jsx';
 
 import { Ionicons } from '@expo/vector-icons';
 
 const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
   const [showModal, setShowModal] = useState(false);
   const [showAlarm, setShowAlarm] = useState();
- 
- const handleInput = (event) => {
-   setInputTime(event.target.value);
- };
+
+  const handleInput = (event) => {
+    setInputTime(event.target.value);
+  };
 
   return (
     <SafeAreaView style={styles.wrapper}>
