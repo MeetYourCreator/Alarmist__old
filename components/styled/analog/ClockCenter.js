@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ClockCenter = styled.View`
-bottom: -75%;
+bottom: -70%;
 left: 0%;
 width: 40px;
 height: 40px;
