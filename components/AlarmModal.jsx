@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
+import Input from './Input.jsx';
 import AlarmDetail from './AlarmDetail.jsx';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -59,10 +60,8 @@ const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
                 onChange={handleInput}
               ></GenericButton>
             </View>
-            <View>
-              <Text>Time</Text>
-              <Text>Repeat</Text>
-              <Text>Sound</Text>
+            <View style={styles.input}>
+              <Input title='Time' />
             </View>
             <TouchableOpacity
               onPress={() => {
@@ -121,6 +120,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  input: {
+  
+  }
 });
 
 export default AlarmModal;
