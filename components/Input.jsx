@@ -1,15 +1,14 @@
-import React from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import React from 'react';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 
-const Input = props => {
-
+const Input = (props) => {
   return (
     <View style={styles.inputContainer}>
       <Text style={styles.text}>{props.title}</Text>
-      < TextInput style={{ ...styles.input, ...props.style }}/>
+      <TextInput style={{ ...styles.input, ...props.style }} />
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   inputContainer: {
