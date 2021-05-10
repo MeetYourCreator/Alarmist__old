@@ -234,10 +234,7 @@ const AnalogClock = () => {
             iconColor="black"
             onFontHandle={fontHandler}
           ></AnalogClockNumberModal>
-          <AlarmModal
-            iconName="alarm"
-            iconColor="black">
-          </AlarmModal>
+          <AlarmModal iconName="alarm" iconColor="black"></AlarmModal>
         </View>
       </SafeAreaView>
     </>
