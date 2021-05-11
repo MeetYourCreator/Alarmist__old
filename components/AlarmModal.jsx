@@ -10,7 +10,7 @@ import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
 import AppButton from './AppButton.jsx'
 import Input from './Input.jsx';
-import AlarmDetail from '../screens/AlarmDetail.jsx';
+import AlarmDetail from '../screens/AlarmDetailScreen.jsx';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -25,62 +25,11 @@ const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
-        <Modal
-          animationType={'slide'}
-          onBackdropPress={() => setShowModal(false)}
-          transparent={true}
-          visible={showModal}
-          onRequestClose={() => {
-            console.log('Modal has been closed.');
-          }}
-        >
-          {/*All views of Modal*/}
-          {/*Animation can be slide, slide, none*/}
-          <View style={styles.modalPopUp}>
-            <View style={styles.buttonsContainer}>
-              <GenericButton
-                backgroundColor="transparent"
-                color="black"
-                borderRadius="1px"
-                borderWidth="0px"
-                width="60px"
-                height="40px"
-                value="Cancel"
-                fontFamily="audiowide"
-              />
-              <GenericButton
-                backgroundColor="transparent"
-                color="black"
-                borderRadius="1px"
-                borderWidth="0px"
-                width="40px"
-                height="40px"
-                value="Save"
-                fontFamily="audiowide"
-                onChange={handleInput}
-              ></GenericButton>
-            </View>
-            <View style={styles.input}>
-              <AppButton
-                onPress={() => navigation.navigate('Alarm Detail')}
-              ></AppButton>
-              <Input title="Time" />
-            </View>
-            <TouchableOpacity
-              onPress={() => {
-                setShowModal(!showModal);
-              }}
-            ></TouchableOpacity>
-          </View>
-        </Modal>
-        {/*Updating the state to make Modal Visible*/}
         <Ionicons
           name={iconName}
           size={24}
           color={iconColor}
-          onPress={() => {
-            setShowModal(!showModal);
-          }}
+          onPress={() => navigation.navigate('Alarm Detail Screen')}
         ></Ionicons>
       </View>
     </SafeAreaView>
