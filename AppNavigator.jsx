@@ -3,6 +3,7 @@ import React from 'react';
 import HomeScreen from './screens/HomeScreen.jsx';
 import AnalogClock from './screens/AnalogClock.jsx';
 import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
+import AlarmDetail from './screens/AlarmDetail.jsx'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -26,6 +27,10 @@ const AppNavigator = () => {
           name="Analog Clock"
           component={AnalogClock}
           options={{ title: 'Analog Alarmist' }}
+        />
+        <Stack.Screen
+          name='Alarm Detail'
+          component={AlarmDetail}
         />
       </Stack.Navigator>
     </NavigationContainer>

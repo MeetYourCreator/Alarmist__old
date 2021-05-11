@@ -8,9 +8,10 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
+import AppButton from './AppButton.jsx'
 import Input from './Input.jsx';
-import AlarmDetail from './AlarmDetail.jsx';
-
+import AlarmDetail from '../screens/AlarmDetail.jsx';
+import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
 const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
@@ -20,7 +21,7 @@ const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
   const handleInput = (event) => {
     setInputTime(event.target.value);
   };
-
+const navigation = useNavigation(); 
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
@@ -47,7 +48,6 @@ const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
                 value="Cancel"
                 fontFamily="audiowide"
               />
-
               <GenericButton
                 backgroundColor="transparent"
                 color="black"
@@ -61,7 +61,10 @@ const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
               ></GenericButton>
             </View>
             <View style={styles.input}>
-              <Input title='Time' />
+              <AppButton
+                onPress={() => navigation.navigate('Alarm Detail')}
+              ></AppButton>
+              <Input title="Time" />
             </View>
             <TouchableOpacity
               onPress={() => {

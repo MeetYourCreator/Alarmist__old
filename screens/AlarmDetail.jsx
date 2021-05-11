@@ -1,13 +1,13 @@
 import React from 'react';
-import { TouchableOpacity, View, SafeAreaView, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, View, SafeAreaView, StyleSheet } from 'react-native';
 
 const AlarmDetail = () => {
   return (
   
     <>
-      <div style={styles.alarmDetailContainer}>
-        <h1>Hello</h1>
-      </div>
+      <View style={styles.alarmDetailContainer}>
+        <Text>Hello</Text>
+      </View>
     </>
   )
 };
