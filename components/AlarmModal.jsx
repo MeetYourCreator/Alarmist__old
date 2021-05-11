@@ -10,17 +10,12 @@ import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
 import AppButton from './AppButton.jsx'
 import Input from './Input.jsx';
-import AlarmDetail from '../screens/AlarmDetailScreen.jsx';
+import EditAlarmScreen from '../screens/EditAlarmScreen.jsx';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
-const AlarmModal = ({ iconName, iconColor, onAlarmHandle }) => {
-  const [showModal, setShowModal] = useState(false);
-  const [showAlarm, setShowAlarm] = useState();
-
-  const handleInput = (event) => {
-    setInputTime(event.target.value);
-  };
+const AlarmModal = ({ iconName, iconColor }) => {
+  
 const navigation = useNavigation(); 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -29,7 +24,7 @@ const navigation = useNavigation();
           name={iconName}
           size={24}
           color={iconColor}
-          onPress={() => navigation.navigate('Alarm Detail Screen')}
+          onPress={() => navigation.navigate('Edit Alarm Screen')}
         ></Ionicons>
       </View>
     </SafeAreaView>
@@ -55,26 +50,7 @@ const styles = StyleSheet.create({
     height: 70,
     width: '30%',
   },
-  modalPopUp: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundColor: 'rgba(192,192,192,.7)',
-    marginTop: 100,
-    marginBottom: 100,
-    borderWidth: 5,
-    borderColor: 'black',
-  },
-  buttonText: {
-    color: 'black',
-  },
-  buttonsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  input: {
   
-  }
 });
 
 export default AlarmModal;

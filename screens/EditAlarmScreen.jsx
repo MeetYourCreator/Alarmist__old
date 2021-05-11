@@ -1,10 +1,12 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, SafeAreaView, StyleSheet } from 'react-native';
 import GenericButton from '../components/GenericButton.jsx'
+import EditAlarmDetailButton from '../components/EditAlarmDetailButton.jsx'
+import AppButton from '../components/AppButton.jsx'
 
-const AlarmDetailScreen = () => {
+const EditAlarmScreen = () => {
   return (
-    <View>
+    <View style={styles.alarmDetailContainer}>
       <View style={styles.topButtonsContainer}>
         <GenericButton
           backgroundColor="transparent"
@@ -27,7 +29,9 @@ const AlarmDetailScreen = () => {
           fontFamily="audiowide"
         ></GenericButton>
       </View>
-      <View style={styles.input}>
+      <View>
+        <AppButton></AppButton>
+       <EditAlarmDetailButton name='Repeat'></EditAlarmDetailButton>
       </View>
     </View>
   );
@@ -36,9 +40,24 @@ const AlarmDetailScreen = () => {
 const styles = StyleSheet.create({
   alarmDetailContainer: {
     flex: 1,
-    borderWidth: 2,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(192,192,192,.3)',
+    marginTop: 30,
+    marginBottom: 100,
+    borderWidth: 5,
     borderColor: 'black',
-  }
-})
+  },
+  topButtonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  buttonText: {
+    color: 'black',
+  },
+  input: {
+  width: 100
+  },
+});
 
-export default AlarmDetailScreen;
+export default EditAlarmScreen;

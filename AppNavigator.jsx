@@ -3,7 +3,7 @@ import React from 'react';
 import HomeScreen from './screens/HomeScreen.jsx';
 import AnalogClock from './screens/AnalogClock.jsx';
 import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
-import AlarmDetailScreen from './screens/AlarmDetailScreen.jsx'
+import AlarmDetailScreen from './screens/EditAlarmScreen.jsx'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -30,8 +30,9 @@ const AppNavigator = () => {
           options={{ title: 'Analog Alarmist' }}
         />
         <Stack.Screen
-          name='Alarm Detail Screen'
+          name='Edit Alarm Screen'
           component={AlarmDetailScreen}
+          options={{title: 'Edit Alarm'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
