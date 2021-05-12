@@ -1,10 +1,16 @@
 import React from 'react';
-import { TouchableOpacity, Text, View, SafeAreaView, StyleSheet } from 'react-native';
-import GenericButton from '../components/GenericButton.jsx'
-import EditAlarmDetailButton from '../components/EditAlarmDetailButton.jsx'
-import AppButton from '../components/AppButton.jsx'
+import {
+  TouchableOpacity,
+  Text,
+  View,
+  SafeAreaView,
+  StyleSheet,
+} from 'react-native';
+import GenericButton from '../components/GenericButton.jsx';
+import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
+import AppButton from '../components/AppButton.jsx';
 
-const EditAlarmScreen = () => {
+const EditAlarmScreenMain = () => {
   return (
     <View style={styles.alarmDetailContainer}>
       <View style={styles.topButtonsContainer}>
@@ -29,9 +35,15 @@ const EditAlarmScreen = () => {
           fontFamily="audiowide"
         ></GenericButton>
       </View>
-      <View>
-        <AppButton></AppButton>
-       <EditAlarmDetailButton name='Repeat'></EditAlarmDetailButton>
+      <View style={styles.alarmOptions}>
+        <EditAlarmDetail
+          name="Repeat"
+          screen="Edit Alarm Screen Repeat"
+        ></EditAlarmDetail>
+        <EditAlarmDetail
+          name="Label"
+          screen="Edit Alarm Screen Label"
+        ></EditAlarmDetail>
       </View>
     </View>
   );
@@ -49,15 +61,20 @@ const styles = StyleSheet.create({
     borderColor: 'black',
   },
   topButtonsContainer: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  alarmOptions: {
+    flex: 1,
+    marginBottom: 300,
   },
   buttonText: {
     color: 'black',
   },
   input: {
-  width: 100
+    width: 100,
   },
 });
 
-export default EditAlarmScreen;
+export default EditAlarmScreenMain;

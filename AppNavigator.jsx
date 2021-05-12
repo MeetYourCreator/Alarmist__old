@@ -3,10 +3,11 @@ import React from 'react';
 import HomeScreen from './screens/HomeScreen.jsx';
 import AnalogClock from './screens/AnalogClock.jsx';
 import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
-import AlarmDetailScreen from './screens/EditAlarmScreen.jsx'
+import EditAlarmScreenMain from './screens/EditAlarmScreenMain.jsx';
+import EditAlarmScreenRepeat from './screens/EditAlarmScreenRepeat.jsx';
+import EditAlarmScreenLabel from './screens/EditAlarmScreenLabel.jsx';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const AppNavigator = () => {
   const Stack = createStackNavigator();
@@ -30,9 +31,19 @@ const AppNavigator = () => {
           options={{ title: 'Analog Alarmist' }}
         />
         <Stack.Screen
-          name='Edit Alarm Screen'
-          component={AlarmDetailScreen}
-          options={{title: 'Edit Alarm'}}
+          name="Edit Alarm Screen Main"
+          component={EditAlarmScreenMain}
+          options={{ title: 'Edit Alarm' }}
+        />
+        <Stack.Screen
+          name="Edit Alarm Screen Repeat"
+          component={EditAlarmScreenRepeat}
+          options={{ title: 'Repeat' }}
+        />
+        <Stack.Screen
+          name="Edit Alarm Screen Label"
+          component={EditAlarmScreenLabel}
+          options={{ title: 'Label' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

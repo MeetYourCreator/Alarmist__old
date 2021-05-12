@@ -10,7 +10,7 @@ import Modal from 'react-native-modal';
 import GenericButton from './GenericButton.jsx';
 import AppButton from './AppButton.jsx'
 import Input from './Input.jsx';
-import EditAlarmScreen from '../screens/EditAlarmScreen.jsx';
+import EditAlarmScreenMain from '../screens/EditAlarmScreenMain.jsx';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -24,7 +24,7 @@ const navigation = useNavigation();
           name={iconName}
           size={24}
           color={iconColor}
-          onPress={() => navigation.navigate('Edit Alarm Screen')}
+          onPress={() => navigation.navigate('Edit Alarm Screen Main')}
         ></Ionicons>
       </View>
     </SafeAreaView>
