@@ -10,7 +10,6 @@ const EditAlarmScreenLabel = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
   screenWrapper: {
     display: 'flex',
