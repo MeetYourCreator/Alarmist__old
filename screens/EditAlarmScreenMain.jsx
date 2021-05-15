@@ -37,12 +37,20 @@ const EditAlarmScreenMain = () => {
       </View>
       <View style={styles.alarmOptions}>
         <EditAlarmDetail
-          name="Repeat"
+          name="Alarm Sound"
+          screen="Edit Alarm Screen Sound"
+        ></EditAlarmDetail>
+        <EditAlarmDetail
+          name="Alarm Repeat"
           screen="Edit Alarm Screen Repeat"
         ></EditAlarmDetail>
         <EditAlarmDetail
-          name="Label"
+          name="Alarm Label"
           screen="Edit Alarm Screen Label"
+        ></EditAlarmDetail>
+        <EditAlarmDetail
+          name="Alarm Snooze"
+          screen="Edit Alarm Screen Snooze"
         ></EditAlarmDetail>
       </View>
     </View>
