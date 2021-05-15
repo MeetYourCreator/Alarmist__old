@@ -6,9 +6,9 @@ import {
   SafeAreaView,
   StyleSheet,
 } from 'react-native';
-import GenericButton from '../components/GenericButton.jsx';
+import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
-import AppButton from '../components/AppButton.jsx';
+import AppButton from '../components/buttons/AppButton.jsx';
 
 const EditAlarmScreenMain = () => {
   return (

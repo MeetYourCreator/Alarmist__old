@@ -6,9 +6,9 @@ import { Clock } from '../../components/styled/digital/Clock.js';
 import { ClockText } from '../../components/styled/digital/ClockText.js';
 import { Location } from '../../components/styled/digital/Location.js';
 
-import DigitalClockNumberColorModal from '../../components/DigitalClockNumberColorModal.jsx';
-import DigitalClockNumberFontModal from '../../components/DigitalClockNumberFontModal.jsx';
-import AlarmModal from '../../components/AlarmModal.jsx';
+import DigitalClockNumberColorModal from '../../components/modals/DigitalClockNumberColorModal.jsx';
+import DigitalClockNumberFontModal from '../../components/modals/DigitalClockNumberFontModal.jsx';
+import AlarmModal from '../../components/modals/AlarmModal.jsx';
 
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());

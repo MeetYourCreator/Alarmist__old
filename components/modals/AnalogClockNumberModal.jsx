@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, View, SafeAreaView, StyleSheet } from 'react-native';
 import Modal from 'react-native-modal';
-import MenuFontButton from './MenuFontButton.jsx';
+import MenuFontButton from '../buttons/MenuFontButton.jsx';
 
 import { Ionicons } from '@expo/vector-icons';
 

@@ -9,9 +9,9 @@ import { HourHand } from '../components/styled/analog/HourHand.js';
 import { ClockNumberContainer } from '../components/styled/analog/ClockNumberContainer.js';
 import { ClockNumberFont } from '../components/styled/analog/ClockNumberFont.js';
 import { ClockCenter } from '../components/styled/analog/ClockCenter.js';
-import AnalogClockFaceModal from '../components/AnalogClockFaceModal.jsx';
-import AnalogClockNumberModal from '../components/AnalogClockNumberModal.jsx';
-import AlarmModal from '../components/AlarmModal.jsx';
+import AnalogClockFaceModal from '../components/modals/AnalogClockFaceModal.jsx';
+import AnalogClockNumberModal from '../components/modals/AnalogClockNumberModal.jsx';
+import AlarmModal from '../components/modals/AlarmModal.jsx';
 
 
 

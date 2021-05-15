@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, SafeAreaView, StyleSheet } from 'react-native';
-import AppButton from '../components/AppButton.jsx';
+import AppButton from '../components/buttons/AppButton.jsx';
 import * as Notifications from 'expo-notifications';
 import * as Permissions from 'expo-permissions';
 

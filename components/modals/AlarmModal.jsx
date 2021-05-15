@@ -7,10 +7,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import Modal from 'react-native-modal';
-import GenericButton from './GenericButton.jsx';
-import AppButton from './AppButton.jsx'
-import Input from './Input.jsx';
-import EditAlarmScreenMain from '../screens/EditAlarmScreenMain.jsx';
+import GenericButton from '../buttons/GenericButton.jsx';
+import AppButton from '../buttons/AppButton.jsx'
+import Input from '../Input.jsx';
+import EditAlarmScreenMain from '../../screens/EditAlarmScreenMain.jsx';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
