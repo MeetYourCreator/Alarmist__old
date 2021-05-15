@@ -15,6 +15,8 @@ const GenericButton = ({
   height,
   value,
   fontFamily,
+  fontSize,
+  fontWeight,
   onPress,
 }) => {
   return (
@@ -23,13 +25,14 @@ const GenericButton = ({
         backgroundColor={backgroundColor}
         color={color}
         fontFamily={fontFamily}
+        fontWeight={fontWeight}
         width={width}
         height={height}
         borderRadius={borderRadius}
         borderWidth={borderWidth}
         onPress={onPress}
       >
-        <Text style={styles.text}>{value}</Text>
+        <Text fontSize={fontSize} style={styles.text}>{value}</Text>
       </CustomGenericButton>
     </View>
   );
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   text: {
-    fontSize: 13,
+  
   },
 });
 

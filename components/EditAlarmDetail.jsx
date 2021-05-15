@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 10,
     color: 'black',
-    fontFamily: 'audiowide',
+    fontWeight: '800',
   },
   right: {
     color: 'black',

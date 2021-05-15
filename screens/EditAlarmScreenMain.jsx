@@ -23,6 +23,8 @@ const EditAlarmScreenMain = () => {
           height="40px"
           value="Cancel"
           fontFamily="audiowide"
+          fontSize="24px"
+          fontWeight="800"
         />
         <GenericButton
           backgroundColor="transparent"
@@ -33,6 +35,8 @@ const EditAlarmScreenMain = () => {
           height="40px"
           value="Save"
           fontFamily="audiowide"
+          fontSize="24px"
+          fontWeight="700"
         ></GenericButton>
       </View>
       <View style={styles.alarmOptions}>

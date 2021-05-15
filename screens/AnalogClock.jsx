@@ -22,6 +22,8 @@ const AnalogClock = () => {
   const [colorValue, setColorValue] = useState('#F1B814');
   const [fontValue, setcurrentFont] = useState('diplomatica');
 
+ 
+
   let colorHandler = (event) => {
     setColorValue(event);
   };
