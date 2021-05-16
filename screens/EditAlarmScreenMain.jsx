@@ -1,16 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
-  TouchableOpacity,
-  Text,
   View,
-  SafeAreaView,
   StyleSheet,
 } from 'react-native';
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
-import AppButton from '../components/buttons/AppButton.jsx';
 
 const EditAlarmScreenMain = () => {
+  
+  const [inputValue, setInputValue] = useState('')
+
+  const inputHandler = event => {
+  setInputValue(event)
+  }
+
+
   return (
     <View style={styles.alarmDetailContainer}>
       <View style={styles.topButtonsContainer}>
@@ -51,7 +55,8 @@ const EditAlarmScreenMain = () => {
         <EditAlarmDetail
           name="Alarm Label"
           screen="Edit Alarm Screen Label"
-        ></EditAlarmDetail>
+          onInputHandle={inputHandler}
+        >{inputValue}</EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Snooze"
           screen="Edit Alarm Screen Snooze"
