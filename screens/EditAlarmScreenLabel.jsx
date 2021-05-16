@@ -6,6 +6,7 @@ const EditAlarmScreenLabel = ({ label, onInputHandle }) => {
   const [input, setInput] = useState('')
   
   const handleSetInput = (event) => {
+    event.persist();
     setInput(event)
   }
   console.log(input)
