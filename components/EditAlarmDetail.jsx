@@ -28,8 +28,9 @@ const EditAlarmDetail = ({ name, value, screen }) => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    flexDirection: 'column',
-    justifyContent: 'space-around',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
     borderColor: 'black',
     borderWidth: 1,
     backgroundColor: 'rgba(180,180,180,.8)',
@@ -37,15 +38,20 @@ const styles = StyleSheet.create({
   },
   left: {
     justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 0,
-    marginLeft: 10,
+    alignItems: 'flex-start',
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 10,
     color: 'black',
     fontWeight: '800',
   },
   right: {
+    alignItems: 'flex-end',
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingRight: 10,
     color: 'black',
+    fontWeight: '800'
   },
 });
 export default EditAlarmDetail;

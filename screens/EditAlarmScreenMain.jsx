@@ -54,9 +54,10 @@ const EditAlarmScreenMain = () => {
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Label"
+          value={inputValue}
           screen="Edit Alarm Screen Label"
           onInputHandle={inputHandler}
-        >{inputValue}</EditAlarmDetail>
+        ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Snooze"
           screen="Edit Alarm Screen Snooze"
