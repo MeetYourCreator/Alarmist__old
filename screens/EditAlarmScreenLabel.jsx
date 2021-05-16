@@ -2,10 +2,10 @@ import React from 'react';
 import { View, SafeView, StyleSheet, Text, TextInput } from 'react-native';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenLabel = () => {
+const EditAlarmScreenLabel = ({label}) => {
   return (
     <View>
-      <TextInput style={styles.screenWrapper}></TextInput>
+      <TextInput style={styles.screenWrapper}>{label}</TextInput>
     </View>
   );
 };
