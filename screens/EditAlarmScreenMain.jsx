@@ -1,19 +1,14 @@
-import React, {useState} from 'react';
-import {
-  View,
-  StyleSheet,
-} from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenMain = () => {
-  
-  const [inputValue, setInputValue] = useState('')
+const EditAlarmScreenMain = ({value}) => {
+  const [inputValue, setInputValue] = useState('');
 
-  const inputHandler = event => {
-  setInputValue(event)
-  }
-
+  const inputHandler = (event) => {
+    setInputValue(event);
+  };
 
   return (
     <View style={styles.alarmDetailContainer}>
@@ -46,20 +41,23 @@ const EditAlarmScreenMain = () => {
       <View style={styles.alarmOptions}>
         <EditAlarmDetail
           name="Alarm Sound"
+          value="Placeholder"
           screen="Edit Alarm Screen Sound"
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Repeat"
+          value="Placeholder"
           screen="Edit Alarm Screen Repeat"
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Label"
-          value={inputValue}
+          value={value}
           screen="Edit Alarm Screen Label"
           onInputHandle={inputHandler}
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Snooze"
+          value="Placeholder"
           screen="Edit Alarm Screen Snooze"
         ></EditAlarmDetail>
       </View>

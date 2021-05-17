@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, SafeView, StyleSheet, Text, TextInput } from 'react-native';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenLabel = ({ label, onInputHandle }) => {
+const EditAlarmScreenLabel = ({ value, onInputHandle }) => {
   const [input, setInput] = useState('')
   
   const handleSetInput = (event) => {
@@ -12,7 +12,7 @@ const EditAlarmScreenLabel = ({ label, onInputHandle }) => {
   console.log(input)
   return (
     <View>
-      <TextInput style={styles.screenWrapper} input={label} onChange={handleSetInput} onSubmit={onInputHandle}></TextInput>
+      <TextInput style={styles.screenWrapper} input={value} onChange={handleSetInput} onSubmit={onInputHandle}></TextInput>
     </View>
   );
 };
