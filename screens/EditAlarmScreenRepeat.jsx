@@ -7,28 +7,24 @@ const EditAlarmScreenRepeat = ({ navigation, onInputHandle }) => {
   const [showCheck, setShowCheck] = useState(false);
 
   return (
-    <View>
-      <CheckSelectRadioButton />
+    <View style={styles.radioButtonsContainer}>
+      <CheckSelectRadioButton day='Monday'></CheckSelectRadioButton>
+      <CheckSelectRadioButton day='Tuesday'></CheckSelectRadioButton>
+      <CheckSelectRadioButton day='Wednesday'></CheckSelectRadioButton>
+      <CheckSelectRadioButton day='Thursday'></CheckSelectRadioButton>
+      <CheckSelectRadioButton day='Friday'></CheckSelectRadioButton>
+      <CheckSelectRadioButton day='Saturday'></CheckSelectRadioButton>
+      <CheckSelectRadioButton day='Sunday'></CheckSelectRadioButton>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  radioButtonWrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingTop: 5,
-    paddingBottom: 5,
-    padding: 20,
-    marginTop: 300,
-    marginBottom: 300,
-    borderColor: 'black',
-    borderWidth: 1,
-    backgroundColor: 'rgba(180,180,180,.8)',
-    width: '100%',
-  },
+  radioButtonsContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    
+  }
 });
 
 export default EditAlarmScreenRepeat;
