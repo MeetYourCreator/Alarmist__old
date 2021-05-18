@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenMain = ({value}) => {
+const EditAlarmScreenMain = ({value, navigation, route}) => {
   const [inputValue, setInputValue] = useState('');
 
   const inputHandler = (event) => {
     setInputValue(event);
   };
 
+  useEffect(() => {
+    if (route.params?.post) {
+    setInputValue(inputValue)
+    }
+  }, [route.params?.post])
   return (
     <View style={styles.alarmDetailContainer}>
       <View style={styles.topButtonsContainer}>
@@ -51,7 +56,7 @@ const EditAlarmScreenMain = ({value}) => {
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Label"
-          value={value}
+          value={route.params?.post}
           screen="Edit Alarm Screen Label"
           onInputHandle={inputHandler}
         ></EditAlarmDetail>
