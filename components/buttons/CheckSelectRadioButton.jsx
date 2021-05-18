@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React from 'react'
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
-import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx';
 
-const EditAlarmScreenRepeat = ({ navigation, onInputHandle }) => {
-  const [showCheck, setShowCheck] = useState(false);
-
-  return (
-    <View>
-      <CheckSelectRadioButton />
-    </View>
-  );
+const CheckSelectRadioButton = () => {
+  
+return (
+  <View>
+    <TouchableOpacity style={styles.radioButtonWrapper} onPress={() => {}}>
+      <Text>Monday</Text>
+      <Ionicons name="checkmark-outline" size={24} color="black"></Ionicons>
+    </TouchableOpacity>
+  </View>
+);
 };
 
 const styles = StyleSheet.create({
@@ -31,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EditAlarmScreenRepeat;
+export default CheckSelectRadioButton;

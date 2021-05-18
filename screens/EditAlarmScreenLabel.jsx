@@ -4,14 +4,6 @@ import { View, SafeView, StyleSheet, Text, TextInput } from 'react-native';
 const EditAlarmScreenLabel = ({ navigation, value, onInputHandle }) => {
   const [input, setInput] = useState('');
 
-  
-  const handleSetInput = (event) => {
-    event.persist();
-    setInput(event);
-  };
-  
-  console.log(input);
-
   return (
     <View>
       <TextInput
@@ -26,7 +18,6 @@ const EditAlarmScreenLabel = ({ navigation, value, onInputHandle }) => {
           })
         }}
       ></TextInput>
-      <Text>value: {input}</Text>
     </View>
   );
 };
