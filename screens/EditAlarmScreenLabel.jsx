@@ -1,18 +1,32 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { View, SafeView, StyleSheet, Text, TextInput } from 'react-native';
-import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenLabel = ({ value, onInputHandle }) => {
-  const [input, setInput] = useState('')
+const EditAlarmScreenLabel = ({ navigation, value, onInputHandle }) => {
+  const [input, setInput] = useState('');
+
   
   const handleSetInput = (event) => {
     event.persist();
-    setInput(event)
-  }
-  console.log(input)
+    setInput(event);
+  };
+  
+  console.log(input);
+
   return (
     <View>
-      <TextInput style={styles.screenWrapper} value={input} onChangeText={setInput} onSubmit={onInputHandle}></TextInput>
+      <TextInput
+        style={styles.screenWrapper}
+        input={value}
+        onChangeText={text => setInput(text)}
+        onSubmitEditing={() => {
+          navigation.navigate({
+            name: 'Edit Alarm Screen Main',
+            params: { post: input },
+            merge: true
+          })
+        }}
+      ></TextInput>
+      <Text>value: {input}</Text>
     </View>
   );
 };
