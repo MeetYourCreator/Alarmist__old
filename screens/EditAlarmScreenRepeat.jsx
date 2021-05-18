@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx';
 
 const EditAlarmScreenRepeat = ({ navigation, onInputHandle }) => {
-  const [showCheck, setShowCheck] = useState(false);
+  
 
   return (
     <View style={styles.radioButtonsContainer}>

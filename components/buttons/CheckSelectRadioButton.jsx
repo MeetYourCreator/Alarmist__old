@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 
 const CheckSelectRadioButton = ({day}) => {
+  const [showCheck, setShowCheck] = useState(false);
   
 return (
  <>
