@@ -12,7 +12,7 @@ const EditAlarmScreenLabel = ({ value, onInputHandle }) => {
   console.log(input)
   return (
     <View>
-      <TextInput style={styles.screenWrapper} input={value} onChange={handleSetInput} onSubmit={onInputHandle}></TextInput>
+      <TextInput style={styles.screenWrapper} value={input} onChangeText={setInput} onSubmit={onInputHandle}></TextInput>
     </View>
   );
 };
