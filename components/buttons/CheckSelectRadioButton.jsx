@@ -1,18 +1,17 @@
-import React, {useState} from 'react'
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
-import { Ionicons } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import CheckBox from './CheckBox.jsx'
 
-const CheckSelectRadioButton = ({day}) => {
-  const [showCheck, setShowCheck] = useState(false);
+const CheckSelectRadioButton = ({ day }) => {
   
-return (
- <>
-    <TouchableOpacity style={styles.radioButtonWrapper} onPress={() => {}}>
-      <Text>{day}</Text>
-      <Ionicons name="checkmark-outline" size={24} color="black"></Ionicons>
-    </TouchableOpacity>
- </>
-);
+  return (
+    <>
+      <View style={styles.radioButtonWrapper}>
+        <Text>{day}</Text>
+        <CheckBox />
+      </View>
+    </>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -26,8 +25,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderColor: 'black',
     borderWidth: 1,
-    backgroundColor: 'rgba(180,180,180,.8)',
- 
+    backgroundColor: '#bebebe',
   },
 });
 
