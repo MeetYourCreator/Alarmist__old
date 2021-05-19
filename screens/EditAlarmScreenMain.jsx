@@ -3,18 +3,29 @@ import { View, StyleSheet } from 'react-native';
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenMain = ({value, navigation, route}) => {
-  const [inputValue, setInputValue] = useState('');
+const EditAlarmScreenMain = ({ value, navigation, route }) => {
+  const [labelValue, setLabelValue] = useState('');
+  const [repeatValue, setRepeatValue] = useState('');
 
-  const inputHandler = (event) => {
-    setInputValue(event);
+  const labelHandler = (event) => {
+    setLabelValue(event);
   };
 
+  const repeatHandler = (event) => {
+    seetRepeatHandler(event);
+  };
   useEffect(() => {
-    if (route.params?.post) {
-    setInputValue(inputValue)
+    if (route.params?.label) {
+      setLabelValue(labelValue);
     }
-  }, [route.params?.post])
+  }, [route.params?.label]);
+
+  useEffect(() => {
+    if (route.params?.repeat) {
+      setRepeatValue(repeatValue);
+    }
+  });
+
   return (
     <View style={styles.alarmDetailContainer}>
       <View style={styles.topButtonsContainer}>
@@ -51,14 +62,14 @@ const EditAlarmScreenMain = ({value, navigation, route}) => {
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Repeat"
-          value="Placeholder"
+          value={route.params?.repeat}
           screen="Edit Alarm Screen Repeat"
+          on
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Label"
-          value={route.params?.post}
+          value={route.params?.label}
           screen="Edit Alarm Screen Label"
-          onInputHandle={inputHandler}
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Snooze"

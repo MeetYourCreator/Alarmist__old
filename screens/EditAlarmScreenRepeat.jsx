@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx';
 
-const EditAlarmScreenRepeat = ({ navigation, onInputHandle }) => {
+const EditAlarmScreenRepeat = ({ navigation}) => {
   
 
   return (
