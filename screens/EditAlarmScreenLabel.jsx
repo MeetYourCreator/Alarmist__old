@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, SafeView, StyleSheet, Text, TextInput } from 'react-native';
 
-const EditAlarmScreenLabel = ({ navigation, value}) => {
+const EditAlarmScreenLabel = ({ navigation, value }) => {
   const [input, setInput] = useState('');
 
   return (
@@ -9,13 +9,13 @@ const EditAlarmScreenLabel = ({ navigation, value}) => {
       <TextInput
         style={styles.screenWrapper}
         input={value}
-        onChangeText={text => setInput(text)}
+        onChangeText={(text) => setInput(text)}
         onSubmitEditing={() => {
           navigation.navigate({
             name: 'Edit Alarm Screen Main',
             params: { label: input },
-            merge: true
-          })
+            merge: true,
+          });
         }}
       ></TextInput>
     </View>

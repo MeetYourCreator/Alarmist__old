@@ -3,8 +3,8 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx';
 
-const EditAlarmScreenRepeat = ({ navigation, value}) => {
-  const [dayOfWeek, setDayOfWeek] = useState('')
+const EditAlarmScreenRepeat = ({ navigation, value }) => {
+  const [dayOfWeek, setDayOfWeek] = useState('');
   return (
     <View style={styles.radioButtonsContainer}>
       <CheckSelectRadioButton
@@ -32,8 +32,7 @@ const styles = StyleSheet.create({
   radioButtonsContainer: {
     flex: 1,
     justifyContent: 'center',
-    
-  }
+  },
 });
 
 export default EditAlarmScreenRepeat;
