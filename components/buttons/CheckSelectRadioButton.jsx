@@ -7,7 +7,7 @@ const CheckSelectRadioButton = ({ day }) => {
   return (
     <>
       <View style={styles.radioButtonWrapper}>
-        <Text>{day}</Text>
+        <Text>{value}</Text>
         <CheckBox />
       </View>
     </>

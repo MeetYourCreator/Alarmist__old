@@ -10,20 +10,20 @@ const EditAlarmScreenRepeat = ({ navigation, value }) => {
       <CheckSelectRadioButton
         onPress={() => {
           navigation.navigate({
-            name: 'Edit Alarm Screen Name',
+            name: 'Edit Alarm Screen Main',
             params: { repeat: dayOfWeek },
             merge: true,
           });
         }}
         dayOfWeek={value}
-        day="Monday"
+        value="Monday"
       ></CheckSelectRadioButton>
-      <CheckSelectRadioButton day="Tuesday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton day="Wednesday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton day="Thursday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton day="Friday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton day="Saturday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton day="Sunday"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Tuesday"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Wednesday"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Thursday"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Friday"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Saturday"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Sunday"></CheckSelectRadioButton>
     </View>
   );
 };
