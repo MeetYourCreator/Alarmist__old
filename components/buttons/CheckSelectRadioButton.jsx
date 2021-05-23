@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import CheckBox from './CheckBox.jsx'
 
-const CheckSelectRadioButton = ({ day }) => {
+const CheckSelectRadioButton = ({ value }) => {
   
   return (
     <>
