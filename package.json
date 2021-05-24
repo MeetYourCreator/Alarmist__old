@@ -12,6 +12,7 @@
     "@expo-google-fonts/monoton": "^0.1.0",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@react-native-async-storage/async-storage": "github:react-native-async-storage/async-storage",
+    "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.11.10",
