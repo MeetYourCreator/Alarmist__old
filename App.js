@@ -4,12 +4,22 @@ import React, { useState } from 'react';
 
 import AppNavigator from './AppNavigator.jsx';
 
+import { createStore, combineReducers } from 'redux'
+import alarmsReducer from './store/reducers/alarms.js'
+import {Provider} from 'react-redux'
+
 import AppLoading from 'expo-app-loading';
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
 
 import * as Font from 'expo-font';
 
+
+const rootReducer = combineReducers({
+  alarms: alarmsReducer
+})
+
+const store = createStore(rootReducer)
 // console.log(store)
 
 //Notifications
@@ -38,7 +48,7 @@ const fetchFonts = () => {
 
 // Build for ios View is mapped to UIView
 // Build for android View is mapped to AndroidView
-export default function App() {
+const App = () => {
   const [dataLoaded, setDataLoaded] = useState(false)
 
   if (!dataLoaded) {
@@ -50,6 +60,10 @@ export default function App() {
   }
 
   return (
-    <AppNavigator />
+    <Provider>
+      <AppNavigator />
+    </Provider>
   );
 };
+
+export default App;
