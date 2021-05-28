@@ -13,6 +13,8 @@ import AnalogClockFaceModal from '../components/modals/AnalogClockFaceModal.jsx'
 import AnalogClockNumberModal from '../components/modals/AnalogClockNumberModal.jsx';
 import AlarmModal from '../components/modals/AlarmModal.jsx';
 
+import {useSelector} from 'react-redux'
+
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour());
   const [minuteRatio, setMinuteRatio] = useState(setMinute());

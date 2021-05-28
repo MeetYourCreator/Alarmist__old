@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 import AppNavigator from './AppNavigator.jsx';
 
 import { createStore, combineReducers } from 'redux'
+import { Provider } from 'react-redux'
 import alarmsReducer from './store/reducers/alarms.js'
-import {Provider} from 'react-redux'
 
 import AppLoading from 'expo-app-loading';
 import * as Notifications from "expo-notifications";
@@ -14,13 +14,12 @@ import * as Permissions from "expo-permissions";
 
 import * as Font from 'expo-font';
 
-
 const rootReducer = combineReducers({
   alarms: alarmsReducer
 })
 
 const store = createStore(rootReducer)
-// console.log(store)
+console.log(store)
 
 //Notifications
 //function exectued to let us know what to do with incoming Notification before the Notification is displayed to the user
@@ -60,10 +59,15 @@ const App = () => {
   }
 
   return (
-    <Provider>
-      <AppNavigator />
+    //store, with its value value of createStore(rootReducer) <line 21>
+    //which has a value of combineReducers, where the value of the alarmsReducer is passed to a key 'alarms' <lines 17-19>
+    //is passed as a prop to the Provider component
+    //This is how the store is made available to every child component of App.js
+    <Provider store={store}>
+    <AppNavigator />
     </Provider>
   );
 };
+
 
 export default App;
