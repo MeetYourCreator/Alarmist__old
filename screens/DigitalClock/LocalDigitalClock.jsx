@@ -10,18 +10,19 @@ import DigitalClockNumberColorModal from '../../components/modals/DigitalClockNu
 import DigitalClockNumberFontModal from '../../components/modals/DigitalClockNumberFontModal.jsx';
 import AlarmModal from '../../components/modals/AlarmModal.jsx';
 
+import { useSelector } from 'react-redux'; 
+
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
   const [colorValue, setColorValue] = useState('#0000FF');
   const [fontValue, setFontValue] = useState('press-start-2p');
-  const [alarmValue, setAlarmValue] = useState(0);
+ 
+  const alarms = useSelector(state => state.alarms.activeAlarms)
 
   const colorHandler = (event) => {
     setColorValue(event);
   };
-
   const fontHandler = (event) => setFontValue(event);
-
   const alarmHandler = (event) => setAlarmValue(event);
 
   const currentColor = colorValue;
@@ -55,6 +56,9 @@ const LocalDigitalClock = () => {
             </Clock>
             <Location style={styles.location}>LocalTime</Location>
           </DigitalClockContainer>
+        </View>
+        <View style={styles.activeAlarmsContainer}>
+        
         </View>
         <View style={styles.menu}>
           <DigitalClockNumberColorModal
@@ -128,6 +132,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     borderWidth: 2,
     borderColor: 'black',
+  },
+  activeAlarmsContainer: {
+  width: '80%',
+  borderWidth: 2,
+  borderColor: 'black'
   },
   menu: {
     flex: 1,
