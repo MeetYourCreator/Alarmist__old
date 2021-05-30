@@ -1,19 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
+
+import { useSelector, useDispatch } from 'react-redux';
+import {setAlarm} from '../store/actions/alarmsActionsObjects.js'
+
+
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenMain = ({ value, navigation, route }) => {
+const EditAlarmScreenMain = ({ value, navigation, route, alarmId }) => {
   const [labelValue, setLabelValue] = useState('');
   const [repeatValue, setRepeatValue] = useState('');
 
-  const labelHandler = (event) => {
-    setLabelValue(event);
-  };
+  const availableAlarms = useSelector(state => state.alarms.alarms);
+  const alarmId = navigation.getParam('alarmId')
 
-  const repeatHandler = (event) => {
-    seetRepeatHandler(event);
-  };
+  const dispatch = useDispatch();
+
+  const setAlarmHandler = useCallback(() => {
+    dispatch(setAlarm(alarmId))
+  }, [dispatch, alarmId])
+
+  useEffect(() => {
+  navigation.setParams({setAlarm: setAlarmHandler})
+  }, [setAlarmHandler])
+
+  
   useEffect(() => {
     if (route.params?.label) {
       setLabelValue(labelValue);
@@ -52,6 +64,7 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
           fontFamily="audiowide"
           fontSize="24px"
           fontWeight="700"
+          onPress={()=> {}}
         ></GenericButton>
       </View>
       <View style={styles.alarmOptions}>

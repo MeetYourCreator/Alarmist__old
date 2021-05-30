@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import { View, SafeAreaView, StyleSheet, Text, TextInput } from 'react-native';
-import AlarmBeep from '../assets/sounds/alarm-beep.mp3';
 
-const Alarm = () => {
+
+const AlarmDetail = ({sound, repeat, label, snooze}) => {
  
-
-  const alarmSound = { AlarmBeep };
-
-  
-
   return (
     <>
       <View>
