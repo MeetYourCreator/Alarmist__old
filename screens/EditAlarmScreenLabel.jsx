@@ -9,6 +9,7 @@ const EditAlarmScreenLabel = ({ navigation, value }) => {
       <TextInput
         style={styles.screenWrapper}
         input={value}
+        selectionColor="rgb(255,255,255)"
         onChangeText={(text) => setInput(text)}
         onSubmitEditing={() => {
           navigation.navigate({
