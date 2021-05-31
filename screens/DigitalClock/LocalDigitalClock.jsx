@@ -5,6 +5,7 @@ import { DigitalClockContainer } from '../../components/styled/digital/DigitalCl
 import { Clock } from '../../components/styled/digital/Clock.js';
 import { ClockText } from '../../components/styled/digital/ClockText.js';
 import { Location } from '../../components/styled/digital/Location.js';
+import AlarmDetail from '../../components/AlarmDetail.jsx'
 
 import DigitalClockNumberColorModal from '../../components/modals/DigitalClockNumberColorModal.jsx';
 import DigitalClockNumberFontModal from '../../components/modals/DigitalClockNumberFontModal.jsx';
@@ -57,8 +58,8 @@ const LocalDigitalClock = () => {
             <Location style={styles.location}>LocalTime</Location>
           </DigitalClockContainer>
         </View>
-        <View style={styles.activeAlarmsContainer}>
-        
+        <View style={styles.alarmsContainer}>
+          <AlarmDetail />
         </View>
         <View style={styles.menu}>
           <DigitalClockNumberColorModal
@@ -127,16 +128,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     display: 'flex',
   },
-  alarmInput: {
-    width: 300,
-    backgroundColor: 'blue',
-    borderWidth: 2,
-    borderColor: 'black',
-  },
-  activeAlarmsContainer: {
-  width: '80%',
-  borderWidth: 2,
-  borderColor: 'black'
+  alarmsContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '70%',
+    height: 170,
+    marginTop: 'auto',
+    marginRight: 'auto',
+    marginLeft: 'auto',
   },
   menu: {
     flex: 1,
