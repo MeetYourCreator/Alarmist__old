@@ -8,9 +8,9 @@ import EditAlarmScreenSound from '../screens/EditAlarmScreenSound.jsx';
 import EditAlarmScreenRepeat from '../screens/EditAlarmScreenRepeat.jsx';
 import EditAlarmScreenLabel from '../screens/EditAlarmScreenLabel.jsx';
 import EditAlarmScreenSnooze from '../screens/EditAlarmScreenSnooze';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, HeaderBackButton } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-
+import { Button } from 'react-native';
 
 const AppNavigator = () => {
   const Stack = createStackNavigator();
@@ -41,12 +41,32 @@ const AppNavigator = () => {
         <Stack.Screen
           name="Edit Alarm Screen Sound"
           component={EditAlarmScreenSound}
-          options={{ title: 'Sound' }}
+          options={{
+            title: 'Sound',
+            // headerLeft: (props) => (
+            //   <HeaderBackButton
+            //     {...props}
+            //     onPress={() => {
+                
+            //     }}
+            //   />
+            // )
+          }}
         />
         <Stack.Screen
           name="Edit Alarm Screen Repeat"
           component={EditAlarmScreenRepeat}
-          options={{ title: 'Repeat' }}
+          options={{
+            title: 'Repeat',
+            //   headerLeft: (props) => (
+            //   <HeaderBackButton
+            //     {...props}
+            //     onPress={() => {
+                
+            //     }}
+            //   />
+            // ),
+          }}
         />
         <Stack.Screen
           name="Edit Alarm Screen Label"

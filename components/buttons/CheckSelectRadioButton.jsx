@@ -7,7 +7,7 @@ const CheckSelectRadioButton = ({ value }) => {
   return (
     <>
       <View style={styles.radioButtonWrapper}>
-        <Text>{value}</Text>
+        <Text style={styles.text}>{value}</Text>
         <CheckBox />
       </View>
     </>
@@ -25,7 +25,11 @@ const styles = StyleSheet.create({
     padding: 20,
     borderColor: 'black',
     borderWidth: 1,
-    backgroundColor: '#bebebe',
+    backgroundColor: 'rgba(90,168,219,.8)',
+  },
+  text: {
+    color: 'rgb(255,255,255)',
+    fontWeight: '800',
   },
 });
 

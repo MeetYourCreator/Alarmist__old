@@ -26,6 +26,11 @@ const EditAlarmDetail = ({ name, value, screen }) => {
   );
 };
 
+EditAlarmDetail.navigationOptions = {
+  headerStyle: {
+    backgroundColor: 'rgb(235,105,158)',
+  },
+};
 const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',

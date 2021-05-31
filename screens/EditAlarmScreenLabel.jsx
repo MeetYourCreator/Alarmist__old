@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, SafeView, StyleSheet, Text, TextInput } from 'react-native';
+import { View, StyleSheet, TextInput } from 'react-native';
 
 const EditAlarmScreenLabel = ({ navigation, value }) => {
   const [input, setInput] = useState('');
@@ -35,7 +35,9 @@ const styles = StyleSheet.create({
     marginBottom: 300,
     borderColor: 'black',
     borderWidth: 1,
-    backgroundColor: 'rgba(180,180,180,.8)',
+    backgroundColor: 'rgba(30,163,145,.8)',
+    color: 'rgb(255,255,255)',
+    fontWeight: '800',
     width: '100%',
   },
 });
