@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginTop: 680,
+    marginTop: 720,
     marginRight: 10,
     marginBottom: 100,
     marginLeft: 10,

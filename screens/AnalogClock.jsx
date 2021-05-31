@@ -48,7 +48,16 @@ const AnalogClock = () => {
       <SafeAreaView style={styles.screenContainer}>
         <View style={styles.clockContainer}>
           <AnalogClockContainer>
-            <ClockCenter />
+            <ClockCenter
+              style={{
+                transform: [
+                  { translateY: 150 },
+                  { translateX: 0 },
+                  { translateY: -70 },
+                  { translateX: 0 },
+                ],
+              }}
+            />
             <Clock
               style={[styles.clockFace, { backgroundColor: currentColor }]}
             >
@@ -56,7 +65,7 @@ const AnalogClock = () => {
                 color="white"
                 style={{
                   transform: [
-                    { translateY: 70 },
+                    { translateY: 90 },
                     { translateX: 0 },
                     { rotate: `${secondRatio * 360}deg` },
                     { translateY: -70 },
@@ -72,8 +81,8 @@ const AnalogClock = () => {
                     //MinuteHand moves left as value is lowered
                     { translateX: 30 },
                     { rotate: `${minuteRatio * 360}deg` },
-                    { translateY: -70 },
-                    { translateX: 0 },
+                    { translateY: -75 },
+                    { translateX: 3 },
                   ],
                 }}
               />
@@ -228,8 +237,7 @@ const AnalogClock = () => {
         </View>
 
         <View style={styles.alarmsContainer}>
-          <AlarmDetail />
-
+         
         </View>
 
         <View style={styles.menu}>
@@ -253,12 +261,12 @@ const AnalogClock = () => {
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   clockContainer: {
     flex: 1,
     marginTop: 180,
-    marginBottom: 90,
+    marginBottom: 120,
   },
   clockFace: {
     borderColor: '#162B32',
@@ -278,9 +286,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     width: '70%',
+    height: 170,
+    marginTop: 'auto',
     marginRight: 'auto',
     marginLeft: 'auto',
-    backgroundColor: 'purple',
   },
   menu: {
     flex: 1,
