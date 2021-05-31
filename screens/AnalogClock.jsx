@@ -12,6 +12,7 @@ import { ClockCenter } from '../components/styled/analog/ClockCenter.js';
 import AnalogClockFaceModal from '../components/modals/AnalogClockFaceModal.jsx';
 import AnalogClockNumberModal from '../components/modals/AnalogClockNumberModal.jsx';
 import AlarmModal from '../components/modals/AlarmModal.jsx';
+import AlarmDetail from '../components/AlarmDetail.jsx';
 
 import { useSelector } from 'react-redux';
 
@@ -226,16 +227,11 @@ const AnalogClock = () => {
           </AnalogClockContainer>
         </View>
 
-        <View style={styles.alarmContainer}>
-            <TextInput style={styles.hour} keyboardType="numeric"></TextInput>
-            <TextInput
-              style={styles.minute}
-              keyboardType="numeric"
-              // value={inputTime}
-              // onChange={handleInput}
-            ></TextInput>
-          </View>
-        
+        <View style={styles.alarmsContainer}>
+          <AlarmDetail />
+
+        </View>
+
         <View style={styles.menu}>
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
@@ -278,25 +274,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: '#162B32',
   },
-  alarmContainer: {
-    flexDirection: 'row',
-
-    backgroundColor: 'blue',
-  },
-  alarmsTime: {
-    flexDirection: 'row'
-  },
-  hour: {
-    borderColor: 'red',
-    width: 30,
-    borderWidth: 3,
-    backgroundColor: 'white'
-  },
-  minute: {
-    borderColor: 'black',
-    width: 30,
-    borderWidth: 3,
-    backgroundColor: 'white'
+  alarmsContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '70%',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    backgroundColor: 'purple',
   },
   menu: {
     flex: 1,
