@@ -77,6 +77,7 @@ const EditAlarmScreenMain = ({ value, navigation, route}) => {
           name="Alarm Repeat"
           value={route.params?.repeat}
           screen="Edit Alarm Screen Repeat"
+
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Label"

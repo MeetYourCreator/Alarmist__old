@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     borderColor: 'black',
     borderWidth: 1,
-    backgroundColor: 'rgba(180,180,180,.8)',
+    backgroundColor: 'rgba(235,105,158,.3)',
     width: '100%',
   },
   left: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 10,
-    color: 'black',
+    color: 'rgb(235,105,158)',
     fontWeight: '800',
   },
   right: {
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     paddingRight: 10,
-    color: 'black',
-    fontWeight: '800'
+    color: 'rgb(255,255,255)',
+    fontWeight: '800',
   },
 });
 export default EditAlarmDetail;
