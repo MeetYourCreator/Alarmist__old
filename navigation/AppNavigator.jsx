@@ -8,8 +8,9 @@ import EditAlarmScreenSound from '../screens/EditAlarmScreenSound.jsx';
 import EditAlarmScreenRepeat from '../screens/EditAlarmScreenRepeat.jsx';
 import EditAlarmScreenLabel from '../screens/EditAlarmScreenLabel.jsx';
 import EditAlarmScreenSnooze from '../screens/EditAlarmScreenSnooze';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+
 
 const AppNavigator = () => {
   const Stack = createStackNavigator();

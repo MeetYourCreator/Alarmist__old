@@ -8,22 +8,22 @@ import {setAlarm} from '../store/actions/alarmsActionsObjects.js'
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenMain = ({ value, navigation, route }) => {
+const EditAlarmScreenMain = ({ value, navigation, route}) => {
   const [labelValue, setLabelValue] = useState('');
   const [repeatValue, setRepeatValue] = useState('');
 
   const availableAlarms = useSelector(state => state.alarms.alarms);
-  const alarmId = navigation.getParam('alarmId')
+  // const alarmId = navigation.getParam('alarmId')
 
   const dispatch = useDispatch();
 
-  const setAlarmHandler = useCallback(() => {
-    dispatch(setAlarm(alarmId))
-  }, [dispatch, alarmId])
+  // const setAlarmHandler = useCallback(() => {
+  //   dispatch(setAlarm(alarmId))
+  // }, [dispatch, alarmId])
 
-  useEffect(() => {
-  navigation.setParams({setAlarm: setAlarmHandler})
-  }, [setAlarmHandler])
+  // useEffect(() => {
+  // navigation.setParams({setAlarm: setAlarmHandler})
+  // }, [setAlarmHandler])
 
 
   useEffect(() => {
@@ -77,7 +77,6 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
           name="Alarm Repeat"
           value={route.params?.repeat}
           screen="Edit Alarm Screen Repeat"
-          on
         ></EditAlarmDetail>
         <EditAlarmDetail
           name="Alarm Label"
