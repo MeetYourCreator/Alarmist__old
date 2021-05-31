@@ -96,11 +96,11 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(192,192,192,.3)',
     marginTop: 30,
     marginBottom: 100,
     borderWidth: 5,
     borderColor: 'black',
+    backgroundColor: 'rgba(255,255,255,.8)',
   },
   topButtonsContainer: {
     flex: 1,
