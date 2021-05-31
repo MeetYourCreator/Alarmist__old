@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
+import { Text, TextInput, View, SafeAreaView, StyleSheet } from 'react-native';
 import { setHour, setMinute, setSecond } from '../services/time.js';
 import { AnalogClockContainer } from '../components/styled/analog/AnalogClockContainer.js';
 import { Clock } from '../components/styled/analog/Clock.js';
@@ -13,7 +13,7 @@ import AnalogClockFaceModal from '../components/modals/AnalogClockFaceModal.jsx'
 import AnalogClockNumberModal from '../components/modals/AnalogClockNumberModal.jsx';
 import AlarmModal from '../components/modals/AlarmModal.jsx';
 
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux';
 
 const AnalogClock = () => {
   const [hourRatio, setHourRatio] = useState(setHour());
@@ -225,6 +225,17 @@ const AnalogClock = () => {
             </Clock>
           </AnalogClockContainer>
         </View>
+
+        <View style={styles.alarmContainer}>
+            <TextInput style={styles.hour} keyboardType="numeric"></TextInput>
+            <TextInput
+              style={styles.minute}
+              keyboardType="numeric"
+              // value={inputTime}
+              // onChange={handleInput}
+            ></TextInput>
+          </View>
+        
         <View style={styles.menu}>
           <AnalogClockFaceModal
             iconName="color-palette-sharp"
@@ -266,6 +277,26 @@ const styles = StyleSheet.create({
     fontSize: 27,
     marginTop: 10,
     color: '#162B32',
+  },
+  alarmContainer: {
+    flexDirection: 'row',
+
+    backgroundColor: 'blue',
+  },
+  alarmsTime: {
+    flexDirection: 'row'
+  },
+  hour: {
+    borderColor: 'red',
+    width: 30,
+    borderWidth: 3,
+    backgroundColor: 'white'
+  },
+  minute: {
+    borderColor: 'black',
+    width: 30,
+    borderWidth: 3,
+    backgroundColor: 'white'
   },
   menu: {
     flex: 1,
