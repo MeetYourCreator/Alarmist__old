@@ -1,5 +1,8 @@
 import {ALARMS} from '../../data/alarms.js'
-import {SET_ALARM} from '../actions/alarmsActionsObjects.js'
+import { SET_ALARM } from '../actions/alarmsActionsObjects.js'
+
+//Write the logic for setting and managng alarms
+
 const initialState = {
   alarms: ALARMS,
   activeAlarms: ALARMS,
