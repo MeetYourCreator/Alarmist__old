@@ -8,7 +8,7 @@ import {setAlarm} from '../store/actions/alarmsActionsObjects.js'
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
-const EditAlarmScreenMain = ({ value, navigation, route, alarmId }) => {
+const EditAlarmScreenMain = ({ value, navigation, route }) => {
   const [labelValue, setLabelValue] = useState('');
   const [repeatValue, setRepeatValue] = useState('');
 
@@ -25,7 +25,7 @@ const EditAlarmScreenMain = ({ value, navigation, route, alarmId }) => {
   navigation.setParams({setAlarm: setAlarmHandler})
   }, [setAlarmHandler])
 
-  
+
   useEffect(() => {
     if (route.params?.label) {
       setLabelValue(labelValue);

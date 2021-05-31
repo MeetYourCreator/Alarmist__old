@@ -1,13 +1,13 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import HomeScreen from './screens/HomeScreen.jsx';
-import AnalogClock from './screens/AnalogClock.jsx';
-import LocalDigitalClock from './screens/DigitalClock/LocalDigitalClock.jsx';
-import EditAlarmScreenMain from './screens/EditAlarmScreenMain.jsx';
-import EditAlarmScreenSound from './screens/EditAlarmScreenSound.jsx';
-import EditAlarmScreenRepeat from './screens/EditAlarmScreenRepeat.jsx';
-import EditAlarmScreenLabel from './screens/EditAlarmScreenLabel.jsx';
-import EditAlarmScreenSnooze from './screens/EditAlarmScreenSnooze';
+import HomeScreen from '../screens/HomeScreen.jsx';
+import AnalogClock from '../screens/AnalogClock.jsx';
+import LocalDigitalClock from '../screens/DigitalClock/LocalDigitalClock.jsx';
+import EditAlarmScreenMain from '../screens/EditAlarmScreenMain.jsx';
+import EditAlarmScreenSound from '../screens/EditAlarmScreenSound.jsx';
+import EditAlarmScreenRepeat from '../screens/EditAlarmScreenRepeat.jsx';
+import EditAlarmScreenLabel from '../screens/EditAlarmScreenLabel.jsx';
+import EditAlarmScreenSnooze from '../screens/EditAlarmScreenSnooze';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
