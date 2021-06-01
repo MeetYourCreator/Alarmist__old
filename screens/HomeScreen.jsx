@@ -61,11 +61,13 @@ const HomeScreen = ({ navigation }) => {
           ></AppButton> */}
           <AppButton
             color={Colors.yellow}
+            fontColor={Colors.blue}
             title="12 Hour Alarmist"
             onPress={() => navigation.navigate('Analog Clock')}
           ></AppButton>
           <AppButton
             color={Colors.blue}
+            fontColor={Colors.yellow}
             title="24 Hour Alarmist"
             onPress={() => navigation.navigate('Digital Local Clock')}
           ></AppButton>
