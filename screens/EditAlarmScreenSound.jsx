@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeView, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx'
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 

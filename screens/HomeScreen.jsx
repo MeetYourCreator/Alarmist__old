@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react';
 import { View, SafeAreaView, StyleSheet } from 'react-native';
 import AppButton from '../components/buttons/AppButton.jsx';
+import Colors from '../components/shared/Colors.js'
+
+//NOTIFICATIONS
 import * as Notifications from 'expo-notifications';
 import * as Permissions from 'expo-permissions';
 
 const HomeScreen = ({ navigation }) => {
+  //NOTIFICATIONS
   //Permissions needed for ios
   useEffect(() => {
     Permissions.getAsync(Permissions.NOTIFICATIONS)
@@ -51,15 +55,17 @@ const HomeScreen = ({ navigation }) => {
     <>
       <SafeAreaView style={styles.screenContainer}>
         <View style={styles.buttonContainer}>
-          <AppButton
+          {/* <AppButton
             title="Trigger Notifications"
             onPress={triggerNotificationsHandler}
-          ></AppButton>
+          ></AppButton> */}
           <AppButton
+            color={Colors.yellow}
             title="12 Hour Alarmist"
             onPress={() => navigation.navigate('Analog Clock')}
           ></AppButton>
           <AppButton
+            color={Colors.blue}
             title="24 Hour Alarmist"
             onPress={() => navigation.navigate('Digital Local Clock')}
           ></AppButton>
@@ -75,22 +81,19 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   menu: {
-    flex: 1,
+ 
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'flex-end',
-    marginTop: 40,
-    marginLeft: 20,
-    marginRight: 20,
-    height: 10,
   },
   screenContainer: {
-    flex: 1,
-    justifyContent: 'space-between',
+    
+    flexDirection: 'row',
+    justifyContent: 'center',
+
   },
   buttonContainer: {
-    flex: 1,
-    justifyContent: 'center',
+
+    flexDirection: 'row',
+
   },
 });
 
