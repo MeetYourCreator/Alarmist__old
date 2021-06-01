@@ -16,12 +16,12 @@ const EditAlarmScreenSound = () => {
         }}
         value="Monday"
       ></CheckSelectRadioButton> */}
-      <CheckSelectRadioButton value="Tuesday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton value="Wednesday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton value="Thursday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton value="Friday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton value="Saturday"></CheckSelectRadioButton>
-      <CheckSelectRadioButton value="Sunday"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Sound 2"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Sound 3"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Sound 4"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Sound 5"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Sound 6"></CheckSelectRadioButton>
+      <CheckSelectRadioButton value="Sound 7"></CheckSelectRadioButton>
     </View>
   );
 };
