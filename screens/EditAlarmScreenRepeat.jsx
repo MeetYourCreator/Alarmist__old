@@ -7,6 +7,7 @@ const EditAlarmScreenRepeat = ({ navigation, value }) => {
   const [isChecked, setIsChecked] = useState(true)
   console.log(isChecked)
   
+  //VIEW
   return (
     <View style={styles.radioButtonsContainer}>
       <CheckSelectRadioButton

@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 
+//REDUX
 import { useSelector, useDispatch } from 'react-redux';
 import { setAlarm } from '../store/actions/alarmsActionsObjects.js';
 
@@ -11,10 +12,13 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
   const [labelValue, setLabelValue] = useState('');
   const [repeatValue, setRepeatValue] = useState('');
 
+  //REDUX
+  //useSelector will give access to the alarmsReducer values for the alarms key in App.js line 22
+  //Through the rootreducer in App. js lines 21-23, useSelector will get access to the initialState in ../store/reducers/alarms.js lines 6 - 10, and grab a hold of the ALARMS value for the alarms key in ../store/reducers/alarms.js line 7
   const availableAlarms = useSelector((state) => state.alarms.alarms);
   // const alarmId = navigation.getParam('alarmId')
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // const setAlarmHandler = useCallback(() => {
   //   dispatch(setAlarm(alarmId))
@@ -24,6 +28,7 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
   // navigation.setParams({setAlarm: setAlarmHandler})
   // }, [setAlarmHandler])
 
+  //NAVIGATION
   useEffect(() => {
     if (route.params?.label) {
       setLabelValue(labelValue);
@@ -36,6 +41,7 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
     }
   });
 
+  //VIEW
   return (
     <View style={styles.alarmDetailContainer}>
       <View style={styles.topButtonsContainer}>
