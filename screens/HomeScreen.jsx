@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, SafeAreaView, StyleSheet } from 'react-native';
 import AppButton from '../components/buttons/AppButton.jsx';
-import Colors from '../components/shared/Colors.js'
+import Colors from '../components/shared/Colors.js';
 
 //NOTIFICATIONS
 import * as Notifications from 'expo-notifications';
@@ -81,19 +81,14 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   menu: {
- 
     flexDirection: 'row',
   },
   screenContainer: {
-    
     flexDirection: 'row',
     justifyContent: 'center',
-
   },
   buttonContainer: {
-
     flexDirection: 'row',
-
   },
 });
 
