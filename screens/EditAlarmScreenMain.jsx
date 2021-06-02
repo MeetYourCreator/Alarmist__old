@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 
 //REDUX
 import { useSelector, useDispatch } from 'react-redux';
-import { setAlarm } from '../store/actions/alarmsActionsObjects.js';
+import { setAlarm } from '../store/actions/index.js';
 
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';

@@ -7,7 +7,7 @@ import AppNavigator from './navigation/AppNavigator.jsx';
 //REDUX
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
-import alarmsReducer from './store/reducers/alarms.js'
+import alarmsReducer from './store/reducers'
 
 //FONTS
 import AppLoading from 'expo-app-loading';

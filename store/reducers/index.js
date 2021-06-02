@@ -1,5 +1,5 @@
 import {ALARMS} from '../../data/alarms.js'
-import { SET_ALARM } from '../actions/alarmsActionsObjects.js'
+import { SET_ALARM } from '../actions'
 
 //Write the logic for setting and managng alarms
 
