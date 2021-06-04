@@ -238,8 +238,7 @@ const AnalogClock = () => {
         </View>
 
         <View style={styles.alarmsContainer}>
-          <AlarmDetail />
-          <AlarmList />
+          <AlarmList/>
         </View>
 
         <View style={styles.menu}>

@@ -1,16 +1,18 @@
 import React from 'react';
 import { View, SafeAreaView, StyleSheet, Text, TextInput } from 'react-native';
 
-const AlarmDetail = () => {
+const AlarmDetail = ({minute, hour}) => {
   return (
     <>
       <View style={styles.alarmContainer}>
         <TextInput
+          hour={hour}
           style={styles.hour}
           keyboardType="numeric"
           maxLength={2}
         ></TextInput>
         <TextInput
+          minute={minute}
           style={styles.minute}
           keyboardType="numeric"
           maxLength={2}
