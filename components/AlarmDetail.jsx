@@ -1,36 +1,22 @@
 import React from 'react';
 import { View, SafeAreaView, StyleSheet, Text, TextInput } from 'react-native';
+import AlarmTime from './AlarmTime.jsx';
 
-const AlarmDetail = ({minute, hour}) => {
+const AlarmDetail = ({ minute, hour }) => {
   return (
-    <>
-      <View style={styles.alarmContainer}>
-        <TextInput
-          hour={hour}
-          style={styles.hour}
-          keyboardType="numeric"
-          maxLength={2}
-        ></TextInput>
-        <TextInput
-          minute={minute}
-          style={styles.minute}
-          keyboardType="numeric"
-          maxLength={2}
-          // value={inputTime}
-          // onChange={handleInput}
-        ></TextInput>
-      </View>
+  <>
+    <View>
+      <AlarmTime />
+    </View>
+
     </>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
   alarmContainer: {
     flexDirection: 'row',
     backgroundColor: 'blue',
-  },
-  alarmsTime: {
-    flexDirection: 'row',
   },
   hour: {
     borderColor: 'red',

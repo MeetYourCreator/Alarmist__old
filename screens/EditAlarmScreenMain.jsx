@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 
+import AlarmTime from '../components/AlarmTime.jsx'
+
 //REDUX
 import { useSelector, useDispatch } from 'react-redux';
 import { setAlarm } from '../store/actions';
@@ -71,6 +73,9 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
           fontWeight="700"
           onPress={() => {}}
         ></GenericButton>
+      </View>
+      <View>
+      <AlarmTime />
       </View>
       <View style={styles.alarmOptions}>
         <EditAlarmDetail
