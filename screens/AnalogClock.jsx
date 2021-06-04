@@ -292,6 +292,7 @@ const styles = StyleSheet.create({
     marginTop: 'auto',
     marginRight: 'auto',
     marginLeft: 'auto',
+    backgroundColor: 'purple'
   },
   menu: {
     flex: 1,

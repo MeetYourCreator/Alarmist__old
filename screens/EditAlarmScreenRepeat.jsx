@@ -5,7 +5,7 @@ import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton
 const EditAlarmScreenRepeat = ({ navigation, value }) => {
   const [dayOfWeek, setDayOfWeek] = useState({ value: value });
   const [isChecked, setIsChecked] = useState(true)
-  console.log(isChecked)
+  console.log('EditAlarmScreenRepeat')
   
   //VIEW
   return (

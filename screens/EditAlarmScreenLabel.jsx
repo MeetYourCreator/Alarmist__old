@@ -3,7 +3,8 @@ import { View, StyleSheet, TextInput } from 'react-native';
 
 const EditAlarmScreenLabel = ({ navigation, value }) => {
   const [input, setInput] = useState('');
-
+  console.log('EditAlarmScreenLabel')
+  
   return (
     <View>
       <TextInput

@@ -12,6 +12,7 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
   const [labelValue, setLabelValue] = useState('');
   const [repeatValue, setRepeatValue] = useState('');
 
+   console.log('EditAlarmScreenMain');
   //REDUX
   //useSelector will give access to the alarmsReducer values for the alarms key in App.js line 22
   //Through the rootreducer in App. js lines 21-23, useSelector will get access to the initialState in ../store/reducers/alarms.js lines 6 - 10, and grab a hold of the ALARMS value for the alarms key in ../store/reducers/alarms.js line 7

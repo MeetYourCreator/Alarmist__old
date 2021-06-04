@@ -60,7 +60,7 @@ const App = () => {
     return <AppLoading
       startAsync={fetchFonts}
       onFinish={() => setDataLoaded(true)}
-      onError={(error) => conssole.log(error)}
+      onError={(error) => console.log(error)}
     />
   }
 
@@ -71,7 +71,7 @@ const App = () => {
     //This is how the store is made available to every child component of App.js
     //REDUX
     <Provider store={store}>
-    <AppNavigator />
+      <AppNavigator />
     </Provider>
   );
 };

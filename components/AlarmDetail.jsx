@@ -5,10 +5,15 @@ const AlarmDetail = () => {
   return (
     <>
       <View style={styles.alarmContainer}>
-        <TextInput style={styles.hour} keyboardType="numeric"></TextInput>
+        <TextInput
+          style={styles.hour}
+          keyboardType="numeric"
+          maxLength={2}
+        ></TextInput>
         <TextInput
           style={styles.minute}
           keyboardType="numeric"
+          maxLength={2}
           // value={inputTime}
           // onChange={handleInput}
         ></TextInput>
