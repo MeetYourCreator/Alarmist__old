@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 const AlarmList = () => {
   return (
     <>
+     
       <View>
         <Text>Alarm List</Text>
       </View>
@@ -13,8 +14,8 @@ const AlarmList = () => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state)
-  return state
+  console.log({ alarms: state.alarms });
+  return {alarms: state.alarms}
 }
 
 export default connect(mapStateToProps)(AlarmList);
