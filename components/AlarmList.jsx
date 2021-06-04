@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
 const AlarmList = (props) => {
+  const [alarms, setAlarms] = useState(props);
+
+  const { minute, hour } = props;
+  
   return (
     <>
-     {console.log(props)}
+      {console.log(props)}
       <View>
         <Text>Alarm List</Text>
       </View>
@@ -15,7 +19,7 @@ const AlarmList = (props) => {
 
 const mapStateToProps = (state) => {
   console.log({ alarms: state.alarms });
-  return {alarms: state.alarms}
-}
+  return { alarms: state.alarms };
+};
 
 export default connect(mapStateToProps)(AlarmList);
