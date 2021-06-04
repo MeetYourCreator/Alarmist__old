@@ -4,14 +4,15 @@ import { connect } from 'react-redux';
 
 const AlarmList = (props) => {
   const [alarms, setAlarms] = useState(props);
-
+  console.log(alarms.alarms.alarms)
   const { minute, hour } = props;
-  
+
   return (
     <>
       {console.log(props)}
       <View>
         <Text>Alarm List</Text>
+        
       </View>
     </>
   );
