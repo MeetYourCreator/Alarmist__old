@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
-const AlarmList = () => {
+const AlarmList = (props) => {
   return (
     <>
-     
+     {console.log(props)}
       <View>
         <Text>Alarm List</Text>
       </View>
