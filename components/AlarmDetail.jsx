@@ -2,7 +2,7 @@ import React from 'react';
 import { View, SafeAreaView, StyleSheet, Text, TextInput } from 'react-native';
 import AlarmTime from './AlarmTime.jsx';
 
-const AlarmDetail = ({ minute, hour }) => {
+const AlarmDetail = () => {
   return (
   <>
     <View>

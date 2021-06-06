@@ -74,7 +74,7 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
           onPress={() => {}}
         ></GenericButton>
       </View>
-      <View>
+      <View style={styles.alarmTime}>
       <AlarmTime />
       </View>
       <View style={styles.alarmOptions}>
@@ -107,9 +107,9 @@ const styles = StyleSheet.create({
   alarmDetailContainer: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     marginTop: 30,
-    marginBottom: 100,
+    marginBottom: 10,
     borderWidth: 5,
     borderColor: 'black',
     backgroundColor: 'rgba(255,255,255,.8)',
@@ -118,6 +118,13 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  alarmTime: {
+    marginRight: 'auto',
+    marginBottom: 100,
+    marginLeft: 'auto'
+
+    
   },
   alarmOptions: {
     flex: 1,
