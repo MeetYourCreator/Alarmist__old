@@ -1,7 +1,7 @@
-import {ALARMS} from '../data/alarms.js'
+import { ALARMS } from '../data/alarms.js'
 import { CREATE_ALARM } from '../actions'
 
-import { v4 as uuid4 } from uuid;
+import { v4 as uuid4 } from 'uuid';
 //Write the logic for setting and managing alarms
 
 const initialState = {
@@ -11,6 +11,7 @@ const initialState = {
 }
 
 const alarmsReducer = (state = initialState, action) => {
+  console.log('action:' + action);
   switch (action.type) {
     case CREATE_ALARM:
       let newAlarm = {};
@@ -32,6 +33,6 @@ const alarmsReducer = (state = initialState, action) => {
     default:
       return state;
   }
-  }
+}
 
 export default alarmsReducer;

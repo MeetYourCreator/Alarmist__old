@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
   },
   clockContainer: {
     flex: 1,
-    marginTop: 180,
+    marginTop: 120,
     marginBottom: 120,
   },
   clockFace: {

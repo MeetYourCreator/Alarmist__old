@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import store from '../../redux/store.js';
+
 import {
   Text,
   TouchableOpacity,
@@ -29,7 +30,7 @@ const AlarmModal = ({ iconName, iconColor }) => {
           color={iconColor}
           onPress={() => {
             store.dispatch({
-              type: CREATE_ALARM,
+              type: 'CREATE_ALARM',
             });
             navigation.navigate('Edit Alarm Screen Main');
           }}
