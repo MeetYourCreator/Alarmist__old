@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   Text,
   TouchableOpacity,
@@ -8,15 +9,17 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import GenericButton from '../buttons/GenericButton.jsx';
-import AppButton from '../buttons/AppButton.jsx'
+import AppButton from '../buttons/AppButton.jsx';
 import Input from '../Input.jsx';
 import EditAlarmScreenMain from '../../screens/EditAlarmScreenMain.jsx';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
 const AlarmModal = ({ iconName, iconColor }) => {
-  
-const navigation = useNavigation(); 
+  const state = useSelector((state) => state.alarms);
+  const dispatch = useDispatch();
+
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
@@ -50,7 +53,6 @@ const styles = StyleSheet.create({
     height: 70,
     width: '30%',
   },
-  
 });
 
 export default AlarmModal;
