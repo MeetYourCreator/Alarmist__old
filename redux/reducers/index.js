@@ -1,12 +1,20 @@
-import { ALARMS } from '../data/alarms.js'
-import { CREATE_ALARM } from '../actions'
+import { alarmAppState } from '../data/alarms.js'
+import { createAlarm as CREATE_ALARM } from '../actions'
+import { setAlarmHour as SET_ALARM_HOUR } from '../actions'
+import { setAlarmMinutes as SET_ALARM_MINUTES } from '../actions'
+import { setAlarmLabel as SET_ALARM_LABEL } from '../actions'
+import { setAlarmSound as SET_ALARM_SOUND } from '../actions'
+import { setAlarmRepeat as SET_ALARM_REPEAT } from '../actions'
+import { setAlarmSnooze as SET_ALARM_SNOOZE } from '../actions'
+import { setAlarmAsActive as SET_ALARM_AS_ACTIVE } from '../actions'
+import { deleteAlarm as DELETE_ALARM } from '../actions'
 
 import { v4 as uuid4 } from 'uuid';
 //Write the logic for setting and managing alarms
 
 const initialState = {
-  alarms: ALARMS,
-  activeAlarms: ALARMS,
+  alarms: alarmAppState,
+  activeAlarms: alarmAppState,
   pinnedAlarms: []
 }
 
