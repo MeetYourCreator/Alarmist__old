@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import store from '../../redux/store.js';
 import {
   Text,
   TouchableOpacity,
@@ -17,7 +18,6 @@ import { Ionicons } from '@expo/vector-icons';
 
 const AlarmModal = ({ iconName, iconColor }) => {
   const state = useSelector((state) => state.alarms);
-  const dispatch = useDispatch();
 
   const navigation = useNavigation();
   return (
@@ -27,7 +27,12 @@ const AlarmModal = ({ iconName, iconColor }) => {
           name={iconName}
           size={24}
           color={iconColor}
-          onPress={() => navigation.navigate('Edit Alarm Screen Main')}
+          onPress={() => {
+            store.dispatch({
+              type: CREATE_ALARM,
+            });
+            navigation.navigate('Edit Alarm Screen Main');
+          }}
         ></Ionicons>
       </View>
     </SafeAreaView>
