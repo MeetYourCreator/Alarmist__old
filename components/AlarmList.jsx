@@ -9,7 +9,7 @@ const AlarmList = (props) => {
 
   return (
     <>
-      {console.log(props)}
+     
       <View>
         {console.log(alarms.alarms.alarms)}
         <Text>Alarm List</Text>
@@ -23,7 +23,7 @@ const AlarmList = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log({ alarms: state.alarms });
+
   return { alarms: state.alarms };
 };
 
