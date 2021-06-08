@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux';
-import alarmsReducer from './redcuers';
+import alarmsReducer from './reducers';
 
 const rootReducer = combineReducers({
   alarms: alarmsReducer

@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import AlarmTime from '../components/AlarmTime.jsx'
+import AlarmTime from '../components/AlarmTime.jsx';
 
 //REDUX
 import { useSelector, useDispatch } from 'react-redux';
-import { setAlarm } from '../redux/actions';
+
 
 import GenericButton from '../components/buttons/GenericButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
@@ -14,7 +14,7 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
   const [labelValue, setLabelValue] = useState('');
   const [repeatValue, setRepeatValue] = useState('');
 
-   console.log('EditAlarmScreenMain');
+  console.log('EditAlarmScreenMain');
   //REDUX
   //useSelector will give access to the alarmsReducer values for the alarms key in App.js line 22
   //Through the rootreducer in App. js lines 21-23, useSelector will get access to the initialState in ../store/reducers/alarms.js lines 6 - 10, and grab a hold of the ALARMS value for the alarms key in ../store/reducers/alarms.js line 7
@@ -75,7 +75,7 @@ const EditAlarmScreenMain = ({ value, navigation, route }) => {
         ></GenericButton>
       </View>
       <View style={styles.alarmTime}>
-      <AlarmTime />
+        <AlarmTime />
       </View>
       <View style={styles.alarmOptions}>
         <EditAlarmDetail
@@ -122,9 +122,7 @@ const styles = StyleSheet.create({
   alarmTime: {
     marginRight: 'auto',
     marginBottom: 100,
-    marginLeft: 'auto'
-
-    
+    marginLeft: 'auto',
   },
   alarmOptions: {
     flex: 1,
