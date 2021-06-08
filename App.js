@@ -5,9 +5,8 @@ import React, { useState } from 'react';
 import AppNavigator from './navigation/AppNavigator.jsx';
 
 //REDUX
-import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
-import alarmsReducer from './store/reducers'
+import {store} from './redux/store.js'
 
 //FONTS
 import AppLoading from 'expo-app-loading';
@@ -16,14 +15,6 @@ import * as Font from 'expo-font';
 //NOTIFICATIONS
 import * as Notifications from "expo-notifications";
 import * as Permissions from "expo-permissions";
-
-//REDUX
-const rootReducer = combineReducers({
-  alarms: alarmsReducer
-})
-
-const store = createStore(rootReducer)
-console.log(store)
 
 //FONTS
 const fetchFonts = () => {
