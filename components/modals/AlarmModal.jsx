@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import store from '../../screens/store.js';
+import store from '../../redux/store.js';
 
 import {
   Text,

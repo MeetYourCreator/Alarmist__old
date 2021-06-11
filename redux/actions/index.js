@@ -8,12 +8,12 @@ import { setAlarmSnooze } from './alarms/creators.js'
 import { setAlarmAsActive } from './alarms/creators.js'
 import { deleteAlarm } from './alarms/creators.js'
 
-export const createAlarm;
-export const setAlarmHour;
-export const setAlarmMinutes;
-export const setAlarmLabel;
-export const setAlarmSound;
-export const setAlarmRepeat;
-export const setAlarmSnooze;
-export const setAlarmAsActive;
-export const deleteAlarm;
+export { createAlarm };
+export { setAlarmHour };
+export { setAlarmMinutes };
+export { setAlarmLabel };
+export { setAlarmSound };
+export { setAlarmRepeat };
+export { setAlarmSnooze };
+export { setAlarmAsActive };
+export { deleteAlarm };
