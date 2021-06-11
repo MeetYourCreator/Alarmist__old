@@ -7,4 +7,4 @@ export default Colors = {
   red: 'rgb(230,54,47)',
   orange: 'rgb(239,117,27',
   yellow: 'rgb(250,234,9)'
-}
+};

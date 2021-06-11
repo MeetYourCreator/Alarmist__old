@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx'
+import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx';
 import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
 
 const EditAlarmScreenSound = () => {
-   return (
+  return (
     <View style={styles.radioButtonsContainer}>
       {/* <CheckSelectRadioButton
         onPress={() => {

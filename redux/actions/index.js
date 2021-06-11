@@ -8,7 +8,6 @@ import { setAlarmSnooze } from './alarms/creators.js'
 import { setAlarmAsActive } from './alarms/creators.js'
 import { deleteAlarm } from './alarms/creators.js'
 
-
 export const createAlarm;
 export const setAlarmHour;
 export const setAlarmMinutes;

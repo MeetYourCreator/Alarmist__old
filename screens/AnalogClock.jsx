@@ -13,7 +13,7 @@ import AnalogClockFaceModal from '../components/modals/AnalogClockFaceModal.jsx'
 import AnalogClockNumberModal from '../components/modals/AnalogClockNumberModal.jsx';
 import AlarmModal from '../components/modals/AlarmModal.jsx';
 import AlarmDetail from '../components/AlarmDetail.jsx';
-import AlarmList from '../components/AlarmList.jsx'
+import AlarmList from '../components/AlarmList.jsx';
 
 import { useSelector } from 'react-redux';
 
@@ -238,7 +238,7 @@ const AnalogClock = () => {
         </View>
 
         <View style={styles.alarmsContainer}>
-          <AlarmList/>
+          <AlarmList />
         </View>
 
         <View style={styles.menu}>
@@ -291,7 +291,7 @@ const styles = StyleSheet.create({
     marginTop: 'auto',
     marginRight: 'auto',
     marginLeft: 'auto',
-    backgroundColor: 'purple'
+    backgroundColor: 'purple',
   },
   menu: {
     flex: 1,

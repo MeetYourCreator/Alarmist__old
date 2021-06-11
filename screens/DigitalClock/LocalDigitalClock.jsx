@@ -5,20 +5,20 @@ import { DigitalClockContainer } from '../../components/styled/digital/DigitalCl
 import { Clock } from '../../components/styled/digital/Clock.js';
 import { ClockText } from '../../components/styled/digital/ClockText.js';
 import { Location } from '../../components/styled/digital/Location.js';
-import AlarmDetail from '../../components/AlarmDetail.jsx'
+import AlarmDetail from '../../components/AlarmDetail.jsx';
 
 import DigitalClockNumberColorModal from '../../components/modals/DigitalClockNumberColorModal.jsx';
 import DigitalClockNumberFontModal from '../../components/modals/DigitalClockNumberFontModal.jsx';
 import AlarmModal from '../../components/modals/AlarmModal.jsx';
 
-import { useSelector } from 'react-redux'; 
+import { useSelector } from 'react-redux';
 
 const LocalDigitalClock = () => {
   const [localTime, setLocalTime] = useState(showLocalTime());
   const [colorValue, setColorValue] = useState('#0000FF');
   const [fontValue, setFontValue] = useState('press-start-2p');
- 
-  const alarms = useSelector(state => state.alarms.activeAlarms)
+
+  const alarms = useSelector((state) => state.alarms.activeAlarms);
 
   const colorHandler = (event) => {
     setColorValue(event);

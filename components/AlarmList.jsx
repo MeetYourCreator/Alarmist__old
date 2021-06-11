@@ -9,21 +9,17 @@ const AlarmList = (props) => {
 
   return (
     <>
-     
       <View>
         {console.log(alarms.alarms.alarms)}
         <Text>Alarm List</Text>
-        <AlarmDetail
-          />
-        {alarms.alarms.alarms.map(() => {
-        })}
+        <AlarmDetail />
+        {alarms.alarms.alarms.map(() => {})}
       </View>
     </>
   );
 };
 
 const mapStateToProps = (state) => {
-
   return { alarms: state.alarms };
 };
 

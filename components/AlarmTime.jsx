@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   },
   hour: {
     width: 30,
-    backgroundColor: 'rgba(235,105,158,.3)'
+    backgroundColor: 'rgba(235,105,158,.3)',
   },
   minute: {
     width: 30,

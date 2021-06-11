@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from 'redux';
-import alarmsReducer from '../redux/reducers';
+import alarmsReducer from './redcuers'
 
-const rootReducer = combineReducers({
-  alarms: alarmsReducer
-})
+const rootReducer = createStore({
+  alarmsReducer: alarmsReducer
+});
 
 const store = createStore(rootReducer);
 

@@ -4,13 +4,12 @@ import AlarmTime from './AlarmTime.jsx';
 
 const AlarmDetail = () => {
   return (
-  <>
-    <View>
-      <AlarmTime />
-    </View>
-
+    <>
+      <View>
+        <AlarmTime />
+      </View>
     </>
-  )
+  );
 };
 
 const styles = StyleSheet.create({
