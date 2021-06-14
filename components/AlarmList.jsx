@@ -10,10 +10,10 @@ const AlarmList = (props) => {
   return (
     <>
       <View>
-        {console.log(alarms.alarms.alarms)}
+        {console.log('alarms:' + alarms.alarms)}
         <Text>Alarm List</Text>
         <AlarmDetail />
-        {alarms.alarms.alarms.map(() => {})}
+        {alarms.alarms.map(() => {})}
       </View>
     </>
   );
