@@ -6,7 +6,7 @@ import AppNavigator from './navigation/AppNavigator.jsx';
 
 //REDUX
 import { Provider } from 'react-redux';
-import { store } from './redux/store.js';
+import store from './redux/store.js';
 
 //FONTS
 import AppLoading from 'expo-app-loading';
