@@ -13,7 +13,7 @@ const AlarmList = (props) => {
         {console.log('alarms:' + alarms.alarms)}
         <Text>Alarm List</Text>
         <AlarmDetail />
-        {alarms.alarms.map(() => {})}
+        {/* {alarms.alarms.map(() => {})} */}
       </View>
     </>
   );
