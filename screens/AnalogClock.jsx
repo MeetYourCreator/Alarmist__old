@@ -264,11 +264,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
   },
+
   clockContainer: {
     flex: 1,
     marginTop: 120,
     marginBottom: 120,
   },
+
   clockFace: {
     borderColor: '#162B32',
     borderWidth: 5,
@@ -277,12 +279,14 @@ const styles = StyleSheet.create({
     height: 325,
     position: 'relative',
   },
+
   clockNumber: {
     textAlign: 'center',
     fontSize: 27,
     marginTop: 10,
     color: '#162B32',
   },
+
   alarmsContainer: {
     display: 'flex',
     justifyContent: 'center',
@@ -293,6 +297,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     backgroundColor: 'purple',
   },
+
   menu: {
     flex: 1,
     flexDirection: 'row',
@@ -303,10 +308,12 @@ const styles = StyleSheet.create({
     marginRight: 20,
     padding: 0,
   },
+
   buttonContainer: {
     flex: 1,
     justifyContent: 'center',
   },
+
 });
 
 export default AnalogClock;
