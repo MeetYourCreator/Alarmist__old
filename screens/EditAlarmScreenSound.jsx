@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import CheckSelectRadioButton from '../components/buttons/CheckSelectRadioButton.jsx';
-import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
+import EditAlarmDetail from '../components/alarm/EditAlarmDetail.jsx';
 
 const EditAlarmScreenSound = () => {
   return (

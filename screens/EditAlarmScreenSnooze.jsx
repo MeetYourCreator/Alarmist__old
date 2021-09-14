@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, SafeView, StyleSheet, Text } from 'react-native';
-import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
+import EditAlarmDetail from '../components/alarm/EditAlarmDetail.jsx';
 
 const EditAlarmScreenSnooze = () => {
   return (

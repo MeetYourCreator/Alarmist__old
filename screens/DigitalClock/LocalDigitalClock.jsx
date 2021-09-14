@@ -5,7 +5,7 @@ import { DigitalClockContainer } from '../../components/styled/digital/DigitalCl
 import { Clock } from '../../components/styled/digital/Clock.js';
 import { ClockText } from '../../components/styled/digital/ClockText.js';
 import { Location } from '../../components/styled/digital/Location.js';
-import AlarmDetail from '../../components/etc/AlarmDetail.jsx';
+import AlarmDetail from '../../components/alarm/AlarmDetail.jsx';
 
 import DigitalClockNumberColorModal from '../../components/modals/DigitalClockNumberColorModal.jsx';
 import DigitalClockNumberFontModal from '../../components/modals/DigitalClockNumberFontModal.jsx';

@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import AlarmTime from '../components/AlarmTime.jsx';
+import AlarmTime from '../components/alarm/AlarmTime.jsx';
 
 //REDUX
 import { useSelector, useDispatch } from 'react-redux';
 
 import GenericButton from '../components/buttons/GenericButton.jsx';
-import EditAlarmDetail from '../components/EditAlarmDetail.jsx';
+import EditAlarmDetail from '../components/alarm/EditAlarmDetail.jsx';
 
 const EditAlarmScreenMain = ({ value, navigation, route }) => {
   const [labelValue, setLabelValue] = useState('');

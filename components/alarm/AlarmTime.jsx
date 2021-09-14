@@ -6,7 +6,10 @@ import {
   Pressable,
   StyleSheet,
   TouchableOpacity,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback
 } from 'react-native';
+import KeyboardAvoidingWrapper from './KeyboardAvoidingWrapper';
 
 const AlarmTime = ({ minute, hour }) => {
   return (
@@ -15,21 +18,22 @@ const AlarmTime = ({ minute, hour }) => {
         <View style={styles.text}>
           <Text>Time</Text>
         </View>
-        <View style={styles.setTimeDetails}>
-          <TextInput style={styles.hour} keyboardType="numeric" maxLength={2}>
-            {hour}
-          </TextInput>
-          <Text>:</Text>
-          <TextInput
-            style={styles.minute}
-            keyboardType="numeric"
-            maxLength={2}
-            // value={inputTime}
-            // onChange={handleInput}
-          >
-            {minute}
-          </TextInput>
-        </View>
+        
+          <View style={styles.setTimeDetails}>
+            <TextInput style={styles.hour} keyboardType="numeric" maxLength={2}>
+              {hour}
+            </TextInput>
+            <Text>:</Text>
+            <TextInput
+              style={styles.minute}
+              keyboardType="numeric"
+              maxLength={2}
+              // value={inputTime}
+              // onChange={handleInput}
+            >
+              {minute}
+            </TextInput>
+          </View>
         <View style={styles.amPm}>
           <Pressable>
             <Text style={styles.am}>AM</Text>
@@ -40,7 +44,7 @@ const AlarmTime = ({ minute, hour }) => {
         </View>
       </View>
     </>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
