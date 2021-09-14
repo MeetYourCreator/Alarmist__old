@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
-import AlarmDetail from './AlarmDetail.jsx';
+import AlarmDetail from './etc/AlarmDetail.jsx';
 
 const AlarmList = (props) => {
   const [alarms, setAlarms] = useState(props);

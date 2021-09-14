@@ -12,7 +12,7 @@ import { ClockCenter } from '../components/styled/analog/ClockCenter.js';
 import AnalogClockFaceModal from '../components/modals/AnalogClockFaceModal.jsx';
 import AnalogClockNumberModal from '../components/modals/AnalogClockNumberModal.jsx';
 import AlarmModal from '../components/modals/AlarmModal.jsx';
-import AlarmDetail from '../components/AlarmDetail.jsx';
+import AlarmDetail from '../components/etc/AlarmDetail.jsx';
 import AlarmList from '../components/AlarmList.jsx';
 
 import { useSelector } from 'react-redux';
