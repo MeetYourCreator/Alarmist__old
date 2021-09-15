@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, TextInput, View, SafeAreaView, StyleSheet, KeyboardAvoidingView } from 'react-native';
+import { View, SafeAreaView, StyleSheet, KeyboardAvoidingView } from 'react-native';
 import { setHour, setMinute, setSecond } from '../services/time.js';
 import { AnalogClockContainer } from '../components/styled/analog/AnalogClockContainer.js';
 import { Clock } from '../components/styled/analog/Clock.js';
@@ -14,7 +14,6 @@ import AnalogClockNumberModal from '../components/modals/AnalogClockNumberModal.
 import AlarmModal from '../components/modals/AlarmModal.jsx';
 import AlarmDetail from '../components/alarm/AlarmDetail.jsx';
 import AlarmList from '../components/alarm/AlarmList.jsx';
-import KeyboardAvoidingWrapper from '../components/alarm/KeyboardAvoidingWrapper.jsx';
 
 import { useSelector } from 'react-redux';
 
